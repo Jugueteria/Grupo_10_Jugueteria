@@ -6,12 +6,14 @@ Colaboradores:Jonathan Valdivia
 
 2.Tematica: El objetivo del proyeto va orientado a la construccion de una pagina web para la venta de juguetes para una audiciencia de padres de familia con niños entre 6 meses y 10 años de edad; dentro de las funcionalidades tenemos:
 
-*Solicitud para mantenimiento/Reparacion de los juguetes
-*Plataforma de pago/Carrito de compras
-*Descripcion de cada producto con precios
-*Publicidad para los productos
-*Formularios de registro
-*Formulario de ingreso al sistema
+
+* plataforma web (HOME) para venta de juquetes
+* Página de Carrito de compras y pago
+* Página de descripcion de cada producto con precios
+* Publicidad para los productos
+* Formulario de registro
+* Login
+* Filtrar por marca
 
 3.Sitios de referencia 
 
@@ -27,5 +29,11 @@ promociones, catalogos, integracion de algunas API y redes sociales.
 *https://www.cebra.com.ar/: La busqueda se realiza por edades, tiene promociones, envíos, tambien cuenta con una sección de afiliados.
 
 *https://www.kinderland.com.ar/: A parte de vender juguetes, tambien vende accesorios para bebes, entre otros.
+
+
+
+Link de WireFrame
+
+https://www.figma.com/file/xXkIA722N1vahUo4jJ0FEQ/Jugueteria
 
  
