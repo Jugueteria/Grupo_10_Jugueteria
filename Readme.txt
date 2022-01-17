@@ -1,6 +1,6 @@
 1. Repositorio:https://github.com/Jugueteria/Grupo_10_Jugueteria
 Colaboradores:
-Jonathan Valdivia:
+Jonathan Valdivia:Ingeniero de software.
 Jessica Montilla: Administradora/Aprendíz en IT
 María Romo: Abogada. Programadora Web full Stack in progress. 
 Juan Pablo Rodriguez: Ingeniero Mecatronico.
