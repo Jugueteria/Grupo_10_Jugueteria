@@ -2,7 +2,7 @@
 Colaboradores:Jonathan Valdivia
               Jessica Montilla: Administradora/Aprendíz en IT
               María Romo
-              Juan Pablo Rodriguez
+              Juan Pablo Rodriguez: Ingeniero Mecatronico.
 
 2.Tematica: El objetivo del proyeto va orientado a la construccion de una pagina web para la venta de juguetes para una audiciencia de padres de familia con niños entre 6 meses y 10 años de edad; dentro de las funcionalidades tenemos:
 
