@@ -1,0 +1,110 @@
+*{
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Delius Unicase';
+    background-color: #ffffff;
+}
+/***INICIO Barra cabecera********/
+.container-header{
+    background-color:#CDABED;
+    width: auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-between
+}
+.container-header .info {
+    color: white;
+    font-size: 12px; 
+    margin: 0px 30px;
+    padding: 5px;
+    justify-content: flex-start;
+}
+.container-header
+.button-header {
+    display: inline-flex;
+    margin-top: -5px;
+}
+.btn-ingresar,
+.btn-registrarse {
+    background-color:rgb(14, 108, 239);
+    color: white;
+    font-family: 'Delius Unicase';
+    font-size: 12px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn-ingresar {
+    background-color:#CDABED;
+    color: black;
+    border: solid rgb(232, 231, 231);
+}
+/***FIN Barra cabecera********/
+
+/***INICIO Logo, buscador y carrito********/
+.container-main {
+    display: flex; 
+    justify-content: space-between;
+}
+.logo {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+/***INICIO Footer********/
+.footer-box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+    background-color: #CDABED;
+}
+.footer-box h3 {
+    text-align: start;
+    margin: 20px;
+    margin-left: 20px;
+}
+.footer-box .contacto ul>li{
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.footer-box .informacion ul>li{
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.footer-box .informacion a {
+    text-decoration: none;
+    color: white;
+}
+.footer-box .informacion li>a:hover {
+    color: black;
+    background-color: #ffffff;
+}
+.footer-box .pagos ul>li{
+    flex-direction: row;
+    justify-content:space-around;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.footer-box .pagos i{
+    display: flex;
+    font-size: 32px;
+}
+.footer-box .mapa-box {
+    width: 360px;
+    height:250px;
+    border: solid 1px #393939;
+}
+/***FIN Footer********/
