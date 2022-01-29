@@ -66,27 +66,32 @@ form{
     height:700px ;
     background-color:#2A2D43;
     margin: auto;
-    margin-top: 60px;
-    margin-bottom: 90px;
+    
    
 }
 
 .imagen_login{
 
-    width: 400px;
-    height:500px ;
+    width: 380px;
+    height:380px ;
+    margin-top: 30px;
 }
 
 .ingreso{
     display: flex;
-
+    background-color:#9198A9;
+    width: 870px;
+    height:700px ;
+    margin: auto;
+    margin-bottom: 100px;
+   
     
 }
 
 .Marco{
     width: 400px;
-    height:500px ;
-    background-color:#2A2D43;
+    height:400px ;
+    
 }
 
 
@@ -156,7 +161,19 @@ margin-left: 30px;
        padding: 10px;
        border-top: 1px  solid gray;
    }
+.logo2{
+    margin-top: 40px;
+    margin-left: 55px;
+    
+}
 
+.eslogan{
+    margin-top: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color:#1D3E94;
+}
 
 /***INICIO Footer********/
 .footer-box {
