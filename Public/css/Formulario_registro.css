@@ -63,7 +63,7 @@ body{
 
 form{
     width: 450px;
-    height:850px ;
+    height:760px ;
     background-color:#2A2D43;
     margin: auto;  
     margin-bottom: 60px;
@@ -113,21 +113,10 @@ a{
 }
 
 .formulario{
-padding-top: 50px;
-margin-top: 90px;
+padding-top: 20px;
+margin-top: 30px;
 margin-left: 30px;
-
-
 }
-
-.usuario{
-    width: 100px;
-    height:100px ;
-    margin-left: 170px;
-    margin-top: 50px;
-
-   }
-
 
    .text{
        border: none;
@@ -138,12 +127,65 @@ margin-left: 30px;
    h2{
     color:#C5C3C3;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
    }
 
    
 
 /***FINAL Formulario Ingreso********/
+
+
+/***Inicio slider********/
+
+.slider{
+    background-color:#9b57db;
+    width: 80%;
+    height: 140px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+}
+
+.slider ul{
+    display:flex;
+    padding: 0;
+    width: 300%;
+    animation:  cambio 20s infinite alternate;
+   
+}
+
+.slider li{
+    list-style: none;
+    width: 100%;
+    
+}
+
+.images_slider{
+
+    width: 200px ;
+    height: 100px;
+    margin-top: 10px;
+}
+
+
+.slider img{
+width: 30%;
+
+}
+
+/***Fin slider********/
 
 /***INICIO Footer********/
 .footer-box {
@@ -196,3 +238,5 @@ margin-left: 30px;
     border: solid 1px #393939;
 }
 /***FIN Footer********/
+
+
