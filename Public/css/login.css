@@ -63,14 +63,19 @@ body{
 
 form{
     width: 450px;
-    height:850px ;
+    height:700px ;
     background-color:#2A2D43;
-    margin: auto;  
-    margin-bottom: 60px;
-    border-radius: 20px;
+    margin: auto;
     
+   
 }
 
+.imagen_login{
+
+    width: 380px;
+    height:380px ;
+    margin-top: 30px;
+}
 
 .ingreso{
     display: flex;
@@ -80,6 +85,13 @@ form{
     margin: auto;
     margin-bottom: 100px;
    
+    
+}
+
+.Marco{
+    width: 400px;
+    height:400px ;
+    
 }
 
 
@@ -104,6 +116,11 @@ a{
     font-size: small;
 }
 
+.crea{
+    color: #ff84e8;
+    margin-left: 40px;
+}
+
 .boton{
     font-family: 'Delius Unicase', cursive;
     margin-top: 60px;
@@ -113,7 +130,6 @@ a{
 }
 
 .formulario{
-padding-top: 50px;
 margin-top: 90px;
 margin-left: 30px;
 
@@ -126,8 +142,13 @@ margin-left: 30px;
     margin-left: 170px;
     margin-top: 50px;
 
+    
    }
 
+   .olvido{
+    margin-left: 105px;
+   
+   }
 
    .text{
        border: none;
@@ -135,15 +156,80 @@ margin-left: 30px;
        border-bottom: 1px solid gray;
    }
 
-   h2{
-    color:#C5C3C3;
-    text-align: center;
-    margin-bottom: 60px;
+   .linea{
+       margin-top: 70px;
+       padding: 10px;
+       border-top: 1px  solid gray;
    }
+.logo2{
+    margin-top: 40px;
+    margin-left: 55px;
+    
+}
 
-   
+.eslogan{
+    margin-top: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color:#1D3E94;
+}
 
 /***FINAL Formulario Ingreso********/
+
+/***Inicio slider********/
+
+.slider{
+    background-color:#9b57db;
+    width: 80%;
+    height: 140px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+}
+
+.slider ul{
+    display:flex;
+    padding: 0;
+    width: 300%;
+    animation:  cambio 20s infinite alternate;
+   
+}
+
+.slider li{
+    list-style: none;
+    width: 100%;
+    
+}
+
+.images_slider{
+
+    width: 200px ;
+    height: 100px;
+    margin-top: 10px;
+}
+
+
+
+.slider img{
+width: 30%;
+
+}
+
+/***Fin slider********/
+
 
 /***INICIO Footer********/
 .footer-box {
