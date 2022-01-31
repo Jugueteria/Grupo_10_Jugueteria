@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Playground-Jugueteria</title>
 </head>
 <body>
-    <h1>Bienvenidos</h1>
+    <!--Cabecera del sitio-->
+    <header>
+        <div class="container-header">
+        <div class="info">
+            <p>ventas@playgroundjugueteria.com | +56 9999 5555</p>
+        </div>
+        <!--Boton de Ingresar y Resgistro-->
+        <div class="button-header">
+            <button type="button" name="ingresar" class="btn-ingresar">Ingresar</button>
+            <button type="button" name="ingresar" class="btn-registrarse">Regístrarse</button>
+        </div>
+        </div>
+    </header>
+    <!--Logo, buscador y carrito de compras-->
+    <main class="container-main">
+        <div class="logo">
+            <img src="images/Design/logo.png"  alt="Logo Playground Jugueteria"></img>
+        </div>
+        <div class="buscar-wrapper">
+            <input class="buscador-box" type="search" text="Search" placeholder="Buscar producto">
+            <button type="button" class="fas fa-search" id="lupa"></button>
+        </div>
+        <div class="container-carrito">
+            <div class="carro">
+                <i class="fas fa-shopping-cart" id="icono-carrito">
+                    <div class="box-carrito"></div>
+                </i>
+            </div>
+        </div>
+    </main>
+    <!--Menú-->
+    <nav class="main-navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Marcas</a></li>
+            <li><a href="#">Edades</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <!--Slide seccion-->
+    <section>
+        <div class="slide-container">
+            <h1>SLIDE</h1>
+        </div>
+    </section>
+    <div class="info-destacados">
+        <h3>
+            PRODUCTOS DESTACADOS
+        </h3>
+    </div>
+    <!--Productos Destacados-->
+    <section class="destacados">
+        <div class="destacados-box1"></div>
+        <div class="destacados-box2"></div>
+    </section>
+    <!--Nuestras Marcas-->
+    <section class="nuestras-marcas">
+        <div class="nuestras-marcas-box"></div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="footer-box">
+            <div class="contacto">
+            <h3>CONTACTENOS</h3>
+                <ul>
+                    <li>ventas@playgroundjugueteria.com</li>
+                    <li>+56 9999 5555</li>
+                </ul>
+            </div>
+            <div class="informacion">
+                <h3>INFORMACIÓN</h3>
+                    <ul>
+                        <li><a href="#">Devolución</a></li>
+                        <li><a href="#">Despacho</a></li>
+                        <li><a href="#">Ventas mayoristas</a></li>
+                    </ul>
+            </div>
+            <div class="pagos">
+                <h3>FORMAS DE PAGO</h3>
+                    <ul>
+                        <li><i class="fab fa-cc-visa"></i></li>
+                        <li><i class="fab fa-cc-mastercard"></i></li>
+                        <li><i class="fab fa-cc-paypal"></i></li>
+                    </ul>
+            </div>
+            <div>
+                <div class="mapa-box"></div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
