@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <script defer src="js/slide.js"></script>
 
     <title>Playground-Jugueteria</title>
 </head>
+
 <body>
     <!--Cabecera del sitio-->
     <header>
@@ -43,34 +44,45 @@
     </main>
     <!--Menú-->
     <nav class="main-navbar">
+        
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Marcas</a></li>
+            <li><a href="#marcas">Marcas</a></li>
             <li><a href="#">Edades</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
+
+
+
     <!--Slide seccion-->
-    <section>
-        <div class="slide-container">
-            <div class="slider">
-                <ul>
-                    <li>
-      <img src="http://dominicushoeve.com/wp-content/uploads/ktz/latest-high-resolution-wallpaper-1920x1080-70558-pictures-high-resolution-wallpaper-30whtvl34j4r12m8b0c1sa.jpg" alt="">
-     </li>
-                    <li>
-      <img src="http://youghaltennisclub.ie/wp-content/uploads/2014/06/Tennis-Wallpaper-High-Definition-700x300.jpg" alt="">
-    </li>
-                    <li>
-      <img src="http://welltechnically.com/wp-content/uploads/2013/08/android-wallpapers-700x300.jpg" alt="">
-    </li>
-                    <li>
-      <img src="http://welltechnically.com/wp-content/uploads/2013/09/android-widescreen-wallpaper-14165-hd-wallpapers-700x300.jpg" alt="">
-    </li>
-                </ul>
-            </div>
+   
+    <div class="carrousel">
+        <div class="slider">
+            <button type="button" class="boton_izquierdo">
+                <i class="fas fa-angle-left"></i>
         </div>
-    </section>
+        <div class="grande">
+            <img src="images/carrousel/slide1.jpeg" alt="Imagen 1" class="img">
+            <img src="images/carrousel/slide2.jpeg" alt="Imagen 2" class="img">
+            <img src="images/carrousel/slide3.jpeg" alt="Imagen 3" class="img">
+        </div>
+        <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+        </ul>
+        <div class="slider">
+            <button type="button" class="boton_derecho">
+                <i class="fas fa-angle-right"></i>
+        </div>
+    </div>
+    
+    
+
+
+
+
     <div class="info-destacados">
         <h3>
             PRODUCTOS DESTACADOS
@@ -78,15 +90,48 @@
     </div>
     <!--Productos Destacados-->
     <section class="destacados">
-        <div class="destacados-box1"></div>
-        <div class="destacados-box2"></div>
+        <div class="destacados-box1">
+            <img src="images/destacados/barbie1.jpeg" alt="Imagen barbie">
+            <img src="images/destacados/lego1.jpeg" alt="Imagen lego">
+            <img src="images/destacados/toystory1.jpeg" alt="Imagen toy story">
+            <img src="images/destacados/spider.jpeg" alt="Imagen lego">
+            <img src="images/destacados/frozen.jpeg" alt="Imagen lego">
+        </div>
+        <div class="destacados-box2">
+            
+        </div>
     </section>
+
     <!--Nuestras Marcas-->
-    <section class="nuestras-marcas">
-        <div class="nuestras-marcas-box"></div>
+    <section id="marcas">
+        <div class="nuestras-marcas-box">
+            <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+                <i class="fas fa-angle-left"></i>
+            <div class="carousel">
+                <div class="marcas">
+                    <a href="#"><img src="images/destacados/marca-barbie.png" alt=""></a>
+                </div>
+                <div class="marcas">
+                    <a href="#"><img src="images/destacados/marca-mickymouse.png" alt=""></a>
+                </div>
+                <div class="marcas">
+                    <a href="#"><img src="images/destacados/marca-hotWheels.png" alt=""></a>
+                </div>
+                <div class="marcas">
+                    <a href="#"><img src="images/destacados/marca-disney.png" alt=""></a>
+                </div>
+                <div class="marcas">
+                    <a href="#"><img src="images/destacados/marca-frozen.png" alt=""></a>
+                </div>
+            </div>
+            <button role="button" id="flecha-derecha" class="flecha-derecha">
+                <i class="fas fa-angle-right"></i>
+            </button>
+        </div>
     </section>
+
     <!--Footer-->
-    <footer>
+    <footer id="contacto">
         <div class="footer-box">
             <div class="contacto">
             <h3>CONTACTENOS</h3>
@@ -112,7 +157,9 @@
                     </ul>
             </div>
             <div>
-                <div class="mapa-box"></div>
+                <div class="mapa-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d255858.18448484907!2d-74.11976343055036!3d40.697663748391925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2scl!4v1643680349834!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </footer>
