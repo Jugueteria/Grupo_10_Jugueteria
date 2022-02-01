@@ -37,4 +37,8 @@ Link de WireFrame
 
 https://www.figma.com/file/xXkIA722N1vahUo4jJ0FEQ/Jugueteria
 
+Link de Trello
+
+https://trello.com/b/DKAu7O3N/proyecto-integrador
+
  
