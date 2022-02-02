@@ -165,7 +165,6 @@ body{
 .container-detalle input {
     width: 10%;
     height: 20px;
-    background: #FFC2EE;
     color: #2a2d43;  
 }
 
@@ -176,9 +175,11 @@ body{
     text-decoration: none;
     list-style: none;
     color: #9b57db;
-    
 }
 
+.orden-metodos {
+    display: flex;
+}
 
 
 
