@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
   },
   "name": "grupo_10_jugueteria",
   "version": "1.0.0",
