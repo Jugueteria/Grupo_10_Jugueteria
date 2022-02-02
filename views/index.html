@@ -28,7 +28,9 @@
     <!--Logo, buscador y carrito de compras-->
     <main class="container-main">
         <div class="logo">
-            <img src="images/Design/logo.png"  alt="Logo Playground Jugueteria"></img>
+            <img src="images/Design/logo.png"  alt="Logo Playground Jugueteria">
+            <a href="#home"></a>
+        </img>
         </div>
         <div class="buscar-wrapper">
             <input class="buscador-box" type="search" text="Search" placeholder="Buscar producto">
@@ -57,27 +59,31 @@
 
     <!--Slide seccion-->
    
-    <div class="carrousel">
-        <div class="slider">
-            <button type="button" class="boton_izquierdo">
-                <i class="fas fa-angle-left"></i>
+    <div id="window">
+        <div id="slide-container">
+            <div class="slides">
+          
+    <!-- First image --> 
+                <img class="slide" src="images/barbie-slide1.jpeg"> 
+            </div>
+        
+    <!-- Second image --> 
+            <div class="slides">
+                <img class="slide" src="images/spiderman-slide2.jpeg"> 
+            </div>
+        
+     <!-- Third image --> 
+        <div class="slides">
+                <img class="slide" src="images/frozen-slide3.jpeg"> 
+            </div>
+            <a id="previous" class="arrow-left">&#10094</a>
+            <a id="next" class="arrow">&#10095</a>
+            <div id="text-bar">
+                <p id="place"></p>
+            </div>
         </div>
-        <div class="grande">
-            <img src="images/carrousel/slide1.jpeg" alt="Imagen 1" class="img">
-            <img src="images/carrousel/slide2.jpeg" alt="Imagen 2" class="img">
-            <img src="images/carrousel/slide3.jpeg" alt="Imagen 3" class="img">
-        </div>
-        <ul class="puntos">
-            <li class="punto activo"></li>
-            <li class="punto"></li>
-            <li class="punto"></li>
-        </ul>
-        <div class="slider">
-            <button type="button" class="boton_derecho">
-                <i class="fas fa-angle-right"></i>
-        </div>
+        <div id="dotsContainer"></div>
     </div>
-    
     
 
 
@@ -91,11 +97,13 @@
     <!--Productos Destacados-->
     <section class="destacados">
         <div class="destacados-box1">
-            <img src="images/destacados/barbie1.jpeg" alt="Imagen barbie">
-            <img src="images/destacados/lego1.jpeg" alt="Imagen lego">
-            <img src="images/destacados/toystory1.jpeg" alt="Imagen toy story">
-            <img src="images/destacados/spider.jpeg" alt="Imagen lego">
-            <img src="images/destacados/frozen.jpeg" alt="Imagen lego">
+            <img src="images/destacado-frozen.jpeg" alt="Imagen frozen">
+            <img src="images/destacado-toyStory.jpeg" alt="Imagen toyStory">
+            <img src="images/destacado-spiderman.jpeg" alt="Imagen spiderman">
+            <img src="images/destacado-superman.jpeg" alt="Imagen superman">
+            <img src="images/destacado-starwars.jpeg" alt="Imagen star">
+            <img src="images/destacado-mariobros.jpeg" alt="Imagen mariobros">
+            
         </div>
         <div class="destacados-box2">
             
@@ -104,30 +112,43 @@
 
     <!--Nuestras Marcas-->
     <section id="marcas">
-        <div class="nuestras-marcas-box">
-            <button role="button" id="flecha-izquierda" class="flecha-izquierda">
-                <i class="fas fa-angle-left"></i>
-            <div class="carousel">
-                <div class="marcas">
-                    <a href="#"><img src="images/destacados/marca-barbie.png" alt=""></a>
-                </div>
-                <div class="marcas">
-                    <a href="#"><img src="images/destacados/marca-mickymouse.png" alt=""></a>
-                </div>
-                <div class="marcas">
-                    <a href="#"><img src="images/destacados/marca-hotWheels.png" alt=""></a>
-                </div>
-                <div class="marcas">
-                    <a href="#"><img src="images/destacados/marca-disney.png" alt=""></a>
-                </div>
-                <div class="marcas">
-                    <a href="#"><img src="images/destacados/marca-frozen.png" alt=""></a>
-                </div>
+        <h3>
+            NUESTRAS MARCAS
+        </h3>
+        <div  class="slider">
+            <ul>
+            
+            <li>
+                <img class="images_slider" src="/images/fisher-price-png.png" alt="">
+                <img class="images_slider" src="/images/Lego-logo.jpg" alt="">
+                <img class="images_slider" src="/images/play-doh-715x400.jpg" alt="">
+            </li>
+            
+            
+            <li>
+                <img class="images_slider" src="/images/Hot-Wheels-Logo.png" alt="">
+                <img class="images_slider" src="/images/Hasbro-Logo.png" alt="">
+                <img class="images_slider" src="/images/2560px-Toys__R__Us_logo.svg.png" alt="">
+            </li>
+            
+            
+            <li>
+                <img class="images_slider" src="/images/Mattel-Logo-1969.png" alt="">
+                <img class="images_slider" src="/images/barbie.png" alt="">
+                <img class="images_slider" src="/images/nenuco-715x400.jpg" alt="">
+            </li>
+            
+            
+            <li>
+                <img class="images_slider" src="/images/Bizak_logo.svg.png" alt="">
+                <img class="images_slider" src="/images/mark.png" alt="">
+                <img class="images_slider" src="/images/a.png" alt="">
+            </li>
+            
+            </ul>
+            
             </div>
-            <button role="button" id="flecha-derecha" class="flecha-derecha">
-                <i class="fas fa-angle-right"></i>
-            </button>
-        </div>
+
     </section>
 
     <!--Footer-->

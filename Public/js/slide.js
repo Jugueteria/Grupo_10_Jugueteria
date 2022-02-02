@@ -1,34 +1,53 @@
-'use strict'
+var index = 0; 
+var locations = ["Amsterdam, The Netherlands", "Sydney, Australia", "San Francisco, California"]
 
-const grande    = document.querySelector('.grande')
-const punto     = document.querySelectorAll('.punto')
+var slides = document.getElementsByClassName("slides"); 
+var nextArrow = document.getElementById("next");
 
-// Cuando CLICK en punto
-    // Saber la posición de ese punto
-    // Aplicar un transform translateX al grande
-    // QUITAR la clase activo de TODOS puntos
-    // AÑADIR la clase activo al punto que hemos hecho CLICK
+var previousArrow = document.getElementById("previous");
 
-// Recorrer TODOS los punto
-punto.forEach( ( cadaPunto , i )=> {
-    // Asignamos un CLICK a cadaPunto
-    punto[i].addEventListener('click',()=>{
+var place = document.getElementById("place");
 
-        // Guardar la posición de ese PUNTO
-        let posicion  = i
-        // Calculando el espacio que debe DESPLAZARSE el GRANDE
-        let operacion = posicion * -50
+var dotsContainer = document.getElementById("dotsContainer");
 
-        // MOVEMOS el grand
-        grande.style.transform = `translateX(${ operacion }%)`
+var dotArray = document.getElementsByClassName("dots"); 
 
-        // Recorremos TODOS los punto
-        punto.forEach( ( cadaPunto , i )=>{
-            // Quitamos la clase ACTIVO a TODOS los punto
-            punto[i].classList.remove('activo')
-        })
-        // Añadir la clase activo en el punto que hemos hecho CLICK
-        punto[i].classList.add('activo')
+createDots(); 
+showSlides(index); 
 
-    })
-})
+function createDots() {
+	for (i=0; i<slides.length; i++) {
+	var dot = document.createElement("span");
+	dot.className = "dots"; 
+	dotsContainer.appendChild(dot); 
+	}
+}
+
+function showSlides(x) {
+	if (x > slides.length-1) {
+		index = 0; 
+	}
+	if (x < 0) {
+		index = slides.length-1; 
+	}
+	for (i=0; i < slides.length; i++) {
+		slides[i].style.display = "none"; 
+		dotArray[i].className = "dots";  
+	}
+	
+	slides[index].style.display = "block";
+	dotArray[index].className += " activeDot"; 
+	place.innerHTML = locations[index]; 
+}
+
+nextArrow.onclick = function() {
+	index += 1; 
+	showSlides(index); 
+} 
+
+previousArrow.onclick = function() {
+	index -= 1; 
+	showSlides(index); 
+} 
+
+dotArray[0].onclick = showSlides(1); 
