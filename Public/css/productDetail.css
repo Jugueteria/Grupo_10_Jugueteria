@@ -175,6 +175,7 @@ body{
     text-decoration: none;
     list-style: none;
     color: #9b57db;
+    font-size: 50px;
 }
 
 .orden-metodos {
@@ -184,24 +185,33 @@ body{
 
 
 /***INICIO productos Destacados********/
+/***INICIO productos Destacados********/
 .destacados {
     display: flex;
     align-items: center;
-}
-.destacados .destacados-box1 {
-    background-color: #e1e1e1;
-    width:50%;
-    height: 200px;
-    border-radius: 10px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
     
 }
-.destacados .destacados-box2 {
-    background-color: #e1e1e1;
-    width:50%;
+.destacados .destacados-box1 {
+    background-color: white;
+    width:100%;
     height: 200px;
-    margin: auto;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    
 }
+.destacados .destacados-box1 img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 10px;
+    margin-left: 30px;
+
+}
+
 
 .slide-container h1{
     text-align: center;
@@ -213,11 +223,61 @@ body{
 /***FIN productos Destacados********/
 
 /***INICIO nuestras marcas********/
-.nuestras-marcas-box {
-    width: 100%;
-    height: 180px;
-    background-color: #e1e1e1;
-}
+#marcas h3{
+    text-align: center;
+     margin-top: 90px;
+ }
+ .slider{
+     background-color:#ccc9ce;
+     width: auto;
+     height: 140px;
+     margin: auto;
+     margin-top: 40px;
+     margin-left: 5px;
+     overflow: hidden;
+     border-radius: 5px;
+ }
+ 
+ @keyframes cambio {
+     0% {margin-left: 0;}
+     20% {margin-left: 0;}
+ 
+     25% {margin-left: -100%;}
+     45% {margin-left: -100%;}
+ 
+     50% {margin-left: -200%;}
+     70% {margin-left: -200%;}
+ 
+ }
+ 
+ .slider ul{
+     display:flex;
+     padding: 0;
+     width: 300%;
+     animation:  cambio 20s infinite alternate;
+    
+ }
+ 
+ .slider li{
+     list-style: none;
+     width: 100%;
+     
+ }
+ 
+ .images_slider{
+ 
+     width: 200px ;
+     height: 100px;
+     object-fit: contain;
+     margin-top: 10px;
+ }
+ 
+ 
+ .slider img{
+ width: 30%;
+ 
+ }
+ 
 
 /***INICIO Footer********/
 .footer-box {

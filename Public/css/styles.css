@@ -40,6 +40,9 @@ body{
     border-radius: 5px;
     text-align: center;
 }
+.btn-registrarse{
+    margin-top:5px;
+}
 .btn-ingresar {
     background-color:#CDABED;
     color: black;
@@ -270,6 +273,8 @@ body{
     width:100%;
     height: 200px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
     
 }
 .destacados .destacados-box1 img {
