@@ -1,0 +1,251 @@
+*{
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Delius Unicase';
+    background-color: #ffffff;
+}
+/***INICIO Barra cabecera********/
+.container-header{
+    background-color:#CDABED;
+    width: auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-between
+}
+.container-header .info {
+    color: white;
+    font-size: 12px; 
+    margin: 0px 30px;
+    padding: 5px;
+    justify-content: flex-start;
+}
+.container-header
+.button-header {
+    display: inline-flex;
+    margin-top: -5px;
+}
+.btn-ingresar,
+.btn-registrarse {
+    background-color:rgb(14, 108, 239);
+    color: white;
+    font-family: 'Delius Unicase';
+    font-size: 12px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn-ingresar {
+    background-color:#CDABED;
+    color: black;
+    border: solid rgb(232, 231, 231);
+}
+/***FIN Barra cabecera********/
+
+/***INICIO Logo********/
+.container-main {
+    display: flex; 
+    justify-content: space-between;
+}
+.logo {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+/***FINAL Logo********/
+
+/***INICIO Formulario Ingreso********/
+
+form{
+    width: 450px;
+    height:760px ;
+    background-color:#2A2D43;
+    margin: auto;  
+    margin-bottom: 60px;
+    border-radius: 20px;
+    
+}
+
+
+.ingreso{
+    display: flex;
+    background-color:#9198A9;
+    width: 870px;
+    height:700px ;
+    margin: auto;
+    margin-bottom: 100px;
+   
+}
+
+
+input{
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+}
+
+label{
+    font-family: 'Delius Unicase', cursive;
+    color:#C5C3C3;
+    font-size: small;
+}
+
+a{
+    text-decoration: none;
+    color: #C5C3C3;
+    font-family: 'Delius Unicase', cursive;
+    font-size: small;
+}
+
+.boton{
+    font-family: 'Delius Unicase', cursive;
+    margin-top: 60px;
+    font-weight: bold;
+    font-size: small;
+    height: 40px;
+}
+
+.formulario{
+padding-top: 20px;
+margin-top: 30px;
+margin-left: 30px;
+}
+
+   .text{
+       border: none;
+       background-color: #2A2D43;
+       border-bottom: 1px solid gray;
+   }
+
+   h2{
+    color:#C5C3C3;
+    text-align: center;
+    margin-bottom: 30px;
+   }
+
+   
+
+/***FINAL Formulario Ingreso********/
+
+
+/***Inicio slider********/
+
+.slider{
+    background-color:#ccc9ce;
+    width: auto;
+    height: 140px;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+}
+
+.slider ul{
+    display:flex;
+    padding: 0;
+    width: 300%;
+    animation:  cambio 20s infinite alternate;
+   
+}
+
+.slider li{
+    list-style: none;
+    width: 100%;
+    
+}
+
+.images_slider{
+
+    width: 200px ;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+
+.slider img{
+width: 30%;
+
+}
+
+
+/***Fin slider********/
+
+/***INICIO Footer********/
+.footer-box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+    background-color: #CDABED;
+    margin-top: 40px;
+}
+.footer-box h3 {
+    text-align: start;
+    margin: 20px;
+    margin-left: 20px;
+}
+.footer-box .contacto ul>li{
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.footer-box .informacion ul>li{
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.footer-box .informacion a {
+    text-decoration: none;
+    color: white;
+}
+.footer-box .informacion li>a:hover {
+    color: black;
+    background-color: #ffffff;
+}
+.footer-box .pagos ul>li{
+    flex-direction: row;
+    justify-content:space-around;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+.footer-box .pagos i{
+    display: flex;
+    font-size: 32px;
+}
+.footer-box .mapa-box {
+    width: 360px;
+    height:250px;
+    border: solid 1px #393939;
+}
+.footer-box .mapa-box iframe {
+    width: 360px;
+    height:250px;
+    margin: 0;
+}
+/***FIN Footer********/
+
