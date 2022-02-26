@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/productCart.css">
+
+    <title>Playground-Jugueteria</title>
+</head>
+<body>
+    <!--Cabecera del sitio-->
+    
+    <%- include('../partials/header') %>
+
+    <!--Logo, buscador y carrito de compras-->
+    <main class="container-main">
+            <a href="/">
+                <img src="/images/Design/Logo.png"  alt="Logo Playground Jugueteria"></img>
+            </a>
+    
+        <div class="buscar-wrapper">
+            <input class="buscador-box" type="search" text="Search" placeholder="Buscar producto">
+            <button type="button" class="fas fa-search" id="lupa"></button>
+        </div>
+        <div class="container-carrito">
+            <div class="carro">
+                <a href="/productDetail">
+                    <i class="fas fa-shopping-cart" id="icono-carrito">
+                        <div class="box-carrito"></div>
+                    </i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!--Menú-->
+    <nav class="main-navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Marcas</a></li>
+            <li><a href="#">Edades</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</div>
+<!--Boton de mi pedido-->
+<div>
+    <button type="button" name="MI PEDIDO" class="MI_PEDIDO">MI PEDIDO</button>
+    </div>
+</div>
+    <!--ProductoComprado-->
+
+    <main class="ProductoComprado">
+        <div class="ProductoComprado-foto">
+            <img src="/images/muneca.jpg"  alt="images/FotoProducto1.jpg"></img></div>
+
+         <div class="ProductoComprado-descripcion">
+
+            <p>NUEVO/148 VENDIDOS
+             <br><br>
+             
+             TREN DE MADERA</p>
+             
+                <ol>
+                - Incluye 48 piezas
+                - Trae: 23 Vías, 1 Locomotora, 2 Vagones, 10 Figuras de personas, 1 Auto, 6 Árboles, 4 Señalizaciones y 2 Edificios
+                - Incluye Lámina escenario
+                - Favorece la creatividad
+                - Edad Recomendada +3 años
+                - Marca Cubeta Toys
+            </ol></p>         
+            
+         <P>Devolución gratis
+
+            Tenés 30 días desde que lo recibís.</P>
+
+         </div>
+            
+    
+    <div></div>
+    <div></div>
+    </main>
+    <!--Finalizar Compra-->
+    <main class="container-finalizar-compra">
+        <div class="finalizar-compra-box">
+            <div class="finalizar">
+                <h3> ARTíCULO</h3>
+               
+                <ul>
+                    <li>TREN DE MADERA-Art #3845</li>
+                    <li>Llega gratis hoy
+                        Solo en CABA y zonas de GBA
+                        
+                        Comprando dentro de las próximas 2 h 39 min</li>
+                    </ul>
+                </div>
+
+            <div class="cantidad">
+                <h3>CANTIDAD</h3>
+                    
+                    <label for="cantidad"></label>
+                    <input placeholder="0" type="number" id="cantidad" name="cantidad"
+       min="1" max="100">
+                
+                </div>
+            <div class="subtotal">
+        
+                <h3>TOTAL A ABONAR</h3>
+                    <ul>
+                        <li> Producto: $1.000</li>
+                        
+                        <li>Gastos de envío: $0,00</li>
+                        
+                        <li>Total: $1.000</li>
+                    </ul>
+            </div>
+        </div>
+    </main>
+
+    </section>
+    <div></div>
+
+<section class="botones_finalizar">
+    <div>
+        <button type="button" name="MÉTODO DE ENVÍO" class="MÉTODO_DE_ENVÍO">1- MÉTODO DE ENVÍO</button>
+        </div>
+    </div>
+    <div>
+        <button type="button" name="MÉTODO DE PAGO" class="MÉTODO_DE_PAGO">2- MÉTODO DE PAGO</button>
+        </div>
+    </div>
+    <div>
+        <button type="button" name="FINALIZAR COMPRA" class="FINALIZAR_COMPRA_BUTTON">3- FINALIZAR COMPRA</button>
+        </div>
+    </div>
+</section>
+
+    
+   
+     <!--Footer-->
+
+     <%- include('../partials/footer') %>
+
+</body>
+</html>
