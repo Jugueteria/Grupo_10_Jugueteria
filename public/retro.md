@@ -11,9 +11,18 @@ Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 1; pa
 
 
 Retrospectiva Sprint 2
-Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 1; para ello utilizaremos la retrospectiva de estrella de mar, el cual tiene los siguientes elementos:
+Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 2; para ello utilizaremos la retrospectiva de estrella de mar, el cual tiene los siguientes elementos:
 1.  Comenzar hacer: Implementar más herramientas para los estilos de cada página, retroalimentar el tema del responsive para las páginas y efectuar una mejora visual de cada vista del proyecto.
 2.  Hacer más: Practicar y utilizar más estilos para las vistas, organizar el código que se repite en cada vista para optimizar el trabajo y revisar el tema del versionado cuando se requiere unir nuevos cambios.
 3.  Continuar haciendo: Reuniones de estudio para el avance del proyecto, buscar la interacción de todo el equipo; apoyar el trabajo entre todos y documentar el avance de cada tarea del proyecto.
 4.  Hacer menos: Postergar algunas tareas y dejarlas para el final, es mejor ir realizando avances poco a poco.
 5.  Dejar de hacer: Extender el tiempo para validar el avance de cada integrante, es mejor ir mirando los avances de todos en cada reunión para poder realizar más aportes al proyecto e ir corrigiendo las dificultades a tiempo. 
+
+
+Retrospectiva Sprint 3
+Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 3; para ello utilizaremos la retrospectiva de estrella de mar, el cual tiene los siguientes elementos:
+1.  Comenzar hacer: Identificar el proceso de ruteo y controladores de forma detallada junto con la elaboración del CRUD, para definir una estructura de trabajo más organizada.
+2.  Hacer más: Practicar mas el tema de las funciones para asimilar la lógica y uso de cada herramienta, necesarios para el proyecto.
+3.  Continuar haciendo: Retroalimentaciones de temas anteriores para reforzar las temáticas y consolidar el aprendizaje.
+4.  Hacer menos: Centrar la atención en un solo tema y no fluir con la continuidad del proyecto. 
+5.  Dejar de hacer: Direccionar tiempo en una sola cosa y dejar de avanzar en otras funcionalidades del proyecto.
