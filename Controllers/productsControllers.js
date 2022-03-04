@@ -14,7 +14,12 @@ const productsControllers = {
 
 
     'productDetail': function(req, res) {
-        res.render('products/productDetail');
+      let id = req.params.id
+        let product = products.find(product => product.id == id)
+        res.render('products/productDetail', {
+            product
+           
+        })
       },
 
 'formCreate': function(req, res) {
@@ -25,13 +30,6 @@ const productsControllers = {
     res.render('products/products', {products});
   },
 
-//   'detail': (req, res) => {
-//     let id = req.params.id
-//     let product = products.find(product => product.id == id)
-//     res.render('productDetail', {
-//         products,
-       
-//     })
 
   }
   
