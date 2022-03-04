@@ -34,12 +34,42 @@ const productsControllers = {
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
 			...req.body,
-			image: 'default.png'
+			imagen: 'default.png',
 		};
 		products.push(newProduct)
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/products');
 	},
+
+  'edit': function(req, res) {
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+		res.render('products/productsEdit', {productToEdit})
+	},
+
+	'update': function(req, res){
+		let id = req.params.id;
+		let productToEdit = products.find(product => product.id == id)
+
+		productToEdit = {
+			id: productToEdit.id,
+			...req.body,
+			imagen: 'default.png',
+		};
+		
+		let newProducts = products.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
+			}
+			return product;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/');
+	}
+
+
+
 
   }
   

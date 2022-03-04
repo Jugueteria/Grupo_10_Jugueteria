@@ -17,4 +17,9 @@ router.get('/create', productsControllers.formCreate);
 router.post('/', productsControllers.lista); 
 
 
+//Editar un producto
+
+router.get('/edit/:id', productsControllers.edit); 
+router.patch('/edit/:id', productsControllers.update);
+
 module.exports = router;
