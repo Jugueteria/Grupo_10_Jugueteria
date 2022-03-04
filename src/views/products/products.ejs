@@ -49,17 +49,18 @@
     <h1 class="titulo">MI LISTA DE PRODUCTOS</h1>
     <br>
     <br>
-<div class="">
+    <input type="button" onclick="location.href='/products/create'" value="Crear nuevo producto" >
+    
+<div class="tarjetas">
+   
     <% products.forEach(function(products) { %>
         <h4><%= products.titulo %></h4>
-      <p class="">
-        <%= products.descripcionCorta %> 
-      </p>
+      <p><%= products.descripcionCorta %> </p>
       <p>U$S <%= products.precio %></p>
       <br>
        <%   }) %>
 
-
+   
 </div>
     
    

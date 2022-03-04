@@ -14,10 +14,7 @@ router.get('/', productsControllers.products);
 
 //Creación de productos
 router.get('/create', productsControllers.formCreate);
-
-
-
-
+router.post('/', productsControllers.lista); 
 
 
 module.exports = router;
