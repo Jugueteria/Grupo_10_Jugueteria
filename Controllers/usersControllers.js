@@ -17,6 +17,7 @@ const usersControllers = {
         res.render('users/form_admin');
       },
 
+      
 
   };
   

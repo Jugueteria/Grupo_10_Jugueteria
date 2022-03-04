@@ -235,7 +235,12 @@ body{
 .editar{
     
     font-size: 15px;
-   
+}
+
+.eliminar{
+    
+    font-size: 15px;
+    width: 100px;
 }
 /***FIN productos Destacados********/
 

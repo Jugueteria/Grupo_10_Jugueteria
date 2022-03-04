@@ -355,19 +355,5 @@
   "precio": "100",
   "descripcionCorta": "Muñeca con cocina",
   "imagen": "default.png"
- },
- {
-  "id": 52,
-  "titulo": "Carro de bomberos",
-  "precio": "500",
-  "descripcionCorta": "No incluye pilas",
-  "imagen": "default.png"
- },
- {
-  "id": 53,
-  "titulo": "Mono Peluche",
-  "precio": "2000",
-  "descripcionCorta": "Mono con banana",
-  "imagen": "default.png"
  }
 ]

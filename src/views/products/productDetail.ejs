@@ -61,7 +61,11 @@
                     
                     <p>$<%= product.precio %></p>
                 
-                    <input class="editar" onclick="location.href='/products/edit/<%= product.id %>'" type="button" value="Editar" >
+                  
+                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                        <input class="editar" onclick="location.href='/products/edit/<%= product.id %>'" type="button" value="Editar" >
+                        <button type="submit" class="eliminar">Eliminar</button>
+                    </form>
             
                     </div>
              </div>
