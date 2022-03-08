@@ -49,21 +49,47 @@
     <h1 class="titulo">MI LISTA DE PRODUCTOS</h1>
     <br>
     <br>
-    <input type="button" onclick="location.href='/products/create'" value="Crear nuevo producto" >
-    
-<div class="tarjetas">
-   
-    <% products.forEach(function(products) { %>
-        <h4><%= products.titulo %></h4>
-      <p><%= products.descripcionCorta %> </p>
-      <p>U$S <%= products.precio %></p>
-      <br>
-       <%   }) %>
+    <input class="crear" type="button" onclick="location.href='/products/create'" value="Crear nuevo producto" >
 
-   
-</div>
+
+
+    <div class="contenedor_principal">
+
+    
+        <section class="menu">
+          <% products.forEach(function(products) { %>
+            <a href="/products/detail/<%= products.id %>">
+  
+              <article>
+                <div class="imgen-contenedor">
+                  <img src="/images/<%= products.imagen %>" alt="">
+                </div>
+                <ul>
+                  <li>
+                      Nombre: <%= products.titulo %>
+                  </li>
+                  <li>
+                      Descripcion: <%= products.descripcionCorta %> 
+                  </li>
+                  <li>
+                      Precio: $<%= products.precio %>
+                  </li>
+                </ul>
+              </article>
+            </a>
+          <% }) %> 
+    
+        </section>
+      </div>
+  
     
    
+
+
+
+
+
+
       <!--Footer-->
       <%- include('../partials/footer') %>
       

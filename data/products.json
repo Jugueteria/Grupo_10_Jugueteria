@@ -151,209 +151,216 @@
   "titulo": "Muñeco de spiderman",
   "descripcionCorta": "diam cras pellentesque volutpat dui maecenas tristique est et tempus semper",
   "precio": 4401.75,
-  "imagen": "product_22.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 23,
   "titulo": "Lego de frozen",
   "descripcionCorta": "a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel",
   "precio": 64300.85,
-  "imagen": "product_23.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 24,
   "titulo": "Juego de Mario Bros",
   "descripcionCorta": "amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis",
   "precio": 115972.75,
-  "imagen": "product_24.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 25,
   "titulo": "Muñeca con asiento de auto",
   "descripcionCorta": "sapien arcu sed augue aliquam erat volutpat in congue etiam justo",
   "precio": 47954.3,
-  "imagen": "product_25.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 26,
   "titulo": "Muñeco de spiderman",
   "descripcionCorta": "sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero",
   "precio": 85690.15,
-  "imagen": "product_26.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 27,
   "titulo": "Lego de frozen",
   "descripcionCorta": "posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam",
   "precio": 116937.76,
-  "imagen": "product_27.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 28,
   "titulo": "Juego de Mario Bros",
   "descripcionCorta": "egestas metus aenean fermentum donec ut mauris eget massa tempor convallis",
   "precio": 94440.17,
-  "imagen": "product_28.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 29,
   "titulo": "Muñeca con asiento de auto",
   "descripcionCorta": "in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam",
   "precio": 43779.24,
-  "imagen": "product_29.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 30,
   "titulo": "Muñeco de spiderman",
   "descripcionCorta": "a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id",
   "precio": 12336.44,
-  "imagen": "product_30.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 31,
   "titulo": "Lego de frozen",
   "descripcionCorta": "ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus",
   "precio": 81887.58,
-  "imagen": "product_31.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 32,
   "titulo": "Juego de Mario Bros",
   "descripcionCorta": "in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit",
   "precio": 104191.65,
-  "imagen": "product_32.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 33,
   "titulo": "Muñeca con asiento de auto",
   "descripcionCorta": "faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo",
   "precio": 25880.73,
-  "imagen": "product_33.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 34,
   "titulo": "Muñeco de spiderman",
   "descripcionCorta": "ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus",
   "precio": 52637.26,
-  "imagen": "product_34.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 35,
   "titulo": "Lego de frozen",
   "descripcionCorta": "viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est",
   "precio": 42288.55,
-  "imagen": "product_35.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 36,
   "titulo": "Juego de Mario Bros",
   "descripcionCorta": "viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est",
   "precio": 81917.52,
-  "imagen": "product_36.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 37,
   "titulo": "Muñeca con asiento de auto",
   "descripcionCorta": "neque libero convallis eget eleifend luctus ultricies eu nibh quisque",
   "precio": 35898.4,
-  "imagen": "product_37.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 38,
   "titulo": "Muñeco de spiderman",
   "descripcionCorta": "eget tempus vel pede morbi porttitor lorem id ligula suspendisse",
   "precio": 118662,
-  "imagen": "product_38.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 39,
   "titulo": "Lego de frozen",
   "descripcionCorta": "dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at",
   "precio": 73695.61,
-  "imagen": "product_39.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 40,
   "titulo": "Juego de Mario Bros",
   "descripcionCorta": "tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam",
   "precio": 61385.39,
-  "imagen": "product_40.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 41,
   "titulo": "Muñeca con asiento de auto",
   "descripcionCorta": "tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget",
   "precio": 93995.25,
-  "imagen": "product_41.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 42,
   "titulo": "Muñeco de spiderman",
   "descripcionCorta": "nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget",
   "precio": 39408.7,
-  "imagen": "product_42.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 43,
   "titulo": "Lego de frozen",
   "descripcionCorta": "suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla",
   "precio": 82757.7,
-  "imagen": "product_43.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 44,
   "titulo": "Juego de Mario Bros",
   "descripcionCorta": "blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse",
   "precio": 13729.81,
-  "imagen": "product_44.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 45,
   "titulo": "Muñeca con asiento de auto",
   "descripcionCorta": "odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis",
   "precio": 16333.8,
-  "imagen": "product_45.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 46,
   "titulo": "Muñeco de spiderman",
   "descripcionCorta": "nibh in lectus pellentesque at nulla suspendisse potenti cras in",
   "precio": 91412.05,
-  "imagen": "product_46.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 47,
   "titulo": "Lego de frozen",
   "descripcionCorta": "cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis",
   "precio": 51782.01,
-  "imagen": "product_47.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 48,
   "titulo": "Juego de Mario Bros",
   "descripcionCorta": "in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer",
   "precio": 66426.85,
-  "imagen": "product_48.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 49,
   "titulo": "Muñeca con asiento de auto",
   "descripcionCorta": "faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae",
   "precio": 22491.9,
-  "imagen": "product_49.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 50,
   "titulo": "Muñeco de spiderman",
   "descripcionCorta": "sapien arcu sed augue aliquam erat volutpat in congue etiam",
   "precio": 18326.51,
-  "imagen": "product_50.jpg"
+  "imagen": "default.png"
  },
  {
   "id": 51,
   "titulo": "Pepa Pig",
   "precio": "100",
   "descripcionCorta": "Muñeca con cocina",
+  "imagen": "default.png"
+ },
+ {
+  "id": 52,
+  "titulo": "Mono Peluche",
+  "precio": "900",
+  "descripcionCorta": "con artefacto",
   "imagen": "default.png"
  }
 ]
