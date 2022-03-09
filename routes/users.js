@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const mainController = require('../Controllers/mainControllers');
+const usersControllers = require('../Controllers/usersControllers');
 
 
-router.get('/login', mainController.login);
-router.get('/register', mainController.register);
-router.get('/form_admin', mainController.form_admin);
+router.get('/login', usersControllers.login);
+router.get('/register', usersControllers.register);
+router.get('/form_admin', usersControllers.form_admin);
 
 
 module.exports = router;
