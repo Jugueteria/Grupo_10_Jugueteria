@@ -1,0 +1,74 @@
+*{
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.Formulario{
+background-color: #CDABED;
+height: 430px;
+width: 700px;
+border-radius: 25px;
+padding: 8px;
+margin-top: 60px;
+}
+
+.nombre, .precio {
+height: 30px;
+width: 300px;
+border-radius: 10px;
+
+}
+
+.lnombre , .lprecio, .ldescripcion {
+
+color: black;
+
+}
+.formato{
+   
+    display: flex;
+}
+
+.descripcion{
+height: 150px;
+width: 650px;
+border-radius: 10px;
+}
+
+.btnenviar{
+height: 40px;
+width: 80px;
+border-radius: 10px;
+text-align: center;
+margin: auto;
+font-weight: bold;
+
+}
+
+.main-navbar {
+    display:flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+.main-navbar a{
+    text-decoration:  none;
+    color: #222222;
+    display: inline-block;
+    padding: 2px 0;
+    font-size: 13px;
+}
+.main-navbar ul {
+    display:flex;
+}
+.main-navbar li {
+    margin: 0px 5px;
+    margin-left: 30px;
+    list-style: none;
+}
+.main-navbar li>a:hover {
+   color: blue;
+   background-color:#eaeaea; 
+
+}

@@ -27,7 +27,7 @@
         </div>
         <div class="container-carrito">
             <div class="carro">
-                <a href="/products/productDetail">
+                <a href="/products/detail/1">
                     <i class="fas fa-shopping-cart" id="icono-carrito">
                         <div class="box-carrito"></div>
                     </i>
@@ -39,36 +39,34 @@
     <nav class="main-navbar">
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="#">Marcas</a></li>
-            <li><a href="#">Edades</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#marcas">Marcas</a></li>
+            <li><a href="/products">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
     <!--Detalle de Producto seccion-->
     <div class="container-detalle">
         <div class="imagen">
-            <img src="/images/muneca.jpg"  alt="muneca"></img></div>
+            <img class="imagenes" src="/images/<%= product.imagen %>"  alt=""></img>
+        </div>
             <div class="detalle">
-                <h2>Muñeca con asiento de auto</h2>
-                <p>Código: 001</p>
-                <p>Descripción: Muñeca con asiento de auto con accesorios de juguete. 
-                    Incluye sonajero, babero y 2 mamaderas.</p>
-                <p>Medidas: 7cm x 15cm x 14cm</p>
-                <p>Peso: 480 gr</p>
-                <p>Precio: $5.400,00</p>
-                <p>Stock: SI</p>
+                <h2><%= product.titulo %></h2>
+                <br>
+                <p>N° Producto:<%= product.id %></p>
+                <br>
+                <p class="descripcion">Descripción:</p>
+                    <p><%= product.descripcionCorta %></p>
+                <br>
+                <p class="precio">Precio:</p>
+                    
+                    <p>$<%= product.precio %></p>
                 
-                <h4 class="boton agregar"><input type="number" name=numero><input class="#" type="button" value="Agregar"/></h4>
-                <h4 class="boton-guardar">
-                    <input class="botones" type="button" value="Guardar"/>
-                    <div class="metodos-aceptados">
-                        <h4>Métodos aceptados</h4>
-                            <ul class="orden-metodos">
-                                <li><i class="fas fa-money-bill-wave"></i></li>
-                                <li><i class="fab fa-cc-visa"></i></li>
-                                <li><i class="fab fa-cc-mastercard"></i></li>
-                                <li><i class="fab fa-cc-paypal"></i></li>
-                            </ul>
+                  
+                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                        <input class="editar" onclick="location.href='/products/edit/<%= product.id %>'" type="button" value="Editar" >
+                        <button type="submit" class="eliminar">Eliminar</button>
+                    </form>
+            
                     </div>
              </div>
         </div>
@@ -97,9 +95,7 @@
     </section>
     <!--Nuestras Marcas-->
     <section id="marcas">
-        <h3>
-            NUESTRAS MARCAS
-        </h3>
+       
     
 
     </section>

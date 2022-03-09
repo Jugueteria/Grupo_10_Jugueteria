@@ -19,3 +19,18 @@ Finalmente se decide crear el proyecto a través del express generator y realiza
 El compañero Juan Pablo crea un repositorio nuevo para ayudas de cogidos que pueden optimizar el trabajo y el compañero Jonathan sube la información pertinente.
 La compañera María Romo hace un cambio en los colores del logo.
 La compañera Jessica Montilla trae algunas opciones para los cambios de colores y diseños de las nuevas vistas.
+
+
+
+
+Daily semana 3
+
+Durante la reunión de la semana 2 se tomaron los siguientes puntos:
+Subida de avances de las nuevas visas a la rama de cada integrante.
+Verificación de datos para productos y usuarios.
+Generación de archivos JSON para productos y usuarios.
+Implementación de CRUD para productos y adecuación de vistas.
+Actualización del tablero en Trello para asignación de tareas.
+Pruebas de funcionamiento para el CRUD de los productos.
+Generacion de rutas para la edicion y eliminacion de productos.
+Verificacion de rutas anteriores.
