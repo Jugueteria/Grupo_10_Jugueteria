@@ -355,12 +355,5 @@
   "precio": "100",
   "descripcionCorta": "Muñeca con cocina",
   "imagen": "default.png"
- },
- {
-  "id": 52,
-  "titulo": "Mono Peluche",
-  "precio": "900",
-  "descripcionCorta": "con artefacto",
-  "imagen": "default.png"
  }
 ]

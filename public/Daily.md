@@ -25,7 +25,7 @@ La compañera Jessica Montilla trae algunas opciones para los cambios de colores
 
 Daily semana 3
 
-Durante la reunión de la semana 2 se tomaron los siguientes puntos:
+Durante la reunión de la semana 3 se tomaron los siguientes puntos:
 Subida de avances de las nuevas visas a la rama de cada integrante.
 Verificación de datos para productos y usuarios.
 Generación de archivos JSON para productos y usuarios.
@@ -34,3 +34,16 @@ Actualización del tablero en Trello para asignación de tareas.
 Pruebas de funcionamiento para el CRUD de los productos.
 Generacion de rutas para la edicion y eliminacion de productos.
 Verificacion de rutas anteriores.
+
+
+Daily semana 4
+
+Durante la reunión de la semana 34se tomaron los siguientes puntos:
+
+Verificar la estructura de archivos para la entidad de los usuarios(rutas, controladores, vistas ,directorios y colecciones) y anexar lo faltante.
+Iniciar la implementación de las vistas para el registro de usuarios, junto con la subida de imágenes de perfil.
+Generación de la encriptación de contraseñas para usuarios que se registran.
+Creación de CRUD para usuarios.
+Iniciar programación para la funcionalidad de la vista de login, implementando sesiones y cookies.
+Implementar la funcionalidad para recordar datos por sesiones, cuando un usuario se haya logueado.
+Generación de rutas para las diversas vistas según el inicio de sesión por login
