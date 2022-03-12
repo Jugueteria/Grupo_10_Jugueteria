@@ -3,7 +3,7 @@
 <head>
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="stylesheet" href="/stylesheets/products.css">
+    <link rel="stylesheet" href="/stylesheets/users.css">
   
 
 
@@ -47,10 +47,10 @@
         </ul>
     </nav>
 
-    <h1 class="titulo">MI LISTA DE PRODUCTOS</h1>
+    <h1 class="titulo">MI LISTA DE USUARIOS</h1>
     <br>
     <br>
-    <input class="crear" type="button" onclick="location.href='/products/create'" value="Crear nuevo producto" >
+    <input class="crear" type="button" onclick="location.href='/users/create'" value="Crear nuevo usuario" >
 
 
 
@@ -58,22 +58,25 @@
 
     
         <section class="menu">
-          <% products.forEach(function(products) { %>
-            <a href="/products/detail/<%= products.id %>">
+          <% users.forEach(function(users) { %>
+            <a href="/users/detail/<%= users.id %>">
   
               <article>
                 <div class="imgen-contenedor">
-                  <img src="/images/Products/<%= products.imagen %>" alt="">
+                  <img src="/images/Users/<%= users.image %>" alt="">
                 </div>
                 <ul>
                   <li>
-                      Nombre: <%= products.titulo %>
+                      Nombre: <%= users.first_name %>
                   </li>
                   <li>
-                      Descripcion: <%= products.descripcionCorta %> 
+                    Apellido: <%= users.last_name %>
+                </li>
+                  <li>
+                      Email: <%= users.email %> 
                   </li>
                   <li>
-                      Precio: $<%= products.precio %>
+                      Tipo de usuario: $<%= users.category %>
                   </li>
                 </ul>
               </article>
@@ -88,11 +91,3 @@
 
 
 
-
-
-
-      <!--Footer-->
-      <%- include('../partials/footer') %>
-      
-</body>
-</html>

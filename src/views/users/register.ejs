@@ -13,29 +13,31 @@
 
     <main class="container-main">
         <a href="/">
-            <img src="/images/Design/logo.png"  alt="Logo Playground Jugueteria"></img>
+            <img src="/images/Logo/logo.png"  alt="Logo Playground Jugueteria"></img>
         </a>
        
     </main>
 
     
-    <form action="">
+    <form action="/users" method="POST">
 
 <div class="formulario">
 
     <h2>Registrarse</h2>
-    <label>Nombre</label>
-    <input class="text" type="text" name="nombre" required>
-    <label>Apellido paterno</label>
-    <input class="text" type="text" name="apellido" required>
-    <label>Apellido materno</label>
-    <input class="text" type="text" name="apellido2" required>
-    <label>E-mail</label>
-    <input class="text" type="email" name="correo" required>
-    <label>Contraseña</label>
-    <input class="text" type="password" name="contraseña" required>
-    <label>Repetir contraseña</label>
-    <input class="text" type="password" name="contraseña" required>
+    <label for="first_name">Nombre</label>
+    <input id="first_name" class="text" type="text" name="first_name" required>
+
+    <label for="last_name">Apellido</label>
+    <input id="last_name" class="text" type="text" name="last_name" required>
+
+    <label for="email">E-mail</label>
+    <input id="email" class="text" type="email" name="email" required>
+
+    <label for="password">Contraseña</label>
+    <input id="password" class="text" type="password" name="password" required>
+
+    <!-- <label>Repetir contraseña</label>
+    <input class="text" type="password" name="contraseña" required> -->
     <input class="boton" type="submit" value="Aceptar">
 
     </form>
