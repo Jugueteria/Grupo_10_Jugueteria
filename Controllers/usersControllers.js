@@ -42,13 +42,50 @@ const usersControllers = {
         users.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
         res.redirect('/users');
-      }
-    
+      },
 
-   
+      'userDetail': function(req, res) {
+        let id = req.params.id
+          let user = users.find(user => user.id == id)
+          res.render('users/userDetail', {
+              user
+             
+          })
+        },
 
+        'edit': function(req, res) {
+          let id = req.params.id
+          let userToEdit = users.find(user => user.id == id)
+          res.render('users/usersEdit', {userToEdit})
+        },
       
+        'update': function(req, res){
+          let id = req.params.id;
+          let userToEdit = users.find(user => user.id == id)
+      
+          userToEdit = {
+            id: userToEdit.id,
+            ...req.body,
+            image: 'default.png',
+          };
+          
+          let newUsers = users.map(user => {
+            if (user.id == userToEdit.id) {
+              return user = {...userToEdit};
+            }
+            return user;
+          })
+      
+          fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
+          res.redirect('/');
+        },
 
+        eliminar : (req, res) => {
+          let id = req.params.id;
+          let finalUsers = users.filter(user => user.id != id);
+          fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
+          res.redirect('/');
+        }
   };
   
   module.exports = usersControllers;

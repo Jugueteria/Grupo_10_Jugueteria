@@ -178,23 +178,5 @@
   "password": "v6LQ3wNX1m",
   "category": "user",
   "image": "default.PNG"
- },
- {
-  "id": 21,
-  "first_name": "Juan Pablo",
-  "last_name": "Rodriguez Velasquez",
-  "email": "juan346666@gmail.com",
-  "password": "2315",
-  "category": "user",
-  "image": "default.png"
- },
- {
-  "id": 22,
-  "first_name": "Flor",
-  "last_name": "Clemencia",
-  "email": "cab-18@hotmail.com",
-  "password": "123",
-  "category": "user",
-  "image": "default.png"
  }
 ]

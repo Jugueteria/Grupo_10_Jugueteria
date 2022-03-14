@@ -3,7 +3,7 @@
 <head>
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="stylesheet" href="/stylesheets/productDetail.css">
+    <link rel="stylesheet" href="/stylesheets/userDetail.css">
 
 
 
@@ -48,29 +48,30 @@
     <!--Detalle de Producto seccion-->
     <div class="container-detalle">
         <div class="imagen">
-            <img class="imagenes" src="/images/Products/<%= product.imagen %>"  alt=""></img>
+            <img class="imagenes" src="/images/Users/<%= user.image  %>"  alt=""></img>
         </div>
             <div class="detalle">
-                <h2><%= product.titulo %></h2>
+                <p class="id" >N° Usuario:<%= user.id %></p>
                 <br>
-                <p>N° Producto:<%= product.id %></p>
+                <p class="nombre" >Nombre:<%= user.first_name + " " +user.last_name %></p>
                 <br>
-                <p class="descripcion">Descripción:</p>
-                    <p><%= product.descripcionCorta %></p>
+                <p class="email">Email:</p>
+                    <p><%= user.email  %></p>
                 <br>
-                <p class="precio">Precio:</p>
+                <p class="tipo_usuario">Tipo de usuario:</p>
                     
-                    <p>$<%= product.precio %></p>
-                
+                    <p><%= user.category %></p>
+                <br>
                   
-                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                        <input class="editar" onclick="location.href='/products/edit/<%= product.id %>'" type="button" value="Editar" >
-                        <button type="submit" class="eliminar">Eliminar</button>
-                    </form>
+                <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" >
+                    <input class="editar" onclick="location.href='/users/edit/<%= user.id %>'" type="button" value="Editar" >
+                    <button type="submit" class="eliminar">Eliminar</button>
+                </form>
             
                     </div>
              </div>
-        
+        </div>
+    </div>
     <div class="info-destacados">
         <h3>
             PRODUCTOS DESTACADOS
