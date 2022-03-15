@@ -178,5 +178,13 @@
   "password": "v6LQ3wNX1m",
   "category": "user",
   "image": "default.PNG"
+ },
+ {
+  "id": 21,
+  "first_name": "Flor",
+  "last_name": "Rodriguez Velasquez",
+  "email": "grupo10.2022@gmail.com",
+  "password": "123",
+  "image": "default.png"
  }
 ]

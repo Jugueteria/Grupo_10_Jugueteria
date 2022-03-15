@@ -34,10 +34,11 @@ const usersControllers = {
 
       'lista': function(req, res) {
         let newUser = {
+          
           id: users[users.length - 1].id + 1,
           ...req.body,
           category:"user",
-          image:'default.png',
+          image: 'default.png'
         };
         users.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
