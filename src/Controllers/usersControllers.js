@@ -33,16 +33,36 @@ const usersControllers = {
       },
 
       'lista': function(req, res) {
-        let newUser = {
-          
-          id: users[users.length - 1].id + 1,
-          ...req.body,
-          category:"user",
-          image: 'default.png'
-        };
-        users.push(newUser)
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-        res.redirect('/users');
+    
+          if(req.file){
+
+            let newUser = {
+              id: users[users.length - 1].id + 1,
+              ...req.body,
+              category:"user",
+              image: req.file.filename
+            };
+            users.push(newUser)
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+            res.redirect('/users');
+
+          } else{
+
+            let newUser = {
+              id: users[users.length - 1].id + 1,
+              ...req.body,
+              category:"user",
+              image: 'default.png'
+            };
+            users.push(newUser)
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+            res.redirect('/users');
+
+
+
+          }
+
+         
       },
 
       'userDetail': function(req, res) {

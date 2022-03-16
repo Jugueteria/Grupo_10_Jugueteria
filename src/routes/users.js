@@ -5,20 +5,20 @@ const path = require('path');
 const usersControllers = require('../Controllers/usersControllers');
 
 
-// const storage = multer.diskStorage({
-// destination: (req,res,cb)=> {
-//    cb(null, path.join(__dirmname, '../public/images/Users') )
-// },
+const storage = multer.diskStorage({
+destination: (req, file ,cb) => {
+   cb(null, path.join(__dirname, '../../public/images/Users') )
+},
 
-// filename:(req,res,cb)=>{
+filename:(req, file, cb) => {
 
-//    const newFilename='perfil-'+ Date.now() + path.extname(file.originalname) ;
-//    cb(null,newFilename);
-// }
+   const newFilename='perfil-'+ Date.now() + path.extname(file.originalname) ;
+   cb(null, newFilename);
+}
 
-// });
+});
 
-// const upload = multer({storage});
+const upload = multer({storage});
 
 
 router.get('/login', usersControllers.login);
@@ -30,7 +30,7 @@ router.get('/', usersControllers.users);
 
 //Creación de usuarios
    router.get('/create', usersControllers.formCreate);
-   router.post('/', usersControllers.lista); 
+   router.post('/', upload.single('imagenUsuario'), usersControllers.lista); 
 
    // Detalle usuario
 router.get('/detail/:id', usersControllers.userDetail);
