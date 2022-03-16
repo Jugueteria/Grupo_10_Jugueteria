@@ -181,10 +181,11 @@
  },
  {
   "id": 21,
-  "first_name": "Flor",
+  "first_name": "Juan Pablo",
   "last_name": "Rodriguez Velasquez",
-  "email": "grupo10.2022@gmail.com",
-  "password": "123",
+  "email": "cab-18@hotmail.com",
+  "password": "$2b$10$Rj/3Sn1YlLKAYVOoVEFTIuSzZ5ZrwzUBan9M85xBaLaV1OnkGDo06",
+  "category": "user",
   "image": "default.png"
  }
 ]

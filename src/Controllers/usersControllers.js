@@ -1,6 +1,7 @@
 const app = require("../app");
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require("bcrypt");
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -38,7 +39,10 @@ const usersControllers = {
 
             let newUser = {
               id: users[users.length - 1].id + 1,
-              ...req.body,
+              first_name:req.body.first_name,
+              last_name:req.body.last_name,
+              email:req.body.email,
+              password: bcrypt.hashSync(req.body.password, 10),
               category:"user",
               image: req.file.filename
             };
@@ -50,7 +54,11 @@ const usersControllers = {
 
             let newUser = {
               id: users[users.length - 1].id + 1,
-              ...req.body,
+              id: users[users.length - 1].id + 1,
+              first_name:req.body.first_name,
+              last_name:req.body.last_name,
+              email:req.body.email,
+              password: bcrypt.hashSync(req.body.password, 10),
               category:"user",
               image: 'default.png'
             };
