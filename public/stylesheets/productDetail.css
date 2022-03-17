@@ -144,47 +144,85 @@ body{
 
 /** INICIO Detalle de Producto**/
 
-.container-detalle {
+*{
+    padding: 0;
+}
+
+.container-detalle img{
+    display:flex;
+    width: 400px;
+    margin-left: 20%;
+    margin-bottom: 10%;
+    align-content: center;        
+}
+
+.cont-detalle-imagen{
+    width: 500px;
+    margin-left: 55%;
+    margin-top: -35%;
+    align-content: flex-start;
+}
+
+.cont-detalle-imagen h2{
+    margin-left: -1%;
+}
+
+.cont-precio{
+    font-size: 20px;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    font-size: 80%;
-    }
-
-.container-detalle .imagen {
-    width: 40%;
-    height: 40%;
+    width: 100px;
+    height: 30px;
+    align-content: center;
+    margin-left: -1%;
 }
 
-.detalle {
-    width: 60%;
-    height: 40%;
-    margin-left: -10%;
+label {
+    display:flex;
+    font: 1rem 'Delius Unicase', cursive;
 }
 
-.container-detalle input {
-    width: 10%;
+input,
+label {
+    margin: .4rem 0;
+    margin-left: -1%;
+}
+
+.cont-boton-agregar{
+    background-color: #5AAA95;
+    font: 'Delius Unicase', cursive;
+}
+
+.cont-nav-detalle{
+    margin-left: 53%;
+    margin-top: -1%;
+    display:flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.cont-nav-detalle ul>li{
+    width: 100px;
     height: 20px;
-    color: #2a2d43;  
-}
-
-.container-detalle .metodos-aceptados ul>li{
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    text-decoration: none;
     list-style: none;
-    color: #9b57db;
-    font-size: 50px;
+    text-decoration: none;
+    display:inline-block;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-content: center;
+    margin-left: 3px;
 }
 
-.orden-metodos {
+.cont-descripcion{
+    width: 450px;
+    height: 100px;
     display: flex;
+    margin-left: 54%;
+    margin-top: -2%;
+    margin-bottom: 10%;
+    align-content: center;
+
 }
 
-
-
-/***INICIO productos Destacados********/
 /***INICIO productos Destacados********/
 .destacados {
     display: flex;

@@ -45,39 +45,37 @@
         </ul>
     </nav>
     <!--Detalle de Producto seccion-->
+    <!--Imagen del producto-->
     <div class="container-detalle">
-        <div class="imagen">
-            <img src="/images/muneca.jpg"  alt="muneca"></img></div>
-            <div class="detalle">
-                <h2>Muñeca con asiento de auto</h2>
-                <p>Código: 001</p>
-                <p>Descripción: Muñeca con asiento de auto con accesorios de juguete. 
-                    Incluye sonajero, babero y 2 mamaderas.</p>
-                <p>Medidas: 7cm x 15cm x 14cm</p>
-                <p>Peso: 480 gr</p>
-                <p>Precio: $5.400,00</p>
-                <p>Stock: SI</p>
-                
-                <h4 class="boton agregar"><input type="number" name=numero><input class="#" type="button" value="Agregar"/></h4>
-                <h4 class="boton-guardar">
-                    <input class="botones" type="button" value="Guardar"/>
-                    <div class="metodos-aceptados">
-                        <h4>Métodos aceptados</h4>
-                            <ul class="orden-metodos">
-                                <li><i class="fas fa-money-bill-wave"></i></li>
-                                <li><i class="fab fa-cc-visa"></i></li>
-                                <li><i class="fab fa-cc-mastercard"></i></li>
-                                <li><i class="fab fa-cc-paypal"></i></li>
-                            </ul>
-                    </div>
-             </div>
-        </div>
+        <img src="/images/muneca.jpg" alt="muneca">
     </div>
-    <div class="info-destacados">
-        <h3>
-            PRODUCTOS DESTACADOS
-        </h3>
+        <!--Título y Precio-->
+    <div class="cont-detalle-imagen">
+        <h2>Muñeca con Asiento de Auto</h2>
+        <p class="cont-precio">$58,99</p>
+    <!--Botones-->
+        <label for="cont-boton-suma">Cantidad:</label>
+
+        <input type="number" id="cont-boton-suma" name="cont-boton-suma"
+               min="1" max="100">
+        <input class="cont-boton-agregar" type="button" onclick="alert('Agregado!')" value="Agregar al carrito"/>
     </div>
+    <!--Descripcion y Navegador-->
+    
+    <nav class="cont-nav-detalle">
+        <ul>
+            <li><a href="#">Descripción</a></li>
+            <li><a href="#">Edad</a></li>
+            <li><a href="#">Habilidad</a></li>
+            <li><a href="#">Tamaño</a></li>
+        </ul>
+    </nav>
+    <div class="cont-descripcion">
+        <p>Muñeca con asiento de auto y accesorios de juguete. Ideal para que tus pequeños disfruten de los mejores paseos. Incluye sonajero, babero y 2 mamaderas.</p>
+    </div>
+
+    <!--Fin Detalle de Producto-->
+    
     <!--Productos Destacados-->
     <section class="destacados">
         <div class="destacados-box1">
