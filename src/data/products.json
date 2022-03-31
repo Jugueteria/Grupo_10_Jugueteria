@@ -348,5 +348,12 @@
   "precio": "20000",
   "descripcionCorta": "No incluye pilas",
   "imagen": "default.png"
+ },
+ {
+  "id": 51,
+  "titulo": "Dragon ball z 2",
+  "precio": "50000",
+  "descripcionCorta": "Incluye esferas del dragon",
+  "imagen": "default.png"
  }
 ]

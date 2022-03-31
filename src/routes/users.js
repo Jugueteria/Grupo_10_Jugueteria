@@ -33,12 +33,12 @@ router.get('/', usersControllers.users);
    router.post('/', upload.single('imagenUsuario'), usersControllers.lista); 
 
    // Detalle usuario
-router.get('/detail/:id', usersControllers.userDetail);
+router.get('/detail/:id',  usersControllers.userDetail);
 
 //Editar un usuario
 
 router.get('/edit/:id', usersControllers.edit); 
-router.patch('/edit/:id', usersControllers.update);
+router.patch('/edit/:id',upload.single('imagenUsuario'), usersControllers.update);
 
 //Borrar un usuario
 

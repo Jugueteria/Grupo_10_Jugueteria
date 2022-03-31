@@ -178,14 +178,5 @@
   "password": "v6LQ3wNX1m",
   "category": "user",
   "image": "default.PNG"
- },
- {
-  "id": 21,
-  "first_name": "Juan Pablo",
-  "last_name": "Rodriguez Velasquez",
-  "email": "cab-18@hotmail.com",
-  "password": "$2b$10$Rj/3Sn1YlLKAYVOoVEFTIuSzZ5ZrwzUBan9M85xBaLaV1OnkGDo06",
-  "category": "user",
-  "image": "default.png"
  }
 ]

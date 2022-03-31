@@ -91,11 +91,16 @@ const usersControllers = {
         'update': function(req, res){
           let id = req.params.id;
           let userToEdit = users.find(user => user.id == id)
-      
+
           userToEdit = {
             id: userToEdit.id,
-            ...req.body,
-            image: 'default.png',
+            first_name:req.body.first_name,
+              last_name:req.body.last_name,
+              email:req.body.email,
+              password: bcrypt.hashSync(req.body.password, 10),
+              category:"user",
+              image: req.file ? req.file.filename : "default.png"
+
           };
           
           let newUsers = users.map(user => {
