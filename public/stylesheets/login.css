@@ -228,6 +228,11 @@ margin-left: 30px;
     margin-top: 10px;
 }
 
+.errorCredencial{
+    color: #ff84e8;
+    margin-left:90px;
+}
+
 
 .slider img{
 width: 30%;

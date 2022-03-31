@@ -41,20 +41,20 @@ register:[
     .withMessage("Falta ingresar Email")
     .bail()
     .isEmail()
-    .withMessage("Formato de correo incorrecto"),
-    // .bail()
-    // .custom(function(value){
-    //   let users=findAll()
-    //   let user =users.find(function(user){
+    .withMessage("Formato de correo incorrecto")
+    .bail()
+    .custom(function(value){
+      let users=findAll()
+      let userFound =users.find(function(user){
 
-    //         return user.email==value
-    //     })
+            return user.email==value
+        })
 
-    //     if(userFound){
-    //        throw new Error("Email ya registrado")
-    //     }
-    //     return true;
-    // }),
+        if(userFound){
+           throw new Error("Email ya registrado")
+        }
+        return true;
+    }),
 
     check("password")
     .notEmpty()

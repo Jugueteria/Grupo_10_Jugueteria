@@ -184,25 +184,7 @@
   "first_name": "Juan Pablo",
   "last_name": "Rodriguez Velasquez",
   "email": "cab-18@hotmail.com",
-  "password": "$2b$10$/Go8PueqDCoG/bUfr8g.POWUR1blJTBBT2/RftLMUk0uNHkW5UdRG",
-  "category": "user",
-  "image": "default.png"
- },
- {
-  "id": 22,
-  "first_name": "camila",
-  "last_name": "Clemencia",
-  "email": "grupo10.2022@gmail.com",
-  "password": "$2b$10$xIIJkJm60MqiNdnQxuFT.edax.NTbsWySXa3wi4.QAAaTfQzNvkOu",
-  "category": "user",
-  "image": "default.png"
- },
- {
-  "id": 23,
-  "first_name": "Flor",
-  "last_name": "Rodriguez Velasquez",
-  "email": "cab-18@hotmail.com",
-  "password": "$2b$10$zq8gB4DeIg86bk0RCDNWZesd8TziuxPSeCTTPFOq/p8Fc/r352RGu",
+  "password": "$2b$10$LIWimtUuHVOIE66oqjjea.MFcY0sm1FS1kKTGy/MQCtIgN1N3io6y",
   "category": "user",
   "image": "default.png"
  }

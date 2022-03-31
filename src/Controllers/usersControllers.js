@@ -14,13 +14,30 @@ const usersControllers = {
 
       'ingreso': function(req, res) {
         const errors = validationResult(req)
-            
         if(errors.errors.length>0){
          res.render("users/login",{errorsLogin:errors.mapped()})
 
         }
 
+       const userfound = users.find(function(user){
+
+          return user.email == req.body.email && bcrypt.compareSync(req.body.password, user.password)
+       
+        })
+
+        if(userfound){
+          
+          
+
+        }else{
+
+           res.render("users/login",{ errorMsg:"Los datos ingresado son incorrectos"})
+
+        }
+
       },
+
+
 
       'login': function(req, res) {
         res.render('users/login');

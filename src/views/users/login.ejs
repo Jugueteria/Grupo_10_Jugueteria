@@ -25,14 +25,24 @@
     <p class="eslogan">¡La vida es para jugar!</p>
     </div>
     
+   
+
+        <!-- FORMULARIO -->
+
     <form action="/users/login" method="POST">
+
+
 
         <img class="usuario" src="/images/Vistas/usuario.png">
 <div class="formulario">
-    
+    <% if(locals.errorMsg){ %>
+    <span class="errorCredencial"> <%= errorMsg  %> </span>
+
+    <% } %>
+    <br>
     <div>
         <label>E-mail</label>
-        <input class="text" type="email" name="correo" >
+        <input class="text" id="email" type="email" name="email" >
         <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
             <span> <%= locals.errorsLogin.email.msg  %> </span>
     
@@ -42,7 +52,7 @@
     <br>
 <div>
     <label>Contraseña</label>
-    <input class="text" type="password" name="contraseña" >
+    <input id="password" class="text" type="password" name="password" >
     <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
         <span> <%= locals.errorsLogin.password.msg  %> </span>
 
@@ -61,8 +71,12 @@
 </div>
 
 
+
     </form>
+    
 </div>
+
+<!-- slider_dinamico -->
 
 <%- include('../partials/slider_dinamico.ejs') %>
 
