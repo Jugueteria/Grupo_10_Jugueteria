@@ -99,8 +99,12 @@ input{
     display: block;
     width: 90%;
     margin-top: 20px;
-    margin-bottom: 40px;
     
+    
+}
+
+span{
+    color: red;
 }
 
 label{

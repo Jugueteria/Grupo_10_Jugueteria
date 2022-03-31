@@ -63,7 +63,7 @@ body{
 
 form{
     width: 450px;
-    height:700px ;
+    height:800px ;
     background-color:#2A2D43;
     margin: auto;  
     margin-bottom: 60px;
@@ -87,7 +87,7 @@ input{
     display: block;
     width: 90%;
     margin-top: 20px;
-    margin-bottom: 40px;
+    
     
 }
 
@@ -129,6 +129,11 @@ margin-left: 30px;
     text-align: center;
     margin-bottom: 30px;
    }
+span{
+    color: red;
+  
+}
+
 
    
 

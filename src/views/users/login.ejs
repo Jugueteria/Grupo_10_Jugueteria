@@ -25,17 +25,35 @@
     <p class="eslogan">¡La vida es para jugar!</p>
     </div>
     
-    <form action="">
+    <form action="/users/login" method="POST">
 
         <img class="usuario" src="/images/Vistas/usuario.png">
 <div class="formulario">
     
-    <label>E-mail</label>
-    <input class="text" type="email" name="correo" required>
+    <div>
+        <label>E-mail</label>
+        <input class="text" type="email" name="correo" >
+        <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
+            <span> <%= locals.errorsLogin.email.msg  %> </span>
+    
+            <% } %>
+
+    </div>
+    <br>
+<div>
     <label>Contraseña</label>
-    <input class="text" type="password" name="contraseña" required>
+    <input class="text" type="password" name="contraseña" >
+    <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
+        <span> <%= locals.errorsLogin.password.msg  %> </span>
+
+        <% } %>
+
+</div>
+
     <a class="olvido" href="#">¿Olvido su contraseña?</a>
     <input class="boton" type="submit" value="Login">
+
+
     <div class="linea">
     <a href="#">¿No tienes cuenta?</a>
     <a class="crea" href="#">Crea una cuenta</a>

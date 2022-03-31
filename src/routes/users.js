@@ -3,6 +3,9 @@ var router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const usersControllers = require('../Controllers/usersControllers');
+const{ body }=require("express-validator");
+const validator=require("../Middleware/validation");
+
 
 
 const storage = multer.diskStorage({
@@ -20,17 +23,19 @@ filename:(req, file, cb) => {
 
 const upload = multer({storage});
 
-
+//Ingreso Login
 router.get('/login', usersControllers.login);
-router.get('/register', usersControllers.register);
+router.post('/login',validator.login, usersControllers.ingreso); 
+
+//Formulario de productos
 router.get('/form_admin', usersControllers.form_admin);
 
 //Lista de usuarios
 router.get('/', usersControllers.users);
 
 //Creación de usuarios
-   router.get('/create', usersControllers.formCreate);
-   router.post('/', upload.single('imagenUsuario'), usersControllers.lista); 
+   router.get('/register', usersControllers.register);
+   router.post('/register', upload.single('imagenUsuario'),validator.register, usersControllers.create); 
 
    // Detalle usuario
 router.get('/detail/:id',  usersControllers.userDetail);
@@ -38,7 +43,7 @@ router.get('/detail/:id',  usersControllers.userDetail);
 //Editar un usuario
 
 router.get('/edit/:id', usersControllers.edit); 
-router.patch('/edit/:id',upload.single('imagenUsuario'), usersControllers.update);
+router.patch('/edit/:id',upload.single('imagenUsuario'),validator.register, usersControllers.update);
 
 //Borrar un usuario
 

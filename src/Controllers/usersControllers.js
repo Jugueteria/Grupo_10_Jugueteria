@@ -2,6 +2,7 @@ const app = require("../app");
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require("bcrypt");
+const{validationResult}=require("express-validator");
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -11,9 +12,20 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const usersControllers = {
 
 
+      'ingreso': function(req, res) {
+        const errors = validationResult(req)
+            
+        if(errors.errors.length>0){
+         res.render("users/login",{errorsLogin:errors.mapped()})
+
+        }
+
+      },
+
       'login': function(req, res) {
         res.render('users/login');
       },
+
 
 
       'register': function(req, res) {
@@ -29,13 +41,15 @@ const usersControllers = {
         res.render('users/users', {users});
       },
 
-      'formCreate': function(req, res) {
-        res.render('users/register');
-      },
 
-      'lista': function(req, res) {
-    
-          if(req.file){
+      'create': function(req, res) {
+  
+            const errors = validationResult(req)
+            
+            if(errors.errors.length>0){
+             return res.render("users/register",{errors:errors.mapped()})
+
+            }
 
             let newUser = {
               id: users[users.length - 1].id + 1,
@@ -44,32 +58,13 @@ const usersControllers = {
               email:req.body.email,
               password: bcrypt.hashSync(req.body.password, 10),
               category:"user",
-              image: req.file.filename
+              image: req.file ? req.file.filename : "default.png"
             };
             users.push(newUser)
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
             res.redirect('/users');
 
-          } else{
-
-            let newUser = {
-              id: users[users.length - 1].id + 1,
-              id: users[users.length - 1].id + 1,
-              first_name:req.body.first_name,
-              last_name:req.body.last_name,
-              email:req.body.email,
-              password: bcrypt.hashSync(req.body.password, 10),
-              category:"user",
-              image: 'default.png'
-            };
-            users.push(newUser)
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-            res.redirect('/users');
-
-
-
-          }
-
+        
          
       },
 
