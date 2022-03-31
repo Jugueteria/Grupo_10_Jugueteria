@@ -27,7 +27,15 @@ const usersControllers = {
 
         if(userfound){
           
-          
+          let user={
+           id: userfound.id,
+           first_name:userfound.first_name,
+           last_name:userfound.last_name
+           
+          }
+
+          req.session.userLogin = user
+          res.redirect("/")
 
         }else{
 
