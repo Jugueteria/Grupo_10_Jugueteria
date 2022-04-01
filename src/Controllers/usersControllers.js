@@ -102,7 +102,7 @@ const usersControllers = {
             };
             users.push(newUser)
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-            res.redirect('/users');
+            res.redirect('/users/login');
 
         
          

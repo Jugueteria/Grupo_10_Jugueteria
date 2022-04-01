@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
-// const recordame = require("./middlewares/recordar");
+const recordame = require("./middlewares/recordar");
 const locals = require("./middlewares/locals")
 
 var indexRouter = require('./routes/index');
@@ -34,7 +34,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
-// app.use(recordame)
+app.use(recordame);
 app.use(locals);
 
 app.use('/', indexRouter);

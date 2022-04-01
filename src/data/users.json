@@ -187,5 +187,23 @@
   "password": "$2b$10$9sACUkAuO6623uzAdERQGOyXK5FPbE/2B8hd1IFedto2jXs.f0f0e",
   "category": "user",
   "image": "default.png"
+ },
+ {
+  "id": 22,
+  "first_name": "camila",
+  "last_name": "Rodriguez Velásquez",
+  "email": "proyectosoftwarejp@gmail.com",
+  "password": "$2b$10$v69XlG2yjktIcmM04/q2WugxwBcVYDVkxFTWpMv89UQV/Kz.xX7qa",
+  "category": "user",
+  "image": "default.png"
+ },
+ {
+  "id": 23,
+  "first_name": "mario",
+  "last_name": "Clemencia",
+  "email": "stivenszambrano@gmail.com",
+  "password": "$2b$10$q4OfWDLkLnaRO7oHjOYc1e5PVKLVfvidnX2qfjBkVTwqbdFXh9.F.",
+  "category": "user",
+  "image": "default.png"
  }
 ]

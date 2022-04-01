@@ -5,6 +5,7 @@ const path = require('path');
 const usersControllers = require('../Controllers/usersControllers');
 const{ body }=require("express-validator");
 const validator=require("../middlewares/validation");
+const accesos=require("../middlewares/accesos");
 
 
 
@@ -24,7 +25,7 @@ filename:(req, file, cb) => {
 const upload = multer({storage});
 
 //Ingreso Login
-router.get('/login', usersControllers.login);
+router.get('/login',accesos, usersControllers.login);
 router.post('/login',validator.login, usersControllers.ingreso); 
 
 //cerrar sesion
@@ -36,7 +37,7 @@ router.get('/form_admin', usersControllers.form_admin);
 router.get('/', usersControllers.users);
 
 //Creación de usuarios
-   router.get('/register', usersControllers.register);
+   router.get('/register',accesos, usersControllers.register);
    router.post('/register', upload.single('imagenUsuario'),validator.register, usersControllers.create); 
 
    // Detalle usuario
