@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
+// const recordame = require("./middlewares/recordar");
+const locals = require("./middlewares/locals")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -19,7 +21,12 @@ app.set('view engine', 'ejs');
 
 
 
-
+app.use(session({
+  secret:'proyecto',
+  resave:false,
+  saveUninitialized:true
+  
+  }));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -27,12 +34,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
-app.use(session({
-secret:'proyecto',
-resave:false,
-saveUninitialized:true,
-
-}))
+// app.use(recordame)
+app.use(locals);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -35,17 +35,32 @@ const usersControllers = {
           }
 
           req.session.userLogin = user
+
+          // creación de cookie
+
+          if(req.body.remember){
+            
+          res.cookie("user", user.id,{maxAge:60000*24})
+          }
+
+          // creación de cookie
+         
           res.redirect("/")
 
         }else{
 
-           res.render("users/login",{ errorMsg:"Los datos ingresado son incorrectos"})
+           res.render("users/login",{ errorMsg:"Los datos ingresados son incorrectos"})
 
         }
 
       },
+       
+      logout:function(req, res){
+      req.session.destroy();
+      res.clearCookie("user");
+      res.redirect("/");
 
-
+      },
 
       'login': function(req, res) {
         res.render('users/login');
@@ -103,9 +118,11 @@ const usersControllers = {
         },
 
         'edit': function(req, res) {
+         
           let id = req.params.id
           let userToEdit = users.find(user => user.id == id)
           res.render('users/usersEdit', {userToEdit})
+          console.log(userToEdit)
         },
       
         'update': function(req, res){

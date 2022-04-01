@@ -4,7 +4,7 @@ const multer = require('multer');
 const path = require('path');
 const usersControllers = require('../Controllers/usersControllers');
 const{ body }=require("express-validator");
-const validator=require("../Middleware/validation");
+const validator=require("../middlewares/validation");
 
 
 
@@ -27,6 +27,8 @@ const upload = multer({storage});
 router.get('/login', usersControllers.login);
 router.post('/login',validator.login, usersControllers.ingreso); 
 
+//cerrar sesion
+router.post('/logout', usersControllers.logout); 
 //Formulario de productos
 router.get('/form_admin', usersControllers.form_admin);
 

@@ -19,7 +19,7 @@
     </main>
 
     
-    <form action="/users/edit/<%= userToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+    <form class="forms" action="/users/edit/<%= userToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
 
 <div class="formulario">
 
@@ -28,10 +28,10 @@
     <input id="first_name" class="text" type="text" name="first_name" value=<%= userToEdit.first_name %> required>
 
     <label for="last_name">Apellido</label>
-    <input id="last_name" class="text" type="text" name="last_name" required>
+    <input id="last_name" class="text" type="text" name="last_name" value=<%=userToEdit.last_name  %> required>
 
     <label for="email">E-mail</label>
-    <input id="email" class="text" type="email" name="email" required>
+    <input id="email" class="text" type="email" name="email" value=<%= userToEdit.email  %> required>
 
     <label for="password">Contraseña</label>
     <input id="password" class="text" type="password" name="password" required>

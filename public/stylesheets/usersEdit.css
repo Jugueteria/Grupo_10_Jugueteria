@@ -61,7 +61,7 @@ body{
 
 /***INICIO Formulario Ingreso********/
 
-form{
+.forms{
     width: 450px;
     height:700px ;
     background-color:#2A2D43;
@@ -69,6 +69,11 @@ form{
     margin-bottom: 60px;
     border-radius: 20px;
     
+}
+
+.userLogin{
+    color: brown;
+    font-weight: bold;
 }
 
 
@@ -120,7 +125,7 @@ margin-left: 30px;
 
    .text{
        border: none;
-       background-color: #2A2D43;
+       background-color: #C5C3C3;
        border-bottom: 1px solid gray;
    }
 

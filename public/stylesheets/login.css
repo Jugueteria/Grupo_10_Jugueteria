@@ -61,13 +61,11 @@ body{
 
 /***INICIO Formulario Ingreso********/
 
-form{
+.forms{
     width: 450px;
     height:800px ;
     background-color:#2A2D43;
     margin: auto;
-    
-   
 }
 
 .imagen_login{
@@ -84,23 +82,18 @@ form{
     height:800px ;
     margin: auto;
     margin-bottom: 100px;
-   
     
 }
 
 .Marco{
     width: 400px;
-    height:400px ;
-    
+    height:400px ; 
 }
-
 
 input{
     display: block;
     width: 90%;
     margin-top: 20px;
-    
-    
 }
 
 span{
@@ -134,9 +127,8 @@ a{
 }
 
 .formulario{
-margin-top: 90px;
+margin-top: 50px;
 margin-left: 30px;
-
 
 }
 
@@ -145,7 +137,6 @@ margin-left: 30px;
     height:100px ;
     margin-left: 170px;
     margin-top: 50px;
-
     
    }
 
@@ -156,7 +147,7 @@ margin-left: 30px;
 
    .text{
        border: none;
-       background-color: #2A2D43;
+       background-color: #ccc9ce;
        border-bottom: 1px solid gray;
    }
 
@@ -179,6 +170,22 @@ margin-left: 30px;
     color:#1D3E94;
 }
 
+.recordar{
+    display: flex;
+    margin: auto;
+
+}
+
+.recordar2{
+margin-left: 0;
+width: 38%;
+}
+
+.check{
+
+    width: 4%;
+   margin-top: 12px;
+}
 /***FINAL Formulario Ingreso********/
 
 /***Inicio slider********/

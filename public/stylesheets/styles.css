@@ -48,6 +48,11 @@ body{
     color: black;
     border: solid rgb(232, 231, 231);
 }
+
+.userLogin{
+    color: brown;
+    font-weight: bold;
+}
 /***FIN Barra cabecera********/
 
 /***INICIO Logo, buscador y carrito********/

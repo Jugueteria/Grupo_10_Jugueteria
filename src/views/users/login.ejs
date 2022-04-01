@@ -29,7 +29,7 @@
 
         <!-- FORMULARIO -->
 
-    <form action="/users/login" method="POST">
+    <form class="forms" action="/users/login" method="POST">
 
 
 
@@ -57,8 +57,15 @@
         <span> <%= locals.errorsLogin.password.msg  %> </span>
 
         <% } %>
-
 </div>
+
+<div class="recordar">
+    <input class="check" type="checkbox" id="remember" name="remember">
+    <label class="recordar2" for="">Recordar usuario</label>
+   
+</div>
+<br>
+<br>
 
     <a class="olvido" href="#">¿Olvido su contraseña?</a>
     <input class="boton" type="submit" value="Login">
