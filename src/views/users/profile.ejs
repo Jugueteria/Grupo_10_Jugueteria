@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/userDetail.css">
+
+
+
+    <title>Playground-Jugueteria</title>
+</head>
+<body>
+    <!--Cabecera del sitio-->
+
+    <%- include('../partials/header') %>
+
+    <!--Logo, buscador y carrito de compras-->
+    <main class="container-main">
+        
+            <a href="/">
+                <img src="/images/Logo/Logo.png"  alt="Logo Playground Jugueteria"></img>
+            </a>
+     
+        
+        <div class="container-carrito">
+            <div class="carro">
+                
+            </div>
+        </div>
+    </main>
+    <!--Menú-->
+    <nav class="main-navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#marcas">Marcas</a></li>
+            <li><a href="/products">Productos</a></li>
+            <li><a href="/users">Usuarios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <!--Detalle de Producto seccion-->
+    <div class="container-detalle">
+        <div class="imagen">
+            <img class="imagenes" src="/images/Users/<%= userLocal.image %>"  alt=""></img>
+        </div>
+            <div class="detalle">
+                <p class="id" >N° Usuario: <%= userLocal.id %></p>
+                <br>
+                <p class="nombre" >Nombre:<%= userLocal.first_name + " " + userLocal.last_name  %></p>
+                <br>
+                <p class="email">Email:<%= userLocal.email %></p>
+                    <p></p>
+                <br>
+               
+            
+                    </div>
+             </div>
+        </div>
+    </div>
+    <div class="info-destacados">
+        
+    </div>
+    <!--Productos Destacados-->
+    
+    <!--Nuestras Marcas-->
+    <section id="marcas">
+       
+    
+
+    </section>
+      <!--Footer-->
+      <%- include('../partials/footer') %>
+      
+</body>
+</html>

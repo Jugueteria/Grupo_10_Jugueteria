@@ -30,7 +30,11 @@ const usersControllers = {
           let user={
            id: userfound.id,
            first_name:userfound.first_name,
-           last_name:userfound.last_name
+           last_name:userfound.last_name,
+           email:userfound.email,
+           image:userfound.image
+           
+          
            
           }
 
@@ -45,7 +49,7 @@ const usersControllers = {
 
           // creación de cookie
          
-          res.redirect("/")
+          res.redirect("/users/profile")
 
         }else{
 
@@ -115,6 +119,12 @@ const usersControllers = {
               user
              
           })
+        },
+
+
+        'profile': function(req, res){
+
+         res.render('users/profile')
         },
 
         'edit': function(req, res) {

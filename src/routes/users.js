@@ -6,6 +6,7 @@ const usersControllers = require('../Controllers/usersControllers');
 const{ body }=require("express-validator");
 const validator=require("../middlewares/validation");
 const accesos=require("../middlewares/accesos");
+const sinLogin=require("../middlewares/sinLogin");
 
 
 
@@ -34,23 +35,29 @@ router.post('/logout', usersControllers.logout);
 router.get('/form_admin', usersControllers.form_admin);
 
 //Lista de usuarios
-router.get('/', usersControllers.users);
+router.get('/',sinLogin, usersControllers.users);
 
 //Creación de usuarios
    router.get('/register',accesos, usersControllers.register);
    router.post('/register', upload.single('imagenUsuario'),validator.register, usersControllers.create); 
 
    // Detalle usuario
-router.get('/detail/:id',  usersControllers.userDetail);
+router.get('/detail/:id',sinLogin,  usersControllers.userDetail);
 
 //Editar un usuario
 
-router.get('/edit/:id', usersControllers.edit); 
+router.get('/edit/:id',sinLogin, usersControllers.edit); 
 router.patch('/edit/:id',upload.single('imagenUsuario'),validator.register, usersControllers.update);
 
 //Borrar un usuario
 
 router.delete('/delete/:id', usersControllers.eliminar); 
+
+
+//ver perfil de ingreso
+
+router.get('/profile',sinLogin, usersControllers.profile); 
+       
        
 
 module.exports = router;

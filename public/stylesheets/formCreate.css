@@ -12,6 +12,7 @@ width: 700px;
 border-radius: 25px;
 padding: 8px;
 margin-top: 60px;
+margin: auto;
 }
 
 .nombre, .precio {
@@ -46,6 +47,8 @@ margin: auto;
 font-weight: bold;
 
 }
+
+
 
 .main-navbar {
     display:flex;

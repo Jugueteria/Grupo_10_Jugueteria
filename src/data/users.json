@@ -181,12 +181,12 @@
  },
  {
   "id": 21,
-  "first_name": "Juan Pablo",
-  "last_name": "Rodriguez Velasquez",
+  "first_name": "Juan",
+  "last_name": "Rodriguez",
   "email": "cab-18@hotmail.com",
-  "password": "$2b$10$9sACUkAuO6623uzAdERQGOyXK5FPbE/2B8hd1IFedto2jXs.f0f0e",
+  "password": "$2b$10$5xU6EikIDoDZkqz6szIytODjJQD7WzR260ANVGgGbJhM6VCR3ootq",
   "category": "user",
-  "image": "default.png"
+  "image": "perfil-1649044702093.jpg"
  },
  {
   "id": 22,
@@ -203,6 +203,15 @@
   "last_name": "Clemencia",
   "email": "stivenszambrano@gmail.com",
   "password": "$2b$10$q4OfWDLkLnaRO7oHjOYc1e5PVKLVfvidnX2qfjBkVTwqbdFXh9.F.",
+  "category": "user",
+  "image": "default.png"
+ },
+ {
+  "id": 24,
+  "first_name": "mario",
+  "last_name": "gutierresz",
+  "email": "dsdsdsd@hotmail.com",
+  "password": "$2b$10$JC3SeMyN1B6H7WDvqkeTD.ys913A6PMH/Cj4mopPYN46ecHEdu.lW",
   "category": "user",
   "image": "default.png"
  }
