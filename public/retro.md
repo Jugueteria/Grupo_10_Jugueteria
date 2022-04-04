@@ -26,3 +26,13 @@ Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 3; pa
 3.  Continuar haciendo: Retroalimentaciones de temas anteriores para reforzar las temáticas y consolidar el aprendizaje.
 4.  Hacer menos: Centrar la atención en un solo tema y no fluir con la continuidad del proyecto. 
 5.  Dejar de hacer: Direccionar tiempo en una sola cosa y dejar de avanzar en otras funcionalidades del proyecto.
+
+
+Retrospectiva Sprint 4
+Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 4; para ello utilizaremos la retrospectiva de estrella de mar, el cual tiene los siguientes elementos:
+1.  Comenzar hacer: identificar los componentes necesarios para las validaciones de login en el proyecto, la generación de sesiones y las rutas para el ingreso de quienes hicieron el login.
+2.  Hacer más: Realizar las pruebas correspondientes de inicio de sesión para identificar errores puntuales y entrar a corregir el código inmediatamente.
+3.  Continuar haciendo: Realizar esquemas de código para cada parte del proyecto y cada estructura implementada durante cada sprint.
+4.  Hacer menos: Centrar el tiempo en arreglos de estilo de vistas que se pueden corregir al final de cada sprint. 
+5.  Dejar de hacer: Publicar los avances de cada sprint en la rama principal del repositorio GitHub sin el aval de todos los integrantes, para evitar daños en los versionados.
+

@@ -12,6 +12,7 @@ width: 700px;
 border-radius: 25px;
 padding: 8px;
 margin-top: 60px;
+margin: auto;
 }
 
 .nombre, .precio {
@@ -45,6 +46,11 @@ text-align: center;
 margin: auto;
 font-weight: bold;
 
+}
+
+.userLogin{
+    color: brown;
+    font-weight: bold;
 }
 
 .main-navbar {
