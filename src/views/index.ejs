@@ -17,7 +17,7 @@
             <a href="/">
                 <img src="images/Logo/logo.png"  alt="Logo Playground Jugueteria"></img>
             </a>
-       
+            <% if(locals.userLocal){ %>
         <div class="buscar-wrapper">
             <input class="buscador-box" type="search" text="Search" placeholder="Buscar producto">
             <button type="button" class="fas fa-search" id="lupa"></button>
@@ -31,6 +31,8 @@
                 </a>
             </div>
         </div>
+
+        <% } %>
     </main>
     <!--Menú-->
     <nav class="main-navbar">
