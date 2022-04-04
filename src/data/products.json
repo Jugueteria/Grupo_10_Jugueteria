@@ -344,23 +344,16 @@
  },
  {
   "id": 50,
-  "titulo": "Muñeco de spiderman",
-  "descripcionCorta": "sapien arcu sed augue aliquam erat volutpat in congue etiam",
-  "precio": 18326.51,
+  "titulo": "milanesa",
+  "precio": "20000",
+  "descripcionCorta": "No incluye pilas",
   "imagen": "default.png"
  },
  {
   "id": 51,
-  "titulo": "Pepa Pig",
-  "precio": "100",
-  "descripcionCorta": "Muñeca con cocina",
-  "imagen": "default.png"
- },
- {
-  "id": 52,
-  "titulo": "Mono Peluche",
-  "precio": "900",
-  "descripcionCorta": "con artefacto",
+  "titulo": "Dragon ball z 2",
+  "precio": "50000",
+  "descripcionCorta": "Incluye esferas del dragon",
   "imagen": "default.png"
  }
 ]

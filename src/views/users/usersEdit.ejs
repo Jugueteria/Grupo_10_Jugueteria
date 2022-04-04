@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/usersEdit.css">
+
+    <title>Formulario registro</title>
+</head>
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+
+    <main class="container-main">
+        <a href="/">
+            <img src="/images/Logo/logo.png"  alt="Logo Playground Jugueteria"></img>
+        </a>
+       
+    </main>
+
+    
+    <form class="forms" action="/users/edit/<%= userToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+
+<div class="formulario">
+
+    <h2>Actualiza los datos</h2>
+    <label for="first_name">Nombre</label>
+    <input id="first_name" class="text" type="text" name="first_name" value=<%= userToEdit.first_name %> required>
+
+    <label for="last_name">Apellido</label>
+    <input id="last_name" class="text" type="text" name="last_name" value=<%=userToEdit.last_name  %> required>
+
+    <label for="email">E-mail</label>
+    <input id="email" class="text" type="email" name="email" value=<%= userToEdit.email  %> required>
+
+    <label for="password">Contraseña</label>
+    <input id="password" class="text" type="password" name="password" required>
+
+    <label for="imagenUsuario">Imagen de perfil</label>
+    <input type="file" name="imagenUsuario" id="imagenUsuario">
+
+    <!-- <label>Repetir contraseña</label>
+    <input class="text" type="password" name="contraseña" required> -->
+    <input class="boton" type="submit" value="Aceptar">
+
+    </form>
+</div>
+
+
+<%- include('../partials/slider_dinamico.ejs') %>
+
+     <!--Footer-->
+
+     <%- include('../partials/footer.ejs') %>
+    
+    
+</body>
+</html>
