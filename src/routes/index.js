@@ -12,5 +12,5 @@ router.get("/profile", function(req,res){
         res.send("No estas logueado")
     }
 })
-
+//comentario de prueba 
 module.exports = router;
