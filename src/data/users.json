@@ -214,5 +214,14 @@
   "password": "$2b$10$JC3SeMyN1B6H7WDvqkeTD.ys913A6PMH/Cj4mopPYN46ecHEdu.lW",
   "category": "user",
   "image": "default.png"
+ },
+ {
+  "id": 25,
+  "first_name": "Jessica",
+  "last_name": "Montilla",
+  "email": "ysika87@gmail.com",
+  "password": "$2b$10$negfXFRITvncOGhST25HNOVd5ltyfMr4xbuT.hNV8ldbx3KSR4rEi",
+  "category": "user",
+  "image": "default.png"
  }
 ]

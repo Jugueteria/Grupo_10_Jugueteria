@@ -73,7 +73,49 @@ const productsControllers = {
         let finalProducts = products.filter(product => product.id != id);
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
         res.redirect('/');
-      }
+      },
+
+	  //-- CRUD -- Revisar!//
+
+	  'create':(req, res) =>{
+        juguetes.create({
+            first_name:req.body.first_name,
+            last_name:req.body.last_name,
+            rating:req.body.rating,
+        })
+        db.Actor.findAll()
+        .then(actors => {
+            res.render('actorsList.ejs', {actors})
+       });
+    },
+    'edit':(req, res) =>{
+        db.Actor.findByPk(req.params.id)
+            .then(actors => {
+                res.render('actorsEdit.ejs', {actors});
+            });
+    },
+    'update':(req, res) =>{
+        db.Actor.update({
+            first_name:req.body.first_name,
+            last_name:req.body.last_name,
+            rating:req.body.rating,
+        }, {
+        where:{id: req.params.id}
+        });
+        db.Actor.findAll()
+        .then(actors => {
+            res.render('actorsList.ejs', {actors})
+       });
+    },
+    'destroy':(req, res) =>{
+        db.Actor.destroy({
+            where:{id:req.params.id}
+        });
+        db.Movie.findAll()
+        .then(actors => {
+            res.render('actorsList.ejs', {actors})
+       });
+    } 
 
 
 
