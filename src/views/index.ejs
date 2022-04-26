@@ -10,36 +10,25 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/stylesheets/navbar.css" />
-    <link rel="stylesheet" href="/stylesheets/mainIcons.css" />
-    <link rel="stylesheet" href="/stylesheets/slideHeader.css" />
-    <link rel="stylesheet" href="/stylesheets/edades.css" />
-    <link rel="stylesheet" href="/stylesheets/destacados.css" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
 
     <title>Playground-Jugueteria</title>
   </head>
 
   <body>
-    <!--Imagen de fondo-->
-
     <!--Cabecera del sitio, Logo, buscador y carrito de compra-->
-
-    <%- include('partials/navbar.ejs') %> <%-
-    include('partials/slideHeader.ejs') %>
-
-    <!--Iconos secciones-->
+    <%- include('partials/navbar.ejs') %>
+    <!--SECCION DE SLIDE HEADER-->
+    <%-include('partials/slider_header.ejs') %>
+    <!--SECCION DE ICONOS INFORMATIVOS-->
     <%- include('partials/mainIcons.ejs') %>
-
-    <!-- Seccion edades -->
+    <!-- SECCION EDADES -->
     <%- include('partials/edades.ejs') %>
-    <!-- Second image -->
+    <!-- SECCION PRODUCTOS DESTACADOS -->
     <%- include('partials/destacados.ejs') %>
-    <!-- Third image -->
-
-    <!--Productos Destacados-->
-
-    <!--Nuestras Marcas-->
-
-    <!--Footer-->
+    <!-- SECCION DE MARCAS -->
+    <%- include('partials/marcas.ejs') %>
+    <!--SECCION FOOTER-->
+    <%- include('partials/footer.ejs') %>
   </body>
 </html>

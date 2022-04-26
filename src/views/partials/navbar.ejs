@@ -1,43 +1,76 @@
-<header>
+<head>
+  <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<header class="contain-header">
   <nav class="container-navbar">
     <div class="header1">
       <!-- Logo -->
       <a href="/" class="">
-        <img src="/icons/logo.png" class="logo" />
+        <img src="/icons/logo.png" alt="logo" class="logo" />
       </a>
       <!-- Search -->
-      <input class="search__input" type="text" placeholder="Buscar" />
+      <input class="input-search" type="text" placeholder="Buscar" />
       <!-- Carrito icon -->
       <div class="carrito-header">
         <a href="#" class=""></a>
-        <img src="/icons/cart.png" alt="" class="" />
+        <img src="/icons/cart.png" alt="img-carrito" class="" />
         <span
           id="cart_menu_num"
           data-action="cart-can"
           class="badge rounded-circle"
-          >5</span
+          >0</span
         >
       </div>
       <!-- Login and Register -->
+      <% if(!locals.userLocal){ %>
       <div class="button-header">
-        <p><a href="/login" class="btn-ingresar">Ingresar</a></p>
-        <p>
-          <button href="/register" class="btn-registrar">Registrarse</button>
-        </p>
+        <a href="/users/login" class="btn-ingresar">Ingresar</a>
+        <a href="/users/register" class="btn-registrar"> Registrarse </a>
       </div>
+      <% } %>
+      <!-- Usuario Registrado -->
+      <% if(locals.userLocal){ %>
+        <div class="box-sesion">
+
+          <form action="/users/logout" method="post">
+            <div class="user-box">
+              <p class="userLogin"><%= "Bienvenido"+" "+userLocal.first_name %></p>
+            </div>
+            <div class="avatar-box">
+              <a href="/users/profile" class=""><img src="/images/Users/<%= userLocal.image %>"  class="imagen-usuario-navbar" alt="imagen de usuario"></img></a>
+            </div>
+            <button type="submit" class="btn-logout"><i class="fa fa-sign-out-alt"></i></button>
+          </form>
+          <% } %>
+        </div>
     </div>
     <!-- Button hamburguer -->
-    <a href="#" class="hamburguer-button">
-      <i class="fas fa-bars"></i>
-    </a>
+    <div class="btn-hamburguer">
+      <a href="#" class="hamburguer-button">
+        <i class="fas fa-bars"></i>
+      </a>
+    </div>
+
     <!-- Menu -->
     <div class="menu">
       <ul class="">
         <li class=""><button class="btn-menu">Home</button></li>
         <li class=""><button class="btn-menu">Marcas</button></li>
         <li class=""><button class="btn-menu">Edades</button></li>
-        <li class=""><button class="btn-menu">Home</button></li>
+        <li class=""><button class="btn-menu">Contacto</button></li>
       </ul>
+      <% if(locals.userLocal){ %>
+          <ul class="">
+            <li class=""><button class="btn-menu" onclick="location.href='/products/create'">Nuevo producto</button></li>
+            <li class=""><button class="btn-menu" onclick="location.href='/products'">Lista de producto</button></li>
+          </ul>
+        <% } %> 
     </div>
   </nav>
 </header>

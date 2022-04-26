@@ -1,56 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/stylesheets/login.css">
+<html>
+  <head>
+    <title>Login</title>
 
-    <title>Formulario ingreso</title>
-</head>
-<body>
-    
-    <%- include('../partials/header.ejs') %>
-
-
-    <main class="container-main">
-            <a href="/">
-                <img src="/images/Design/Logo.png"  alt="Logo Playground Jugueteria"></img>
-            </a>  
-    </main>
-
-<div class="ingreso"> 
-    
-    <div class="Marco">
-        <p class="eslogan">Iniciar sesión</p>
-    <img class="imagen_login" src="/images/pexels-victoria-borodinova-1620675.jpg" alt=""> 
-    <p class="eslogan">¡La vida es para jugar!</p>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/loginAndRegister.css" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <img class="wave" src="/icons/fondo-login.png" />
+    <div class="container">
+      <div class="img">
+        <img src="/icons/logo.png" />
+      </div>
+      <div class="login-content">
+        <form class="forms" action="/users/login" method="POST">
+          <img
+            src="https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/avatar.svg"
+          />
+          <% if(locals.errorMsg){ %>
+          <span class="errorCredencial"> <%= errorMsg %> </span>
+          <% } %>
+          <h2 class="title">Logín</h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <input
+                id="email"
+                name="email"
+                type="text"
+                class="input"
+                placeholder="email"
+              />
+              <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
+              <span> <%= locals.errorsLogin.email.msg %> </span>
+              <% } %>
+            </div>
+          </div>
+          <div class="input-div pass">
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="div">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="input"
+                placeholder="password"
+              />
+              <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
+              <span> <%= locals.errorsLogin.password.msg %> </span>
+              <% } %>
+            </div>
+          </div>
+          <div class="container-recordar">
+            <input
+              class="check"
+              type="checkbox"
+              id="remember"
+              name="remember"
+            />
+            <label for="">Recordar usuario</label>
+            <a href="#">Recuperar password aquí</a>
+          </div>
+          <input type="submit" class="btn" value="Entrar" />
+          <div class="container-registrate">
+            <div>
+              <p>¿No tienes una cuenta? registrate</p>
+            </div>
+            <div class="">
+              <a href="/users/register" class="btn-envio-registro">aquí</a>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    
-    <form action="">
-
-        <img class="usuario" src="/images/usuario.png">
-<div class="formulario">
-    
-    <label>E-mail</label>
-    <input class="text" type="email" name="correo" required>
-    <label>Contraseña</label>
-    <input class="text" type="password" name="contraseña" required>
-    <a class="olvido" href="#">¿Olvido su contraseña?</a>
-    <input class="boton" type="submit" value="Login">
-    <div class="linea">
-    <a href="#">¿No tienes cuenta?</a>
-    <a class="crea" href="#">Crea una cuenta</a>
-    </div>
-</div>
-
-
-    </form>
-</div>
-
-<%- include('../partials/slider_dinamico.ejs') %>
-
-     <!--Footer-->
-    
-     <%- include('../partials/footer.ejs') %>
-    
-</body>
+  </body>
 </html>

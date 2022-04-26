@@ -1,53 +1,123 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/stylesheets/register.css">
+<html>
+  <head>
+    <title>Login</title>
 
-    <title>Formulario registro</title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/loginAndRegister.css" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <%- include('../partials/navbar.ejs') %>
 
-    <%- include('../partials/header.ejs') %>
+    <div class="container-registro">
+      <div class="registro-content">
+        <form
+          action="/users/register"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <img
+            src="https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/avatar.svg"
+          />
+          <h2 class="title">Registro</h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <input
+                id="first_name"
+                name="first_name"
+                type="text"
+                class="input"
+                placeholder="Nombre"
+              />
+              <% if(locals.errors && locals.errors.first_name){ %>
+              <span> <%= errors.first_name.msg %> </span><% } %>
+            </div>
+          </div>
+          <div class="input-div two">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                class="input"
+                placeholder="Apellidos"
+              />
+              <% if(locals.errors && locals.errors.last_name){ %>
+              <span> <%= errors.last_name.msg %> </span> <% } %>
+            </div>
+          </div>
+          <div class="input-div tree">
+            <div class="i">
+              <i class="fas fa-at"></i>
+            </div>
+            <div class="div">
+              <input
+                id="email"
+                name="email"
+                type="text"
+                class="input"
+                placeholder="Email"
+              />
+              <% if(locals.errors && locals.errors.email){ %>
+              <span> <%= errors.email.msg %> </span><% } %>
+            </div>
+          </div>
+          <div class="input-div pass">
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="div">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="input"
+                placeholder="Password"
+              />
+              <% if(locals.errors && locals.errors.password){ %>
+              <span> <%= errors.password.msg %> </span><% } %>
+            </div>
+          </div>
+          <label for="imagenUsuario">Imagen de perfil</label>
+          <input type="file" name="imagenUsuario" id="imagenUsuario" />
 
+          <input type="submit" class="btn" value="Regístrarse" />
 
-    <main class="container-main">
-        <a href="/">
-            <img src="/images/Design/logo.png"  alt="Logo Playground Jugueteria"></img>
-        </a>
-       
-    </main>
-
-    
-    <form action="">
-
-<div class="formulario">
-
-    <h2>Registrarse</h2>
-    <label>Nombre</label>
-    <input class="text" type="text" name="nombre" required>
-    <label>Apellido paterno</label>
-    <input class="text" type="text" name="apellido" required>
-    <label>Apellido materno</label>
-    <input class="text" type="text" name="apellido2" required>
-    <label>E-mail</label>
-    <input class="text" type="email" name="correo" required>
-    <label>Contraseña</label>
-    <input class="text" type="password" name="contraseña" required>
-    <label>Repetir contraseña</label>
-    <input class="text" type="password" name="contraseña" required>
-    <input class="boton" type="submit" value="Aceptar">
-
-    </form>
-</div>
-
-
-<%- include('../partials/slider_dinamico.ejs') %>
-
-     <!--Footer-->
-
-     <%- include('../partials/footer.ejs') %>
-    
-    
-</body>
+          <div class="container-registrate">
+            <div>
+              <p>¿Ya tienes una cuenta? ingresa</p>
+            </div>
+            <div class="">
+              <a href="/users/login" class="btn-envio-registro">aquí</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-suscripcion">
+      <div class="titulo-suscripcion">
+        <h3 class="text-suscripcion">Suscríbete a nuestro Newletters</h3>
+      </div>
+      <div class="">
+        <input
+          type="text"
+          class="input-suscripcion"
+          placeholder="Ingresa tu email"
+        />
+        <button class="btn-suscribir">suscribir</button>
+      </div>
+    </div>
+  </body>
 </html>

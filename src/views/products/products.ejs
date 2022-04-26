@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/products.css" />
+    <title>Lista de productos</title>
+  </head>
+  <body>
+    <%- include('../partials/navbar.ejs') %>
+    <h1 class="titulo">Listado de productos</h1>
+    <div class="contenedor_principal">
+      <section class="menu">
+        <% products.forEach(function(products) { %>
+        <a href="/products/detail/<%= products.id %>">
+          <article>
+            <div class="imgen-contenedor">
+              <!-- <img src="/images/Products/<%= products.imagen %>" alt="" /> -->
+              <img src="https://picsum.photos/500/300/?image=5" alt="" />
+            </div>
+            <ul class="info-box">
+              <li><h3 class=""><%= products.titulo %></h3></li>
+              <li><p><%= products.descripcionCorta %></p></li>
+              <li>Precio: $<%= products.precio %></li>
+            </ul>
+            <button class="btn-ver">Ver producto</button>
+          </article>
+        </a>
+        <% }) %>
+      </section>
+    </div>
+  </body>
+</html>
