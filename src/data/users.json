@@ -1,50 +1,5 @@
 [
  {
-  "id": 1,
-  "first_name": "Michal",
-  "last_name": "Dyers",
-  "email": "mdyers0@dailymotion.com",
-  "password": "lQqPwB2AJ8P",
-  "category": "user",
-  "image": "foto1.jpg"
- },
- {
-  "id": 2,
-  "first_name": "Tiffanie",
-  "last_name": "Sowrah",
-  "email": "tsowrah1@wp.com",
-  "password": "7MqMwkWk",
-  "category": "user",
-  "image": "foto2.jpg"
- },
- {
-  "id": 3,
-  "first_name": "Teresina",
-  "last_name": "Garber",
-  "email": "tgarber2@kickstarter.com",
-  "password": "MIPiXIWZMdHm",
-  "category": "user",
-  "image": "foto3.jpg"
- },
- {
-  "id": 4,
-  "first_name": "Luciano",
-  "last_name": "Fitchet",
-  "email": "lfitchet3@theatlantic.com",
-  "password": "oJXFMQo8r",
-  "category": "user",
-  "image": "foto4.jpg"
- },
- {
-  "id": 5,
-  "first_name": "Flory",
-  "last_name": "Baildon",
-  "email": "fbaildon4@mapquest.com",
-  "password": "NiUIpcb0wz",
-  "category": "user",
-  "image": "foto5.jpg"
- },
- {
   "id": 6,
   "first_name": "Janeta",
   "last_name": "Ganders",
@@ -64,21 +19,12 @@
  },
  {
   "id": 8,
-  "first_name": "Lin",
+  "first_name": "Linssssss",
   "last_name": "Isaak",
   "email": "lisaak7@example.com",
-  "password": "3i1xYA",
+  "password": "$2b$10$W/QlbRqlRx/ngwHJPBRRROi5U1ITIL74C8eGdjfRqlQRjNJiXCbYO",
   "category": "user",
-  "image": "default.PNG"
- },
- {
-  "id": 9,
-  "first_name": "Nessi",
-  "last_name": "Nozzolii",
-  "email": "nnozzolii8@imgur.com",
-  "password": "RKWcVfanWJr",
-  "category": "user",
-  "image": "default.PNG"
+  "image": "default.png"
  },
  {
   "id": 10,
@@ -235,12 +181,12 @@
  },
  {
   "id": 27,
-  "first_name": "Saul",
-  "last_name": "Goodman",
+  "first_name": "Jimmy",
+  "last_name": "Patín",
   "email": "saul@goodman.com",
-  "password": "$2b$10$1tZVfFT9gfjalsWxmePvJ.8bLEo78/sF1NSQ0XSnYWDMImyFtj6iW",
+  "password": "$2b$10$LEJ2FcTHc6bQ/ZaS6HzlCu4i7RGddF1Ijz8RvatAMzTcXciC8OW1e",
   "category": "user",
-  "image": "perfil-1649547865360.jpg"
+  "image": "default.png"
  },
  {
   "id": 28,

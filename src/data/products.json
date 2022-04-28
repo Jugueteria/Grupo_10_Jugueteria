@@ -1,14 +1,14 @@
 [
  {
   "id": 1,
-  "titulo": "Muñeca con asiento de auto",
-  "descripcionCorta": "Incluye sonajero,babero y 2 mamaderas",
-  "precio": 35.2,
-  "img": "muneca.jpg"
+  "titulo": "MUÑECA",
+  "precio": "35.2",
+  "descripcionCorta": "Incluye",
+  "imagen": "default.png"
  },
  {
   "id": 2,
-  "titulo": "Robot Lego",
+  "titulo": "ROBOTECH",
   "precio": "235294",
   "descripcionCorta": "dfdfdfsdfsdfsdfsdf",
   "imagen": "default.png"
@@ -22,7 +22,7 @@
  },
  {
   "id": 4,
-  "titulo": "Robot Lego",
+  "titulo": "Robot rUUUUUUUU",
   "precio": "222",
   "descripcionCorta": "2scdasdasdasd",
   "imagen": "default.png"

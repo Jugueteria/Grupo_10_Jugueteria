@@ -1,81 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/stylesheets/styles.css" />
-    <link rel="stylesheet" href="/stylesheets/productDetail.css" />
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/productDetail.css">
 
-    <title>Detalle de producto</title>
-  </head>
-
-  <body>
-    <%- include('../partials/navbar.ejs')%>
+    <title>Playground-Jugueteria</title>
+</head>
+<body>
+    <!--Cabecera del sitio-->
+    <%- include('../partials/navbar.ejs') %>
     <!--Detalle de Producto seccion-->
-    <!--Imagen del producto-->
-    <div class="container-detalle">
-      <img src="/images/muneca.jpg" alt="muneca" />
+    <div class="titulo">
+        <h1>Detalle del producto</h1>
     </div>
-    <!--Título y Precio-->
-    <!-- <div class="cont-detalle-imagen">
-      <h2>Muñeca con Asiento de Auto</h2>
-      <p class="cont-precio">$58,99</p> -->
-    <!--Botones-->
-    <!-- <label for="cont-boton-suma">Cantidad:</label>
-
-      <input
-        type="number"
-        id="cont-boton-suma"
-        name="cont-boton-suma"
-        min="1"
-        max="100"
-      />
-      <input
-        class="cont-boton-agregar"
-        type="button"
-        onclick="alert('Agregado!')"
-        value="Agregar al carrito"
-      />
-    </div> -->
-    <!--Descripcion y Navegador-->
-
-    <!-- <nav class="cont-nav-detalle">
-      <ul>
-        <li><a href="#">Descripción</a></li>
-        <li><a href="#">Edad</a></li>
-        <li><a href="#">Habilidad</a></li>
-        <li><a href="#">Tamaño</a></li>
-      </ul>
-    </nav> -->
-    <!-- <div class="cont-descripcion">
-      <p>
-        Muñeca con asiento de auto y accesorios de juguete. Ideal para que tus
-        pequeños disfruten de los mejores paseos. Incluye sonajero, babero y 2
-        mamaderas.
-      </p>
-    </div> -->
-
-    <!--Fin Detalle de Producto-->
-
-    <!--Productos Destacados-->
-    <!-- <section class="destacados">
-      <div class="destacados-box1">
-        <img src="/images/destacado-frozen.jpeg" alt="Imagen frozen" />
-        <img src="/images/destacado-toyStory.jpeg" alt="Imagen toyStory" />
-        <img src="/images/destacado-spiderman.jpeg" alt="Imagen spiderman" />
-        <img src="/images/destacado-superman.jpeg" alt="Imagen superman" />
-        <img src="/images/destacado-starwars.jpeg" alt="Imagen star" />
-        <a href="/productDetail">
-          <img src="/images/muneca.jpg" alt="Imagen mariobros" />
-        </a>
-      </div>
-    </section> -->
-  </body>
+    <div class="container-detail-products">
+        <div class="container-detalle">
+         <div class="imagen">
+            <img class="imagenes" src="/images/Products/<%= product.imagen %>"  alt=""></img>
+            </div>
+            <div class="detalle">
+                <h2><%= product.titulo %></h2>
+                <br>
+                <p>N° Producto:<%= product.id %></p>
+                <br>
+                <p class="descripcion">Descripción:</p>
+                    <p><%= product.descripcionCorta %></p>
+                <br>
+                <p class="precio">Precio:</p>
+                    
+                    <h3>$<%= product.precio %></h3>
+                
+                  <div class="btn-action-product">
+                      <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
+                          <input class="editar" onclick="location.href='/products/edit/<%= product.id %>'" type="button" value="Editar" >
+                          <button type="submit" class="eliminar">Eliminar</button>
+                      </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+    </body>
 </html>

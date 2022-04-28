@@ -149,3 +149,39 @@
 		width: auto;
 	}
 }
+.btn-action .editar{
+	font-weight: bold;
+	line-height: 19px;
+	background: #5850eb;
+	border: none;
+	padding: 15px 25px;
+	border-radius: 6px;
+	color: white;
+	width: 100%;
+	margin-top: 24px;
+	cursor: pointer;
+}
+.btn-action .editar:hover {
+	background: #2c24cf;
+}
+.btn-action .editar:focus {
+	background: #3c32f1;
+}
+.btn-action .eliminar{
+	font-weight: bold;
+	line-height: 19px;
+	background: #ac0505;
+	border: none;
+	padding: 15px 25px;
+	border-radius: 6px;
+	color: white;
+	width: 100%;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.btn-action .eliminar:hover {
+	background: #880404;
+}
+.btn-action .eliminar:focus {
+	background: #630101;
+}

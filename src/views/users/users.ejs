@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/users.css" />
+
+    <title>Playground-Jugueteria</title>
+  </head>
+  <body>
+    <!--Cabecera del sitio-->
+
+    <%- include('../partials/navbar.ejs') %>
+    <div class="contenedor-principal-usuarios">
+      <div class="container-titulo">
+        <h1 class="titulo">LISTA DE USUARIOS REGISTRADOS</h1>
+        <input
+          class="button"
+          type="button"
+          onclick="location.href='/users/register'"
+          value="Crear nuevo usuario"
+        />
+      </div>
+
+      <div class="contenedor_principal">
+        <div class="lista-atributos-usuario">
+          <% users.forEach(function(users) { %>
+          <a href="/users/detail/<%= users.id %>">
+            <div class="card-img">
+              <div class="imagen-usuario">
+                <img src="/images/Users/<%= users.image %>" alt="" />
+              </div>
+              <ul>
+                <div class="nombre-usuario-card">
+                  <li><h3><%= users.first_name %></h3></li>
+                  <li><h3><%= users.last_name %></h3></li>
+                </div>
+                <div class="detalle-usuario">
+                  <li><i class="fa fa-envelope"></i><%= users.email %></li>
+                  <li>Tipo de usuario: $<%= users.category %></li>
+                </div>
+              </ul>
+            </div>
+          </a>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

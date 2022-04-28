@@ -1,0 +1,116 @@
+.container-titulo {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 125px;
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(150,62,156,1) 20%, rgba(0,212,255,1) 100%);
+}
+
+.titulo{
+    margin: 20px 50px;
+    text-align: center;
+    color: white;
+}
+
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+	font-weight: bold;
+	line-height: 19px;
+	background: #5850eb;
+	border: none;
+	padding: 15px 25px;
+	border-radius: 6px;
+	color: white;
+	width: 15%;
+    margin: 0px 20px;
+	cursor: pointer;
+}
+.button:hover {
+	background: #6e67ee;
+}
+.button:focus {
+	background: #4239e8;
+}
+
+/*********************************/
+
+.contenedor_principal {
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+
+.lista-atributos-usuario {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.card-img {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height:auto;
+    border: 1px solid rgb(160, 160, 160);
+    margin: 10px;
+    border-radius:20px;
+    flex-wrap: wrap;
+    background-color: rgb(239, 239, 239);
+}
+.card-img:hover {
+    background-color:rgb(150, 212, 250);
+}
+
+.imagen-usuario {
+    display: flex;
+    justify-content:center;
+}
+.imagen-usuario img{
+    justify-content:center;
+    align-items: center;
+    margin: 8px 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.nombre-usuario-card {
+    display: flex;
+    justify-content:center;
+}
+.nombre-usuario-card li {
+    margin: 5px;
+}
+.detalle-usuario {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    margin: 8px;
+}
+.detalle-usuario i {
+    color: rgb(113, 113, 113);
+}
+
+.fa {
+    margin:6px;
+}
+.lista-atributos-usuario li{
+    margin: 3px;
+    list-style: none;
+}
+
+.lista-atributos-usuario a{
+    text-decoration: none;
+    color: black;
+    
+   
+}
+
+
