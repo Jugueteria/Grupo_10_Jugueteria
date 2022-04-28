@@ -7,7 +7,6 @@
 body{
     font-family: 'Delius Unicase';
     background-color: #ffffff;
-    
 }
 /***INICIO Barra cabecera********/
 .container-header{
@@ -31,7 +30,7 @@ body{
 }
 .btn-ingresar,
 .btn-registrarse {
-   
+    background-color:rgb(14, 108, 239);
     color: white;
     font-family: 'Delius Unicase';
     font-size: 12px;
@@ -42,7 +41,7 @@ body{
     text-align: center;
 }
 .btn-ingresar {
-    
+    background-color:#CDABED;
     color: black;
     border: solid rgb(232, 231, 231);
 }
@@ -138,6 +137,7 @@ body{
 .slide-container {
     width: 100%;
     height: 400px;
+    background-color: #e1e1e1;
     border-radius: 10px;
 }
 /***FIN Slide********/
@@ -145,220 +145,170 @@ body{
 
 
 /***CARRITO******/
-body{
-    font-family: 'Roboto', sans-serif;
-    
+.MI_PEDIDO{
+    border: solid 0.5px #CDABED;  
+    width: 200px;
+  height: 50px;
+  padding: 20px; 
 }
-.titulo_carrito{
-    font-size:bold;
+.ProductoComprado{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+   
 }
-.Carrito{
-        
-    text-decoration: none;
-    list-style: none;
-    font-family: 'roboto', sans-serif;
-}
-.TitulosCarrito{
-    display:flex;
-    justify-content:column;
+.ProductoComprado-descripcion{
+    display: flex;
+    flex-direction: right;
+    width: 50%;
+    height: 300px;
+    background-color: #CDABED;
+    align-self:auto;
+    flex-wrap: wrap;
+    margin:auto;
     justify-content: space-around;
+    text-align:left;
+    font-family: 'Delius Unicase';
+    color:white;;
 }
-.carrito-box {
+.ProductoComprado-foto{
+    display: flex;
+    flex-direction: left;
+    width: 50%;
+    height: 300px;
+    margin:auto;
+    justify-content:space-around;
+}
+.container-finalizar-compra{
+    display: flex;
+    width: 95%;
+    height: 300px;
+    background-color: #CDABED;
+    margin:60px;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: top 10px;
+    margin-bottom: 0;
+}
+.finalizar-compra-box{
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+
+}
+.botones_finalizar{
+    display: flex;
     width: 100%;
-    height: 410px;
-    margin-top: 40px;
-    color: black;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'roboto', sans-serif;
+    height: 300px;
+    margin:30px;
+    justify-content: column; 
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
     
 }
-.TitulosCarrito{
+.finalizar{
     display:flex;
+    align-items: flex-start;
+    }
+
+.FINALIZAR_COMPRA_BUTTON{
+    display: flex;
+    justify-content: right;
+    align-self:flex-end;
+    background-color:#CDABED;
+    border-radius: 10px;
+   }
+
+.container-finalizar-compra ul>li {
+text-decoration: none;
+list-style: none;
+}
+
+.finalizar-compra-box{
+    display:flex;
+    align-self:right;
     justify-content:space-around;
     
-}
-.Titulo_cantidad{
-margin-right: 0px;
-margin-left: 60px;
-}
-.Titulo_descripcion{
-    margin-left: 200px;
-}
-.Titulo_total{
-    margin-right:340px;
-}
-.Imagen{
-   
+
 }
 
-.hombre_araña{
-    width:70px;
+.foto_finalizar_compra{
+    display: flex;
+    flex-direction: left;
+    width: 50%;
+    height: 300px;
+    margin: auto;
     
 }
-.barbie{
-    width: 100px;
-}
-.Cantidad{
+.total{
     flex-direction: column;
     text-decoration: none;
     list-style: none;
-    color:black;
-    
+    color: white;
 }
-.Descripción{
+.Sumas{
     flex-direction: column;
     text-decoration: none;
     list-style: none;
-    color:black;
-    
-    justify-content:space-between;
-    font-weight: bold;
+    color: white;
 }
-
-.Descripción_articulo1{
-    display:flex;
-    
-    height:100px;
-    justify-self: center;
-}
-.Descripción_articulo2{
-    display:flex;
-    height:100px;
-    
-}
-.Descripción_articulo3{
-    display:flex;
-    height:100px;
-    
-}
-.boton1{
-    height:100px;
-}
-.boton2{
-    height:100px;
-}
-.boton3{
-    height:100px;
-}
-.precio1{
-    height:100px;
-    
-}
-.precio2{
-    height:100px;
-}
-.precio3{
-    height:100px;
-}
-.Total {
-    text-decoration: none;
-    color:black;
-    list-style: none;
-    
-    width: 16%;
-    font-weight: bold;
-}
-.Botones_quitar{
-    
-    display:flex;
-    width:10%;
-}
-
-.Quitar {
-    background-color:red;
-    border-radius: 5px;
-    color:white;
-    
-    width: 100px;
-    height: 41px;
-    border-radius: 20px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 18px;
+.finalizar{
+    flex-direction: column;
     text-decoration: none;
     list-style: none;
-
-}
-.boton_quitar1{
-    height: 100px;
-}
-.boton_quitar2{
-    height: 100px;
-}
-.boton_quitar3{
-    height: 100px;
-}
-
-.Sub_total{
-    display:flex;    
-    
-    justify-content:flex-end;
-    
-}
-
-.detalle_subtotal{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-   
-    justify-self: center;
-    align-items: center;
-    height: 30%;
-    width: 30%;
-}
-ol,ul{
-    list-style: none;
-}
-
-.btn{
-    border-radius: 20px;
-    
-}
-.boton_actualizar{
-    display:flex;
-    justify-content: center;
-    margin-left: 100px;
-    
-}
-.Actualizar{
-    background-color:black;
-    color:white;
-    border-radius: 20px;
-    width:150px;
-    height: 40px;
-    
+    color: white;
     
 }
 #cantidad{
-    width: 70px;
-    height: 30px;
-    border-radius:20px;
+    color:black;
+    border-bottom: 1px solid black
 }
-#mas.btn{
-    width: 20px;
-    height: 20px;
-    background-color:grey;
-}
-#menos.btn{
-    width: 20px;
-    height: 20px;
-    background-color:grey;
-}
-.Comprar{
-    background-color:#5AAA95;
-    color:white;
-    border-radius: 20px;
-    width:150px;
-    height:50px;
-    
+#cantidad:hover{
+    color:black;
 }
 
+.cantidad{
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    color:white;
+
+}
+.subtotal{
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+
+}
+.MÉTODO_DE_ENVÍO{
+border: solid 0.5px #CDABED;  
+    width: 300px;
+  height: 60px;
+  padding: 20px; 
+  flex-direction:column;
+  
+}
+.MÉTODO_DE_PAGO{
+    border: solid 0.5px #CDABED;  
+    width: 300px;
+  height: 60px;
+  padding: 20px; 
+  align-self: left;
+  flex-direction:column;
+}
+.FINALIZAR_COMPRA_BUTTON{
+   display: flex;
+    border: solid 0.5px #CDABED;  
+    width: 300px;
+  height: 80px;
+  padding: 20px; 
+  align-items: right;
+  justify-content: right;
+  flex-direction: column;
+
+}
 
 /***INICIO productos Destacados********/
 .destacados {

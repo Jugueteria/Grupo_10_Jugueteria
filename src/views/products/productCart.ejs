@@ -4,7 +4,7 @@
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/stylesheets/productCart.css">
 
-    <title></title>
+    <title>Playground-Jugueteria</title>
 </head>
 <body>
     <!--Cabecera del sitio-->
@@ -12,39 +12,9 @@
     <%- include('../partials/header') %>
 
     <!--Logo, buscador y carrito de compras-->
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/productCart.css">
-
-    <title>Playground-Jugueteria</title>
-</head>
-<body>
-    <!--Cabecera del sitio-->
-    <header>
-        <div class="container-header">
-        <div class="info">
-            <p>ventas@playgroundjugueteria.com | +56 9999 5555</p>
-        </div>
-        <!--Boton de Ingresar y Resgistro-->
-        <div class="button-header">
-            <a href="/login">
-                <button type="button" name="ingresar" class="btn-ingresar">Ingresar</button>
-            </a>
-            <a href="/register">
-                <button type="button" name="registro" class="btn-registrarse">Regístrarse</button>
-            </a>
-        </div>
-        </div>
-    </header>
-    <!--Logo, buscador y carrito de compras-->
     <main class="container-main">
             <a href="/">
-                <img src="images/Design/logo.png"  alt="Logo Playground Jugueteria"></img>
+                <img src="/images/Design/Logo.png"  alt="Logo Playground Jugueteria"></img>
             </a>
     
         <div class="buscar-wrapper">
@@ -53,7 +23,7 @@
         </div>
         <div class="container-carrito">
             <div class="carro">
-                <a href="/productDetail">
+                <a href="/products/detail/1">
                     <i class="fas fa-shopping-cart" id="icono-carrito">
                         <div class="box-carrito"></div>
                     </i>
@@ -64,180 +34,110 @@
     <!--Menú-->
     <nav class="main-navbar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Marcas</a></li>
-            <li><a href="#">Edades</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="#marcas">Marcas</a></li>
+            <li><a href="/products">Productos</a></li>
+            <li><a href="/users">Usuarios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 </div>
-<!--Carrito-->
-<section class="Carrito">
+<!--Boton de mi pedido-->
 <div>
-    <h1 class="titulo_carrito">Carrito de compras</h1>
-        
-    </div>
-
-    <div class="TitulosCarrito">
-<h3 class="Titulo_descripcion">Descripción</h3>
-<h3 class="Titulo_cantidad">Cantidad</h3>
-<h3 class="Titulo_total">Total </h3>
-    </div>
-
-    <hr size="1px" color="grey" />
-    <div class="Productos_comprado">
-        <div class="carrito-box">
-            <div class="Imagen">
-                <h3>      </h3>
-                    <li>
-                        <img class="lego" src="https://http2.mlstatic.com/D_Q_NP_739816-MLA48257948669_112021-R.webp">
-                    </li>
-                    <li>
-                        <img class="barbie"src="https://http2.mlstatic.com/D_NQ_NP_2X_776064-MLA28680909874_112018-F.webp">
-                    </li>
-                    <li>
-                        <img class="hombre_araña"src="https://http2.mlstatic.com/D_NQ_NP_723770-MLA43700805792_102020-O.webp">
-                    </li>
-                    
-            </div>
-            <div class="Descripción">
-            
-                <ul>
-                    <li class="Descripción_articulo1">Lego Duplo Fozen Ice Castle </li>
-                    <li class="Descripción_articulo2">Mochila Barbie</li>
-                    <li class="Descripción_articulo3">Avengers Titan Heroes-Spiderman</li>
-                </ul>
-            </div>
-            <div class="Cantidad">
-               
-                    <li class="boton1">
-                        <button class="btn" type="button" id="menos">-</button>
-<input id="cantidad" type="text" style="text-align: center;" value="1">
-<button class="btn" type="button" id="mas">+</button>
-                        </li>
-                        <li class="boton2"><button class="btn" type="button" id="menos">-</button>
-                            <input id="cantidad" type="text" style="text-align: center;" value="1">
-                            <button class="btn" type="button" id="mas">+</button>
-                        </li>
-                        <li class="boton3">
-                            <button class="btn" type="button" id="menos">-</button>
-                            <input id="cantidad" type="text" style="text-align: center;" value="1">
-                            <button class="btn" type="button" id="mas">+</button>
-                        </li>
-                    
-            </div>
-            <div class="Total">
-               
-                    <ul>
-                        <li class="precio1">$58.99</li>
-                        <li class="precio2">$18.31</li>
-                        <li class="precio3">$46.25</li>
-                    </ul>
-            </div>
-            <div class="Botones_quitar">
-                <h3></h3>
-                <ul>
-                    <div>
-                <li class="boton_quitar1">
-                <button type="button" name="Quitar" class="Quitar">Quitar</button>
-                </li></div>
-                <div>
-                <li class="boton_quitar2">
-                <button type="button" name="Quitar" class="Quitar">Quitar</button>
-                </li></div>
-                <div>
-                <li class="boton_quitar3">
-                <button type="button" name="Quitar" class="Quitar">Quitar</button>
-                </li>
-                </div>
-
-            </ul>
-            </div>
-        </div>
-
-    </div>
-</section>
-<section class="boton_actualizar">
-    <div>
-        <button type="button" name="Actualizar" class="Actualizar">Actualizar</button>
-        </div>
-    </div>
-    
-</section>
-
-
-<div class="Sub_total">
-    <div class="detalle_subtotal">
-    <h3>Sub-total</h3>
-    <h1><b> $163.25</b></h1>
-    <button type="button" name="Comprar" class="Comprar">Comprar</button>
-    <h4>Seguir Comprando -></h4>
+    <button type="button" name="MI PEDIDO" class="MI_PEDIDO">MI PEDIDO</button>
     </div>
 </div>
-
     <!--ProductoComprado-->
 
-<div class="Metodo_de_envio">
+    <main class="ProductoComprado">
+        <div class="ProductoComprado-foto">
+            <img src="/images/Products/muneca.jpg"  alt="images/FotoProducto1.jpg"></img></div>
+
+         <div class="ProductoComprado-descripcion">
+
+            <p>NUEVO/148 VENDIDOS
+             <br><br>
+             
+             TREN DE MADERA</p>
+             
+                <ol>
+                - Incluye 48 piezas
+                - Trae: 23 Vías, 1 Locomotora, 2 Vagones, 10 Figuras de personas, 1 Auto, 6 Árboles, 4 Señalizaciones y 2 Edificios
+                - Incluye Lámina escenario
+                - Favorece la creatividad
+                - Edad Recomendada +3 años
+                - Marca Cubeta Toys
+            </ol></p>         
+            
+         <P>Devolución gratis
+
+            Tenés 30 días desde que lo recibís.</P>
+
+         </div>
+            
     
-</div>
-<form action="../../form-result.php" target="_blank">
-
-    <p>
-  
-      Método de envío:<br>
-  
-      <input type="checkbox" name="retiro en tienda"> Retiro en tienda<br>
-  
-      <input type="checkbox" name="despacho a domicilio"> Despacho a domicilio<br>
-      <p><label>Ingresa tu dirección: <input type="text" name="direccion"></label></p>
-      
-  
-    </p>
-     
-  </form>
-
-
-  <div>
-      <h3>Método de Pago</h3>
-      <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzq2o8H1YssToN1OyVJ63I4Iwqxp90r2r_Sw&usqp=CAU"></image>
-  </div>
-</body> 
-   
-     <!--Footer-->
-     <footer id="contacto">
-        <div class="footer-box">
-            <div class="contacto">
-            <h3>CONTACTENOS</h3>
+    <div></div>
+    <div></div>
+    </main>
+    <!--Finalizar Compra-->
+    <main class="container-finalizar-compra">
+        <div class="finalizar-compra-box">
+            <div class="finalizar">
+                <h3> ARTíCULO</h3>
+               
                 <ul>
-                    <li>ventas@playgroundjugueteria.com</li>
-                    <li>+56 9999 5555</li>
-                </ul>
-            </div>
-            <div class="informacion">
-                <h3>INFORMACIÓN</h3>
-                    <ul>
-                        <li><a href="#">Devolución</a></li>
-                        <li><a href="#">Despacho</a></li>
-                        <li><a href="#">Ventas mayoristas</a></li>
+                    <li>TREN DE MADERA-Art #3845</li>
+                    <li>Llega gratis hoy
+                        Solo en CABA y zonas de GBA
+                        
+                        Comprando dentro de las próximas 2 h 39 min</li>
                     </ul>
-            </div>
-            <div class="pagos">
-                <h3>FORMAS DE PAGO</h3>
-                    <ul>
-                        <li><i class="fab fa-cc-visa"></i></li>
-                        <li><i class="fab fa-cc-mastercard"></i></li>
-                        <li><i class="fab fa-cc-paypal"></i></li>
-                    </ul>
-            </div>
-            <div>
-                <div class="mapa-box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d255858.18448484907!2d-74.11976343055036!3d40.697663748391925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2scl!4v1643680349834!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
+
+            <div class="cantidad">
+                <h3>CANTIDAD</h3>
+                    
+                    <label for="cantidad"></label>
+                    <input placeholder="0" type="number" id="cantidad" name="cantidad"
+       min="1" max="100">
+                
+                </div>
+            <div class="subtotal">
+        
+                <h3>TOTAL A ABONAR</h3>
+                    <ul>
+                        <li> Producto: $1.000</li>
+                        
+                        <li>Gastos de envío: $0,00</li>
+                        
+                        <li>Total: $1.000</li>
+                    </ul>
             </div>
         </div>
-    </footer>
+    </main>
 
-</html>
+    </section>
+    <div></div>
+
+<section class="botones_finalizar">
+    <div>
+        <button type="button" name="MÉTODO DE ENVÍO" class="MÉTODO_DE_ENVÍO">1- MÉTODO DE ENVÍO</button>
+        </div>
+    </div>
+    <div>
+        <button type="button" name="MÉTODO DE PAGO" class="MÉTODO_DE_PAGO">2- MÉTODO DE PAGO</button>
+        </div>
+    </div>
+    <div>
+        <button type="button" name="FINALIZAR COMPRA" class="FINALIZAR_COMPRA_BUTTON">3- FINALIZAR COMPRA</button>
+        </div>
+    </div>
+</section>
+
+    
+   
+     <!--Footer-->
+
      <%- include('../partials/footer') %>
 
 </body>
