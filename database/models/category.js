@@ -28,6 +28,7 @@ module.exports = (sequelize, dataTypes) => {
         Category.belongsToMany(models, Users,{
             as:Users,
             
-        }
+        })
     return Category
+}
 };

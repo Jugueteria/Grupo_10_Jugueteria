@@ -39,10 +39,11 @@ module.exports = (sequelize, dataTypes) => {
         Users.hasmany(models, Products,{
             as:Products,
             foreingKey: "cartsId",
-            otherUsersId:"carts_users_id", 
+            otherUsersId:"carts_users_id"})
         
                
             
         }
     return User
+    
 };
