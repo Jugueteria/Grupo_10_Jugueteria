@@ -7,7 +7,11 @@ const{validationResult}=require("express-validator");
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-
+const Products=db.Products;
+const Users=db.Users;
+const Brands=db.Brands;
+const carts=db.Carts;
+const Category=db.Category;
 
 const usersControllers = {
 

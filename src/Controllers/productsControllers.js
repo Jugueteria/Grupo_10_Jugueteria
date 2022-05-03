@@ -7,8 +7,11 @@ const app = require("../app");
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const Products=db.Products;
+const Users=db.Users;
+const Brands=db.Brands;
+const carts=db.Carts;
+const Category=db.Category;
 
 const productsControllers = {
 
