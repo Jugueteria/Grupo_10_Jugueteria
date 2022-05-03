@@ -30,7 +30,14 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false
     }
     const Product = sequelize.define(alias, cols, config); 
-
+    Product.associate=function(models){
+        Product.hasmany(models, Users,{
+            as:Users,
+            foreingKey: "cartsId",
+            otherUsersId:"carts_users_id", 
+            otherUsersId:"category_id"
+        }
+         ) }
     //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
  
     return Product

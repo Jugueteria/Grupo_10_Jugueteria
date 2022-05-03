@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
         
     };
     let config = {
-        tableName:"Products",
+        tableName:"Category",
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
@@ -24,6 +24,10 @@ module.exports = (sequelize, dataTypes) => {
     const Category= sequelize.define(alias, cols, config); 
 
     //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
- 
+    Category.associate=function(models){
+        Category.belongsToMany(models, Users,{
+            as:Users,
+            
+        }
     return Category
 };

@@ -41,76 +41,64 @@ const Usuarios = db.Usuarios;
 const productsControllers = {
     'list': (req, res) => {
         db.Products.findAll({
-            include: ['genre']
+            include: ['titulo']
         })
-            .then(movies => {
-                res.render('moviesList.ejs', {movies})
+            .then(products => {
+                res.render('productDetail.ejs', {product})
             })
     },
     'detail': (req, res) => {
-        db.Movie.findByPk(req.params.id,
+        db.Products.findByPk(req.params.id,
             {
-                include : ['genre']
+                include : ['titulo']
             })
-            .then(movie => {
-                res.render('moviesDetail.ejs', {movie});
+            .then(products => {
+                res.render('productDetail.ejs', {products});
             });
     },
     'new': (req, res) => {
-        db.Movie.findAll({
+        db.Products.findAll({
             order : [
-                ['release_date', 'DESC']
+                ['DESC']
             ],
             limit: 5
         })
-            .then(movies => {
-                res.render('newestMovies', {movies});
+            .then(products => {
+                res.render('products', {products});
             });
     },
-    'recomended': (req, res) => {
-        db.Movie.findAll({
-            include: ['genre'],
-            where: {
-                rating: {[db.Sequelize.Op.gte] : 8}
-            },
-            order: [
-                ['rating', 'DESC']
-            ]
-        })
-            .then(movies => {
-                res.render('recommendedMovies.ejs', {movies});
-            });
-    },
+    
     //Aqui dispongo las rutas para trabajar con el CRUD
     add: function (req, res) {
-        let promGenres = Genres.findAll();
-        let promActors = Actors.findAll();
+        let promProducts= Products.findAll();
+        let promUsers= Users.findAll();
         
         Promise
-        .all([promGenres, promActors])
-        .then(([allGenres, allActors]) => {
-            return res.render(path.resolve(__dirname, '..', 'views',  'moviesAdd'), {allGenres,allActors})})
+        .all([promProducts, promUsers])
+        .then(([allProducts, allUsers]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'formCreate'), {allProducts,allUsers})})
         .catch(error => res.send(error))
     },
     create: function (req,res) {
-        Movies
+        // verificar si va Products o base_jugueteria
         .create(
             {
                 title: req.body.title,
-                rating: req.body.rating,
+                description: req.body.description,
                 awards: req.body.awards,
-                release_date: req.body.release_date,
-                length: req.body.length,
-                genre_id: req.body.genre_id
+                price: req.body.price,
+                image: req.body.image,
+                brandsId: req.body.brandsId,
+                categoryId: req.body.categoryId
             }
         )
         .then(()=> {
-            return res.redirect('/movies')})            
+            return res.redirect('/products')})            
         .catch(error => res.send(error))
     },
-    edit: function(req,res) {
-        let movieId = req.params.id;
-        let promMovies = Movies.findByPk(movieId,{include: ['genre','actors']});
+    //edit: function(req,res) {
+        let productId = req.params.id;
+        let promProducts = Products.findByPk(productsId,{include: ['genre','actors']});
         let promGenres = Genres.findAll();
         let promActors = Actors.findAll();
         Promise
@@ -123,6 +111,7 @@ const productsControllers = {
             return res.render(path.resolve(__dirname, '..', 'views',  'moviesEdit'), {Movie,allGenres,allActors})})
         .catch(error => res.send(error))
     },
+    
     update: function (req,res) {
         let movieId = req.params.id;
         Movies
