@@ -75,10 +75,6 @@ const productsControllers = {
         res.redirect('/');
       }
 
-
-
-
-
   }
   
   module.exports = productsControllers;

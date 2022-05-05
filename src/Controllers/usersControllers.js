@@ -4,8 +4,10 @@ const path = require('path');
 const bcrypt = require("bcrypt");
 const{validationResult}=require("express-validator");
 
+
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require("../database/models");
 
 
 
@@ -33,9 +35,7 @@ const usersControllers = {
            last_name:userfound.last_name,
            email:userfound.email,
            image:userfound.image
-           
           
-           
           }
 
           req.session.userLogin = user
