@@ -20,6 +20,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(50),
             allowNull: false
         },
+
+        image: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+
         password: {
             type: dataTypes.STRING(20),
             allowNull: false
@@ -28,10 +34,8 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName:'users',
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: false,
+        
     }
     const user = sequelize.define(alias,cols,config);
 

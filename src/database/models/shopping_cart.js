@@ -20,10 +20,8 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName:'shopping_cart',
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: false,
+        
     }
     const shopping_cart = sequelize.define(alias,cols,config);
 

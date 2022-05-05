@@ -1,9 +1,15 @@
 const app = require("../app");
 const fs = require('fs');
 const path = require('path');
+let db = require("../database/models");
+const trademark = require("../database/models/trademark");
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
+
+
 
 const productsControllers = {
 
@@ -23,22 +29,33 @@ const productsControllers = {
       },
 
 'formCreate': function(req, res) {
-    res.render('products/formCreate');
+     db.trademark.findAll()
+     .then(function(trademarks){ 
+      return res.render('products/formCreate', {trademarks:trademarks});
+
+});
   },
 
+
 'products': function(req, res) {
-    res.render('products/products', {products});
+	db.product.findAll()
+	   .then(function(productos){
+		return res.render('products/products', {productos:productos});
+
+	   })
+    
   },
 
 'lista': function(req, res) {
-		let newProduct = {
-			id: products[products.length - 1].id + 1,
-			...req.body,
-			imagen: 'default.png',
-		};
-		products.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/products');
+		db.product.create({
+          title:req.body.titulo,
+		  description:req.body.descripcionCorta,
+		  price:req.body.precio,
+		  imagen: 'default.png',
+
+		});
+
+		res.render('products')
 	},
 
   'edit': function(req, res) {
@@ -73,7 +90,9 @@ const productsControllers = {
         let finalProducts = products.filter(product => product.id != id);
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
         res.redirect('/');
-      }
+      },
+
+	 
 
   }
   

@@ -16,10 +16,8 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName:'trademark',
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: false,
+        
     }
     const trademark = sequelize.define(alias,cols,config);
 

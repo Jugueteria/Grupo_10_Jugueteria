@@ -59,22 +59,22 @@
 
     
         <section class="menu">
-          <% products.forEach(function(products) { %>
-            <a href="/products/detail/<%= products.id %>">
+          <% productos.forEach(function(productos) { %>
+            <a href="/products/detail/<%= productos.id %>">
   
               <article>
                 <div class="imgen-contenedor">
-                  <img src="/images/Products/<%= products.imagen %>" alt="">
+                  <img src="/images/Products/<%= productos.image %>" alt="">
                 </div>
                 <ul>
                   <li>
-                      Nombre: <%= products.titulo %>
+                      Nombre: <%= productos.title %>
                   </li>
                   <li>
-                      Descripcion: <%= products.descripcionCorta %> 
+                      Descripcion: <%= productos.description %> 
                   </li>
                   <li>
-                      Precio: $<%= products.precio %>
+                      Precio: $<%= productos.price %>
                   </li>
                 </ul>
               </article>

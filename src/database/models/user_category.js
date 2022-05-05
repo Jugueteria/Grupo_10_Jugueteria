@@ -16,10 +16,8 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName:'user_category',
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: false,
+        
     }
 
     const user_category = sequelize.define(alias,cols,config);

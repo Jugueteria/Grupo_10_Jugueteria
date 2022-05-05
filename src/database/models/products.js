@@ -16,18 +16,22 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        image: {
+
+        price: {
             type: dataTypes.DECIMAL(3, 1),
             allowNull: false
+        },
+
+        image: {
+            type: dataTypes.STRING(100),
+           
         }
         
     };
     let config = {
         tableName:'products',
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: false,
+      
     }
     const product = sequelize.define(alias,cols,config);
 

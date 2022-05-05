@@ -53,10 +53,29 @@
 
 
 
+    <div class="formato">
+        <div>
+            <label for="" class="lnombre">Marca</label>
+            <select name="marca" id="marca">
+             
+             <% for (let i=0; i < trademarks.length; i++) {%>
+            
+                <option value="<%= trademarks[i].trademark_id %>">
+                   <%= trademarks[i].trademark_name %>
+                </option>
+    
+            <% }%>
+    
+            </select>
+        </div>
+    
+
+    </div>
+    
+
     <input class="btnenviar" type="submit" value="GUARDAR">
     
         </form>
-
 
 
 <%- include('../partials/slider_dinamico.ejs') %>
