@@ -36,9 +36,7 @@ const usersControllers = {
            first_name:userfound.first_name,
            last_name:userfound.last_name,
            email:userfound.email,
-           image:userfound.image
-           
-          
+           image:userfound.image             
            
           }
 
@@ -88,17 +86,7 @@ const usersControllers = {
       'users': function(req, res) {
         res.render('users/users', {users});
       },
-
-
-      'create': function(req, res) {
-  
-            const errors = validationResult(req)
-            
-            if(errors.errors.length>0){
-             return res.render("users/register",{errors:errors.mapped()})
-
-            }
-
+     
             let newUser = {
               id: users[users.length - 1].id + 1,
               first_name:req.body.first_name,
@@ -112,9 +100,9 @@ const usersControllers = {
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
             res.redirect('/users/login');
 
-        
-         
-      },
+          
+          
+      
 
       'userDetail': function(req, res) {
         let id = req.params.id
@@ -130,8 +118,27 @@ const usersControllers = {
 
          res.render('users/profile')
         },
+      
+      
+        create: function(req, res) {
+          Users.create(
+            {
+            first_name:req.body.first_name,
+            last_name:req.body.last_name,
+            email:req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            category:"user",
+            image: req.file ? req.file.filename : "default.png"
+            })
+            .then(()=> {
+            const errors = validationResult(req)
+              
+              if(errors.errors.length>0){
+               return res.render("users/register",{errors:errors.mapped()})
+        }})
+              },
 
-        'edit': function(req, res) {
+        edit: function(req, res) {
          
           let id = req.params.id
           let userToEdit = users.find(user => user.id == id)
@@ -139,12 +146,11 @@ const usersControllers = {
           console.log(userToEdit)
         },
       
-        'update': function(req, res){
+        update: function(req, res){
           let id = req.params.id;
           let userToEdit = users.find(user => user.id == id)
-
-          userToEdit = {
-            id: userToEdit.id,
+          Users.update(
+           {id: userToEdit.id,
             first_name:req.body.first_name,
               last_name:req.body.last_name,
               email:req.body.email,
@@ -152,7 +158,7 @@ const usersControllers = {
               category:"user",
               image: req.file ? req.file.filename : "default.png"
 
-          };
+          });
           
           let newUsers = users.map(user => {
             if (user.id == userToEdit.id) {
@@ -165,7 +171,7 @@ const usersControllers = {
           res.redirect('/');
         },
 
-        eliminar : (req, res) => {
+        delete : (req, res) => {
           let id = req.params.id;
           let finalUsers = users.filter(user => user.id != id);
           fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
