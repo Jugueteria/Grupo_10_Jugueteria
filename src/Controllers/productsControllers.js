@@ -13,19 +13,20 @@ const productsControllers = {
 
 'productCart': (req, res)=> {
     db.Products.findAll((req.params.product)
-    )
+    
     .then(products=> {
         res.render('products.ejs',{product})
 
-    }),
+    }))
+},
 
 'productDetail': (req, res) =>{
       db.Products.findByPk((req.params.id)
       .then(product =>{
           res.render('productDetail.ejs',{product});
-      })
+      }))
 
-}};
+},
 
 create: function (req, res) {
     Products.create(
@@ -68,11 +69,11 @@ create: function (req, res) {
     delete: (req, res)=> {
         let productId = req.params.id;
         Products.findByPk(productId)
-        .then (Product => {
-            return res.render(path.resolve(_(dirname, '..', 'views',  'productsEdit'), {Product})})
+        .then ((Product) => {
+            return res.render(path.resolve(_(dirname, '..', 'views',  'productsEdit'), {Product}))
             .catch(error => res.send(error))
-        }
+        })
 
-};
+}};
 
   module.exports = productsControllers;
