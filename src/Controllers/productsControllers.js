@@ -54,14 +54,16 @@ create: function (req, res) {
         title: req.body.title,
         description:req.body.description,
         image: re.body.image
-            },
+            }),
         {
         where: {id: productId}
 		}
 		.then(()=> {
         return res.redirect('/Products')
         .catch(error => res.send(error))
-    },
+    })
+},
+	
 
     delete: (req, res)=> {
         let productId = req.params.id;
@@ -72,4 +74,5 @@ create: function (req, res) {
         }
 
 };
+
   module.exports = productsControllers;

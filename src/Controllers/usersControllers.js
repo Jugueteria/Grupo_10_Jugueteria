@@ -85,7 +85,7 @@ const usersControllers = {
 
       'users': function(req, res) {
         res.render('users/users', {users});
-      },
+      
      
             let newUser = {
               id: users[users.length - 1].id + 1,
@@ -101,7 +101,7 @@ const usersControllers = {
             res.redirect('/users/login');
 
           
-          
+      },
       
 
       'userDetail': function(req, res) {
