@@ -60,7 +60,7 @@
     
         <section class="menu">
           <% productos.forEach(function(productos) { %>
-            <a href="/products/detail/<%= productos.id %>">
+            <a href="/products/detail/<%= productos.product_id %>">
   
               <article>
                 <div class="imgen-contenedor">
@@ -83,14 +83,6 @@
     
         </section>
       </div>
-  
-    
-   
-
-
-
-
-
 
       <!--Footer-->
       <%- include('../partials/footer') %>

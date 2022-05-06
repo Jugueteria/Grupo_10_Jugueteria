@@ -29,11 +29,15 @@ const productsControllers = {
       },
 
 'formCreate': function(req, res) {
-     db.trademark.findAll()
-     .then(function(trademarks){ 
-      return res.render('products/formCreate', {trademarks:trademarks});
+     let trademarks=db.trademark.findAll()
+	let categories= db.product_category.findAll()
+    
+	Promise.all([trademarks,categories])
+	.then(function([trademarks,categories]){
 
-});
+		return res.render('products/formCreate', {trademarks:trademarks,categories:categories });
+	})
+
   },
 
 
@@ -51,11 +55,15 @@ const productsControllers = {
           title:req.body.titulo,
 		  description:req.body.descripcionCorta,
 		  price:req.body.precio,
-		  imagen: 'default.png',
+		  image:"default.png",
+		  trademark_id:req.body.marca,
+		  Pcategory_id:req.body.category,
 
-		});
+		})
 
-		res.render('products')
+		.then(()=> {
+            return res.redirect('/products')})            
+        .catch(error => res.send(error))
 	},
 
   'edit': function(req, res) {

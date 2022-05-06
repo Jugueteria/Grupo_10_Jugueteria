@@ -68,6 +68,21 @@
     
             </select>
         </div>
+
+        <div>
+            <label for="" class="lnombre">Categoria</label>
+            <select name="category" id="category">
+             
+             <% for (let i=0; i < categories.length; i++) {%>
+            
+                <option value="<%= categories[i].Pcategory_id %>">
+                   <%= categories[i].Pcategory_name %>
+                </option>
+    
+            <% }%>
+    
+            </select>
+        </div>
     
 
     </div>
