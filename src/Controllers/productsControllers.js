@@ -101,14 +101,12 @@ const productsControllers = {
 	},
 
 	eliminar : (req, res) => {
-        let id = req.params.id;
-        let finalProducts = products.filter(product => product.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-        res.redirect('/');
-      },
-
-	 
-
+		let productId = req.params.id
+		db.product.destroy({where: {product_id: productId}, force: true})
+        .then(()=>{
+            return res.redirect('/products')})
+        .catch(error => res.send(error)) 
+    }
   }
   
   module.exports = productsControllers;
