@@ -49,23 +49,23 @@
     <!--Detalle de Producto seccion-->
     <div class="container-detalle">
         <div class="imagen">
-            <img class="imagenes" src="/images/Products/<%= product.imagen %>"  alt=""></img>
+            <img class="imagenes" src="/images/Products/<%= products.image %>"  alt=""></img>
         </div>
             <div class="detalle">
-                <h2><%= product.titulo %></h2>
+                <h2><%= products.title %></h2>
                 <br>
-                <p>N° Producto:<%= product.id %></p>
+                <p>N° Producto:<%= products.product_id %></p>
                 <br>
                 <p class="descripcion">Descripción:</p>
-                    <p><%= product.descripcionCorta %></p>
+                    <p><%= products.description %></p>
                 <br>
                 <p class="precio">Precio:</p>
                     
-                    <p>$<%= product.precio %></p>
+                    <p>$<%= products.price %></p>
                 
                   
-                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                        <input class="editar" onclick="location.href='/products/edit/<%= product.id %>'" type="button" value="Editar" >
+                    <form action="/products/delete/<%= products.product_id %>?_method=DELETE" method="POST" >
+                        <input class="editar" onclick="location.href='/products/edit/<%= products.product_id %>'" type="button" value="Editar" >
                         <button type="submit" class="eliminar">Eliminar</button>
                     </form>
             

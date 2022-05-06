@@ -21,12 +21,14 @@ const productsControllers = {
 
 'productDetail': function(req, res) {
       let id = req.params.id
-        let product = products.find(product => product.id == id)
-        res.render('products/productDetail', {
-            product
-           
-        })
-      },
+        db.product.findByPk(req.params.id,
+			{
+              
+            })
+            .then(products => {
+                res.render('products/productDetail', {products});
+            });
+    },
 
 'formCreate': function(req, res) {
      let trademarks=db.trademark.findAll()
@@ -67,9 +69,15 @@ const productsControllers = {
 	},
 
   'edit': function(req, res) {
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-		res.render('products/productsEdit', {productToEdit})
+		let productId = req.params.id
+		let promProducts = db.product.findByPk(productId);
+        
+        Promise
+        .all([promProducts])
+        .then(([Product]) => {
+           
+			return res.render(path.resolve(__dirname, '..', 'views',  'products',  'productsEdit'), {Product})})
+			.catch(error => res.send(error))
 	},
 
 	'update': function(req, res){
