@@ -139,45 +139,44 @@ const usersControllers = {
         },
 
         'edit': function(req, res) {
-         
-          let id = req.params.id
-          let userToEdit = users.find(user => user.id == id)
-          res.render('users/usersEdit', {userToEdit})
-          console.log(userToEdit)
+          let userId = req.params.id
+          let promUsers = db.user.findByPk(userId);
+              
+              Promise
+              .all([promUsers])
+              .then(([User]) => {
+                 
+            return res.render(path.resolve(__dirname, '..', 'views',  'users',  'usersEdit'), {User})})
+            .catch(error => res.send(error))
         },
       
-        'update': function(req, res){
-          let id = req.params.id;
-          let userToEdit = users.find(user => user.id == id)
-
-          userToEdit = {
-            id: userToEdit.id,
+        'update': function(req, res) {
+          let userId = req.params.id
+          db.user.update({
             first_name:req.body.first_name,
               last_name:req.body.last_name,
               email:req.body.email,
-              password: bcrypt.hashSync(req.body.password, 10),
-              category:"user",
-              image: req.file ? req.file.filename : "default.png"
-
-          };
-          
-          let newUsers = users.map(user => {
-            if (user.id == userToEdit.id) {
-              return user = {...userToEdit};
-            }
-            return user;
+              image: req.file ? req.file.filename : "default.png",
+              password: bcrypt.hashSync(req.body.password, 10),            
+              Ucategory_id:1,
+      
+          },
+          {
+            where: {user_id: userId }
           })
       
-          fs.writeFileSync(usersFilePath, JSON.stringify(newUsers, null, ' '));
-          res.redirect('/');
+          .then(()=> {
+                  return res.redirect('/users')})            
+              .catch(error => res.send(error))
         },
 
         eliminar : (req, res) => {
-          let id = req.params.id;
-          let finalUsers = users.filter(user => user.id != id);
-          fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
-          res.redirect('/');
-        }
+          let userId = req.params.id
+          db.user.destroy({where: {user_id: userId}, force: true})
+              .then(()=>{
+                  return res.redirect('/users')})
+              .catch(error => res.send(error)) 
+          }
   };
   
   module.exports = usersControllers;
