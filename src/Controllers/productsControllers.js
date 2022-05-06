@@ -80,25 +80,24 @@ const productsControllers = {
 			.catch(error => res.send(error))
 	},
 
-	'update': function(req, res){
-		let id = req.params.id;
-		let productToEdit = products.find(product => product.id == id)
+	'update': function(req, res) {
+		let productId = req.params.id
+		db.product.update({
+          title:req.body.titulo,
+		  description:req.body.descripcionCorta,
+		  price:req.body.precio,
+		  image:"default.png",
+		  trademark_id:req.body.marca,
+		  Pcategory_id:req.body.category,
 
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			imagen: 'default.png',
-		};
-		
-		let newProducts = products.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = {...productToEdit};
-			}
-			return product;
+		},
+		{
+			where: {product_id: productId}
 		})
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/');
+		.then(()=> {
+            return res.redirect('/products')})            
+        .catch(error => res.send(error))
 	},
 
 	eliminar : (req, res) => {
