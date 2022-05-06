@@ -49,23 +49,23 @@
     <!--Detalle de Producto seccion-->
     <div class="container-detalle">
         <div class="imagen">
-            <img class="imagenes" src="/images/Users/<%= user.image  %>"  alt=""></img>
+            <img class="imagenes" src="/images/Users/<%= users.image  %>"  alt=""></img>
         </div>
             <div class="detalle">
-                <p class="id" >N° Usuario:<%= user.id %></p>
+                <p class="id" >N° Usuario:<%= users.user_id %></p>
                 <br>
-                <p class="nombre" >Nombre:<%= user.first_name + " " +user.last_name %></p>
+                <p class="nombre" >Nombre:<%= users.first_name + " " +users.last_name %></p>
                 <br>
                 <p class="email">Email:</p>
-                    <p><%= user.email  %></p>
+                    <p><%= users.email  %></p>
                 <br>
                 <p class="tipo_usuario">Tipo de usuario:</p>
                     
-                    <p><%= user.category %></p>
+                 
                 <br>
                   
-                <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" >
-                    <input class="editar" onclick="location.href='/users/edit/<%= user.id %>'" type="button" value="Editar" >
+                <form action="/users/delete/<%= users.user_id %>?_method=DELETE" method="POST" >
+                    <input class="editar" onclick="location.href='/users/edit/<%= users.user_id %>'" type="button" value="Editar" >
                     <button type="submit" class="eliminar">Eliminar</button>
                 </form>
             

@@ -59,25 +59,25 @@
 
     
         <section class="menu">
-          <% users.forEach(function(users) { %>
-            <a href="/users/detail/<%= users.id %>">
+          <% allUsers.forEach(function(allUsers) { %>
+            <a href="/users/detail/<%= allUsers.user_id %>">
   
               <article>
                 <div class="imgen-contenedor">
-                  <img src="/images/Users/<%= users.image %>" alt="">
+                  <img src="/images/Users/<%= allUsers.image %>" alt="">
                 </div>
                 <ul>
                   <li>
-                      Nombre: <%= users.first_name %>
+                      Nombre: <%= allUsers.first_name %>
                   </li>
                   <li>
-                    Apellido: <%= users.last_name %>
+                    Apellido: <%= allUsers.last_name %>
                 </li>
                   <li>
-                      Email: <%= users.email %> 
+                      Email: <%= allUsers.email %> 
                   </li>
                   <li>
-                      Tipo de usuario: $<%= users.category %>
+                      Tipo de usuario: <%=allUsers.Ucategory_id %>
                   </li>
                 </ul>
               </article>

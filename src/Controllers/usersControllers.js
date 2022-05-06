@@ -82,12 +82,18 @@ const usersControllers = {
       },
 
       'users': function(req, res) {
-        res.render('users/users', {users});
+        let promUser=db.user.findAll()
+        let promUsercategory=db.user_category.findAll()
+         Promise
+         .all([promUser,promUsercategory]) 
+           .then(([allUsers,allCategories])=>{
+            return res.render('users/users', {allUsers,allCategories})})
+            .catch(error => res.send(error))
       },
-
+    
 
       'create': function(req, res) {
-  
+             
             const errors = validationResult(req)
             
             if(errors.errors.length>0){
@@ -95,30 +101,35 @@ const usersControllers = {
 
             }
 
-            let newUser = {
-              id: users[users.length - 1].id + 1,
+            db.user.create({
+
+          
               first_name:req.body.first_name,
               last_name:req.body.last_name,
               email:req.body.email,
-              password: bcrypt.hashSync(req.body.password, 10),
-              category:"user",
-              image: req.file ? req.file.filename : "default.png"
-            };
-            users.push(newUser)
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-            res.redirect('/users/login');
+              image: req.file ? req.file.filename : "default.png",
+              password: bcrypt.hashSync(req.body.password, 10),            
+              Ucategory_id:1,
 
-        
-         
+            })
+              
+            .then(()=> {
+              return res.redirect('/users')})            
+          .catch(error => res.send(error))
+  
+          
       },
 
       'userDetail': function(req, res) {
         let id = req.params.id
-          let user = users.find(user => user.id == id)
-          res.render('users/userDetail', {
-              user
-             
+        db.user.findByPk(req.params.id,
+          {
+            
           })
+          .then(users => {
+              res.render('users/userDetail', {users});
+          });
+
         },
 
 
