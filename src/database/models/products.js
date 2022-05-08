@@ -42,7 +42,7 @@ module.exports = (sequelize, dataTypes) => {
         })
 
         product.belongsTo(models.product_category, { 
-            as: "pcategorias",
+            as: "categories",
             foreignKey: "Pcategory_id"
         })
 

@@ -20,18 +20,22 @@ const productsControllers = {
 
 
 'productDetail': function(req, res) {
-      let id = req.params.id
-        db.product.findByPk(req.params.id,
-			{
-              
-            })
-            .then(products => {
-                res.render('products/productDetail', {products});
+    let id = req.params.id
+	let trademarks=db.trademark.findAll()
+	let categories= db.product_category.findAll()
+        let products=db.product.findByPk(req.params.id, {
+
+			include:[{association:"trademarks"},{association:"categories"}]
+		})
+
+		Promise.all([products,trademarks,categories])
+		.then(function([products,trademarks,categories]){
+                res.render('products/productDetail', {products:products,trademarks:trademarks,categories:categories });
             });
     },
 
 'formCreate': function(req, res) {
-     let trademarks=db.trademark.findAll()
+    let trademarks=db.trademark.findAll()
 	let categories= db.product_category.findAll()
     
 	Promise.all([trademarks,categories])
@@ -43,12 +47,15 @@ const productsControllers = {
   },
 
 
-'products': function(req, res) {
-	db.product.findAll()
-	   .then(function(productos){
-		return res.render('products/products', {productos:productos});
+'products': async (req, res) => {
+	try{
+		let productos= await db.product.findAll();
+		let category= await db.product_category.findAll();
+		return res.render('products/products', {productos:productos, category:category})
 
-	   })
+	}catch(error){
+		console.log(error);
+	}
     
   },
 
@@ -71,12 +78,15 @@ const productsControllers = {
   'edit': function(req, res) {
 		let productId = req.params.id
 		let promProducts = db.product.findByPk(productId);
+		let trademarks=db.trademark.findAll()
+		let categories= db.product_category.findAll()
+	
         
         Promise
-        .all([promProducts])
-        .then(([Product]) => {
+        .all([promProducts,trademarks,categories])
+        .then(([Product,trademarks,categories]) => {
            
-			return res.render(path.resolve(__dirname, '..', 'views',  'products',  'productsEdit'), {Product})})
+			return res.render(path.resolve(__dirname, '..', 'views',  'products',  'productsEdit'), {Product,trademarks:trademarks,categories:categories })})
 			.catch(error => res.send(error))
 	},
 

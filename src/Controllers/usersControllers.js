@@ -22,7 +22,7 @@ const usersControllers = {
     }
 
     let userEmail = req.body.email
-    let promEmail = db.user.findOne({
+    db.user.findOne({
 
       where: { email: userEmail }
     })
@@ -33,7 +33,7 @@ const usersControllers = {
         if (User) {
           if (bcrypt.compareSync(req.body.password, User.password)) {
             let user = {
-              id: User.id,
+              user_id: User.user_id,
               first_name: User.first_name,
               last_name: User.last_name,
               email: User.email,
@@ -131,21 +131,30 @@ const usersControllers = {
 
   'userDetail': function (req, res) {
     let id = req.params.id
-    db.user.findByPk(req.params.id,
+    let user_categories=db.user_category.findAll()
+    let users= db.user.findByPk(req.params.id,
       {
-
+        include:[{association:"user_categories"}]
       })
-      .then(users => {
-        res.render('users/userDetail', { users });
+
+      Promise.all([users,user_categories])
+      .then(function([users,user_categories]){
+        res.render('users/userDetail', { users:users,user_categories:user_categories});
       });
 
   },
+
 
 
   'profile': function (req, res) {
 
     res.render('users/profile')
   },
+
+
+
+
+
 
   'edit': function (req, res) {
     let userId = req.params.id

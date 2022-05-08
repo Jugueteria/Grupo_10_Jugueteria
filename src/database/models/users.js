@@ -41,7 +41,7 @@ module.exports = (sequelize, dataTypes) => {
 
     user.associate = function (models) {
         user.belongsTo(models.user_category, { 
-            as: "ucategorias",
+            as: "user_categories",
             foreignKey: "Ucategory_id"
         })
 
