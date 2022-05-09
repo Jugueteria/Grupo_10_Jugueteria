@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="stylesheet" href="/stylesheets/products.css">
-  
+        <link rel="stylesheet" href="/stylesheets/styles.css">
+        <link rel="stylesheet" href="/stylesheets/products.css">
 
 
 
-    <title>Playground-Jugueteria</title>
+
+        <title>Playground-Jugueteria</title>
 </head>
+
 <body>
     <!--Cabecera del sitio-->
 
     <%- include('../partials/header') %>
 
-    <!--Logo, buscador y carrito de compras-->
-    <main class="container-main">
-        
+        <!--Logo, buscador y carrito de compras-->
+        <main class="container-main">
+
             <a href="/">
-                <img src="/images/Logo/Logo.png"  alt="Logo Playground Jugueteria"></img>
+                <img src="/images/Logo/Logo.png" alt="Logo Playground Jugueteria"></img>
             </a>
-     
-        <div class="buscar-wrapper">
-            <input class="buscador-box" type="search" text="Search" placeholder="Buscar producto">
-            <button type="button" class="fas fa-search" id="lupa"></button>
-        </div>
-        <div class="container-carrito">
-            <div class="carro">
-                <a href="/products/detail/1">
-                    <i class="fas fa-shopping-cart" id="icono-carrito">
-                        <div class="box-carrito"></div>
-                    </i>
-                </a>
+
+            <div class="buscar-wrapper">
+                <input class="buscador-box" type="search" text="Search" placeholder="Buscar producto">
+                <button type="button" class="fas fa-search" id="lupa"></button>
             </div>
-        </div>
-    </main>
-    <!--Menú-->
-    <nav class="main-navbar">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#marcas">Marcas</a></li>
-            <li><a href="/products">Productos</a></li>
-            <li><a href="/users">Usuarios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="/users/profile">Perfil</a></li>
-        </ul>
-    </nav>
-
-    <h1 class="titulo">MI LISTA DE PRODUCTOS</h1>
-    <br>
-    <br>
-    <input class="crear" type="button" onclick="location.href='/products/create'" value="Crear nuevo producto" >
-
-
-
-    <div class="contenedor_principal">
-
-    
-        <section class="menu">
-          <% productos.forEach(function(productos) { %>
-            <a href="/products/detail/<%= productos.product_id %>">
-  
-              <article>
-                <div class="imgen-contenedor">
-                  <img src="/images/Products/<%= productos.image %>" alt="">
+            <div class="container-carrito">
+                <div class="carro">
+                    <a href="/products/detail/1">
+                        <i class="fas fa-shopping-cart" id="icono-carrito">
+                            <div class="box-carrito"></div>
+                        </i>
+                    </a>
                 </div>
-                <ul>
-                  <li>
-                      Nombre: <%= productos.title %>
-                  </li>
-                  <li>
-                      Descripcion: <%= productos.description %> 
-                  </li>
-                  <li>
-                      Precio: $<%= productos.price %>
-                  </li>
+            </div>
+        </main>
+        <!--Menú-->
+        <nav class="main-navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#marcas">Marcas</a></li>
+                <li><a href="/products">Productos</a></li>
+                <li><a href="/users">Usuarios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="/users/profile">Perfil</a></li>
+            </ul>
+        </nav>
 
-                
-                  <li>
-                   
-                </li>
-                </ul>
-              </article>
-            </a>
-          <% }) %> 
-    
-        </section>
-      </div>
+        <h1 class="titulo">MI LISTA DE PRODUCTOS</h1>
+        <br>
+        <br>
+        <input class="crear" type="button" onclick="location.href='/products/create'" value="Crear nuevo producto">
 
-      <!--Footer-->
-      <%- include('../partials/footer') %>
-      
+
+
+        <div class="contenedor_principal">
+
+
+            <section class="menu">
+                <% productos.forEach(function(productos) { %>
+                    <a href="/products/detail/<%= productos.product_id %>">
+
+                        <article>
+                            <div class="imgen-contenedor">
+                                <img src="/images/Products/<%= productos.image %>" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    Nombre: <%= productos.title %>
+                                </li>
+                                <li>
+                                    Descripcion: <%= productos.description %>
+                                </li>
+                                <li>
+                                    Precio: $<%= productos.price %>
+                                </li>
+
+
+                                <li>
+
+                                </li>
+                            </ul>
+                        </article>
+                    </a>
+                    <% }) %>
+
+            </section>
+        </div>
+
+        <!--Footer-->
+        <%- include('../partials/footer') %>
+
 </body>
+
 </html>

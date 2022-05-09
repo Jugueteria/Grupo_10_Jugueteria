@@ -1,66 +1,66 @@
-const{check, body }=require("express-validator");
+const { check, body } = require("express-validator");
 const fs = require('fs');
 const path = require('path');
 
 
 
-function findAll(){
-const users= JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')));
-return users;
+function findAll() {
+    const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')));
+    return users;
 
 }
 
 
-module.exports={
+module.exports = {
 
-login:[
-    check("email")
-    .notEmpty()
-    .withMessage("Falta ingresar Email")
-    .bail()
-    .isEmail()
-    .withMessage("Formato de correo incorrecto"),
+    login: [
+        check("email")
+            .notEmpty()
+            .withMessage("Falta ingresar Email")
+            .bail()
+            .isEmail()
+            .withMessage("Formato de correo incorrecto"),
 
-    check("password")
-    .notEmpty()
-    .withMessage("Falta ingresar Contraseña")
+        check("password")
+            .notEmpty()
+            .withMessage("Falta ingresar Contraseña")
 
-],
-register:[
-   
-    check("first_name")
-    .notEmpty()
-    .withMessage("Falta ingresar Nombre"),
+    ],
+    register: [
 
-    check("last_name")
-    .notEmpty()
-    .withMessage("Falta ingresar Apellido"),
+        check("first_name")
+            .notEmpty()
+            .withMessage("Falta ingresar Nombre"),
 
-    check("email")
-    .notEmpty()
-    .withMessage("Falta ingresar Email")
-    .bail()
-    .isEmail()
-    .withMessage("Formato de correo incorrecto")
-    .bail()
-    .custom(function(value){
-      let users=findAll()
-      let userFound =users.find(function(user){
+        check("last_name")
+            .notEmpty()
+            .withMessage("Falta ingresar Apellido"),
 
-            return user.email==value
-        })
+        check("email")
+            .notEmpty()
+            .withMessage("Falta ingresar Email")
+            .bail()
+            .isEmail()
+            .withMessage("Formato de correo incorrecto")
+            .bail()
+            .custom(function (value) {
+                let users = findAll()
+                let userFound = users.find(function (user) {
 
-        if(userFound){
-           throw new Error("Email ya registrado")
-        }
-        return true;
-    }),
+                    return user.email == value
+                })
 
-    check("password")
-    .notEmpty()
-    .withMessage("Falta ingresar Contraseña")
-    
-]
+                if (userFound) {
+                    throw new Error("Email ya registrado")
+                }
+                return true;
+            }),
+
+        check("password")
+            .notEmpty()
+            .withMessage("Falta ingresar Contraseña")
+
+    ]
 
 
 }

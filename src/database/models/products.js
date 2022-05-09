@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-      
+
         title: {
             type: dataTypes.STRING(50),
             allowNull: false
@@ -24,34 +24,34 @@ module.exports = (sequelize, dataTypes) => {
 
         image: {
             type: dataTypes.STRING(100),
-           
+
         }
-        
+
     };
     let config = {
-        tableName:'products',
+        tableName: 'products',
         timestamps: false,
-      
+
     }
-    const product = sequelize.define(alias,cols,config);
+    const product = sequelize.define(alias, cols, config);
 
     product.associate = function (models) {
-        product.belongsTo(models.trademark, { 
+        product.belongsTo(models.trademark, {
             as: "trademarks",
             foreignKey: "trademark_id"
         })
 
-        product.belongsTo(models.product_category, { 
+        product.belongsTo(models.product_category, {
             as: "categories",
             foreignKey: "Pcategory_id"
         })
 
-        product.belongsToMany(models.shopping_cart, { 
+        product.belongsToMany(models.shopping_cart, {
             as: "shoppingCart",
-            through:"cart_detail",
+            through: "cart_detail",
             foreignKey: "product_id",
-            otherKey:"cart_id",
-            timestamps:false
+            otherKey: "cart_id",
+            timestamps: false
         })
 
     }

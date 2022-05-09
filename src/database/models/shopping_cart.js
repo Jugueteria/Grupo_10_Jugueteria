@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-      
+
         total_products: {
             type: dataTypes.INTEGER,
             allowNull: false
@@ -16,31 +16,31 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DECIMAL(3, 1),
             allowNull: false
         }
-       
+
     };
     let config = {
-        tableName:'shopping_cart',
+        tableName: 'shopping_cart',
         timestamps: false,
-        
+
     }
-    const shopping_cart = sequelize.define(alias,cols,config);
+    const shopping_cart = sequelize.define(alias, cols, config);
 
     shopping_cart.associate = function (models) {
-        shopping_cart.belongsTo(models.user, { 
+        shopping_cart.belongsTo(models.user, {
             as: "users",
             foreignKey: "user_id"
         })
 
-        shopping_cart.belongsToMany(models.product, { 
+        shopping_cart.belongsToMany(models.product, {
             as: "products",
-            through:"cart_detail",
+            through: "cart_detail",
             foreignKey: "cart_id",
-            otherKey:"product_id",
-            timestamps:false
+            otherKey: "product_id",
+            timestamps: false
         })
 
 
-        
+
     }
 
     return shopping_cart

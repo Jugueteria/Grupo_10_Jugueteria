@@ -7,22 +7,22 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-      
-       trademark_name: {
+
+        trademark_name: {
             type: dataTypes.STRING(30),
             allowNull: false
         }
-        
+
     };
     let config = {
-        tableName:'trademark',
+        tableName: 'trademark',
         timestamps: false,
-        
+
     }
-    const trademark = sequelize.define(alias,cols,config);
+    const trademark = sequelize.define(alias, cols, config);
 
     trademark.associate = function (models) {
-        trademark.hasMany(models.product, { 
+        trademark.hasMany(models.product, {
             as: "products",
             foreignKey: "trademark_id"
         })

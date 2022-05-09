@@ -3,13 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
-
-
-//const usersFilePath = path.join(__dirname, '../data/users.json');
-//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const db = require("../database/models");
-
-
 
 const usersControllers = {
 
@@ -131,15 +125,15 @@ const usersControllers = {
 
   'userDetail': function (req, res) {
     let id = req.params.id
-    let user_categories=db.user_category.findAll()
-    let users= db.user.findByPk(req.params.id,
+    let user_categories = db.user_category.findAll()
+    let users = db.user.findByPk(req.params.id,
       {
-        include:[{association:"user_categories"}]
+        include: [{ association: "user_categories" }]
       })
 
-      Promise.all([users,user_categories])
-      .then(function([users,user_categories]){
-        res.render('users/userDetail', { users:users,user_categories:user_categories});
+    Promise.all([users, user_categories])
+      .then(function ([users, user_categories]) {
+        res.render('users/userDetail', { users: users, user_categories: user_categories });
       });
 
   },

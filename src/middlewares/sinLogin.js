@@ -1,8 +1,8 @@
-function sinLogin(req, res, next){
-    if (!req.session.userLogin){
-    return  res.redirect("/");
+function sinLogin(req, res, next) {
+    if (!req.session.userLogin) {
+        return res.redirect("/");
     }
     next();
-    }
-    
-    module.exports=sinLogin;
+}
+
+module.exports = sinLogin;
