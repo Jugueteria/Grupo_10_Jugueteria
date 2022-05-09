@@ -1,95 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/stylesheets/login.css">
+        <link rel="stylesheet" href="/stylesheets/login.css">
 
-    <title>Formulario ingreso</title>
+        <title>Formulario ingreso</title>
 </head>
+
 <body>
-    
+
     <%- include('../partials/header.ejs') %>
 
 
-    <main class="container-main">
+        <main class="container-main">
             <a href="/">
-                <img src="/images/Logo/Logo.png"  alt="Logo Playground Jugueteria"></img>
-            </a>  
-    </main>
+                <img src="/images/Logo/Logo.png" alt="Logo Playground Jugueteria"></img>
+            </a>
+        </main>
 
-<div class="ingreso"> 
-    
-    <div class="Marco">
-        <p class="eslogan">Iniciar sesión</p>
-    <img class="imagen_login" src="/images/Vistas/pexels-victoria-borodinova-1620675.jpg" alt=""> 
-    <p class="eslogan">¡La vida es para jugar!</p>
-    </div>
-    
-   
+        <div class="ingreso">
 
-        <!-- FORMULARIO -->
-
-    <form class="forms" action="/users/login" method="POST">
+            <div class="Marco">
+                <p class="eslogan">Iniciar sesión</p>
+                <img class="imagen_login" src="/images/Vistas/pexels-victoria-borodinova-1620675.jpg" alt="">
+                <p class="eslogan">¡La vida es para jugar!</p>
+            </div>
 
 
 
-        <img class="usuario" src="/images/Vistas/usuario.png">
-<div class="formulario">
-    <% if(locals.errorMsg){ %>
-    <span class="errorCredencial"> <%= errorMsg  %> </span>
+            <!-- FORMULARIO -->
 
-    <% } %>
-    <br>
-    <div>
-        <label>E-mail</label>
-        <input class="text" id="email" type="email" name="email" >
-        <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
-            <span> <%= locals.errorsLogin.email.msg  %> </span>
-    
-            <% } %>
-
-    </div>
-    <br>
-<div>
-    <label>Contraseña</label>
-    <input id="password" class="text" type="password" name="password" >
-    <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
-        <span> <%= locals.errorsLogin.password.msg  %> </span>
-
-        <% } %>
-</div>
-
-<div class="recordar">
-    <input class="check" type="checkbox" id="remember" name="remember">
-    <label class="recordar2" for="">Recordar usuario</label>
-   
-</div>
-<br>
-<br>
-
-    <a class="olvido" href="#">¿Olvido su contraseña?</a>
-    <input class="boton" type="submit" value="Login">
-
-
-    <div class="linea">
-    <a href="#">¿No tienes cuenta?</a>
-    <a class="crea" href="#">Crea una cuenta</a>
-    </div>
-</div>
+            <form class="forms" action="/users/login" method="POST">
 
 
 
-    </form>
-    
-</div>
+                <img class="usuario" src="/images/Vistas/usuario.png">
+                <div class="formulario">
+                    <% if(locals.errorMsg){ %>
+                        <span class="errorCredencial">
+                            <%= errorMsg %>
+                        </span>
 
-<!-- slider_dinamico -->
+                        <% } %>
+                            <br>
+                            <div>
+                                <label>E-mail</label>
+                                <input class="text" id="email" type="email" name="email">
+                                <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
+                                    <span>
+                                        <%= locals.errorsLogin.email.msg %>
+                                    </span>
 
-<%- include('../partials/slider_dinamico.ejs') %>
+                                    <% } %>
 
-     <!--Footer-->
-    
-     <%- include('../partials/footer.ejs') %>
-    
+                            </div>
+                            <br>
+                            <div>
+                                <label>Contraseña</label>
+                                <input id="password" class="text" type="password" name="password">
+                                <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
+                                    <span>
+                                        <%= locals.errorsLogin.password.msg %>
+                                    </span>
+
+                                    <% } %>
+                            </div>
+
+                            <div class="recordar">
+                                <input class="check" type="checkbox" id="remember" name="remember">
+                                <label class="recordar2" for="">Recordar usuario</label>
+
+                            </div>
+                            <br>
+                            <br>
+
+                            <a class="olvido" href="#">¿Olvido su contraseña?</a>
+                            <input class="boton" type="submit" value="Login">
+
+
+                            <div class="linea">
+                                <a href="#">¿No tienes cuenta?</a>
+                                <a class="crea" href="#">Crea una cuenta</a>
+                            </div>
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+        <!-- slider_dinamico -->
+
+        <%- include('../partials/slider_dinamico.ejs') %>
+
+            <!--Footer-->
+
+            <%- include('../partials/footer.ejs') %>
+
 </body>
+
 </html>
