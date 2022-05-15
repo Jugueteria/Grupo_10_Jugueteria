@@ -11,7 +11,7 @@ const usersControllers = {
   'ingreso': function (req, res) {
     const errors = validationResult(req)
     if (errors.errors.length > 0) {
-      res.render("users/login", { errorsLogin: errors.mapped() })
+      res.render("users/login", { errorsLogin: errors.mapped()})
 
     }
 
@@ -21,8 +21,6 @@ const usersControllers = {
       where: { email: userEmail }
     })
       .then((User) => {
-
-
 
         if (User) {
           if (bcrypt.compareSync(req.body.password, User.password)) {
@@ -41,7 +39,7 @@ const usersControllers = {
 
             if (req.body.remember) {
 
-              res.cookie("user", user.id, { maxAge: 60000 * 24 })
+              res.cookie("user", user.user_id, { maxAge: 60000 * 24 })
             }
 
             // creación de cookie
@@ -60,7 +58,7 @@ const usersControllers = {
 
   },
 
-  logout: function (req, res) {
+  'logout': function (req, res) {
     req.session.destroy();
     res.clearCookie("user");
     res.redirect("/");
@@ -119,8 +117,6 @@ const usersControllers = {
         return res.redirect('/users')
       })
       .catch(error => res.send(error))
-
-
   },
 
   'userDetail': function (req, res) {
@@ -138,17 +134,10 @@ const usersControllers = {
 
   },
 
-
-
   'profile': function (req, res) {
 
     res.render('users/profile')
   },
-
-
-
-
-
 
   'edit': function (req, res) {
     let userId = req.params.id
