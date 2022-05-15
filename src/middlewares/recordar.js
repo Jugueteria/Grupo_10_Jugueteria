@@ -10,12 +10,12 @@ function recordame(req, res, next) {
     db.user.findOne({
 
       where: {
-        id: req.cookies.user
+        user_id: req.cookies.user
       }
     }).then((userFound) => {
       if (userFound) {
         let user = {
-          id: userFound.id,
+          user_id: userFound.user_id,
           first_name: userFound.first_name,
           last_name: userFound.last_name
 
