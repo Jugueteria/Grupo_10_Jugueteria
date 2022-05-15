@@ -11,7 +11,7 @@ const usersControllers = {
   'ingreso': function (req, res) {
     const errors = validationResult(req)
     if (errors.errors.length > 0) {
-      res.render("users/login", { errorsLogin: errors.mapped() })
+      res.render("users/login", { errorsLogin: errors.mapped()})
 
     }
 

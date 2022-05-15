@@ -1,31 +1,33 @@
+const cookieParser = require('cookie-parser');
 const fs = require('fs');
 const path = require('path');
+const db = require("../database/models");
 
 
-
-function findAll() {
-  const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')));
-  return users;
-}
 
 function recordame(req, res, next) {
   if (!req.session.userLogin && req.cookies.user) {
+    db.user.findOne({
 
-    let users = findAll()
-    const usuarioLogueado = users.find(function (user) {
+      where: {
+        id: req.cookies.user
+      }
+    }).then((userFound) => {
+      if (userFound) {
+        let user = {
+          id: userFound.id,
+          first_name: userFound.first_name,
+          last_name: userFound.last_name
 
-      return user.id == req.cookies.user
+        }
+
+        req.session.userLogin = user;
+        return next()
+
+      }else {
+        return next()
+      }
     })
-    let user = {
-      id: usuarioLogueado.id,
-      first_name: usuarioLogueado.first_name,
-      last_name: usuarioLogueado.last_name
-
-    }
-
-    req.session.userLogin = user;
-    return next()
-
   } else {
 
     return next()
