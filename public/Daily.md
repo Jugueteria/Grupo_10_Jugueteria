@@ -10,7 +10,7 @@ El compañero Jonathan Valdivia dirige la reunión de repaso, orientando algunas
 
 Daily semana 2
 
-Durante la reunión de la semana 2 se tomaron los siguientes puntos:
+Durante la reunión para el sprint 2 se tomaron los siguientes puntos:
 Estructuración del diseño de todas las vistas, para hacer una mejora significativa, realizando nuevos bocetos y cambios en cada diseño del proyecto.
 Se solicita hacer practicas para el uso de rutas y controladores, para luego ser aplicados al proyecto.
 Se definen los archivos partials que serán organizados dentro del proyecto.
@@ -25,7 +25,7 @@ La compañera Jessica Montilla trae algunas opciones para los cambios de colores
 
 Daily semana 3
 
-Durante la reunión de la semana 3 se tomaron los siguientes puntos:
+Durante la reunión para el sprint 3 se tomaron los siguientes puntos:
 Subida de avances de las nuevas visas a la rama de cada integrante.
 Verificación de datos para productos y usuarios.
 Generación de archivos JSON para productos y usuarios.
@@ -38,7 +38,7 @@ Verificacion de rutas anteriores.
 
 Daily semana 4
 
-Durante la reunión de la semana 4 se tomaron los siguientes puntos:
+Durante la reunión para el sprint 4 se tomaron los siguientes puntos:
 
 Verificar la estructura de archivos para la entidad de los usuarios(rutas, controladores, vistas ,directorios y colecciones) y anexar lo faltante.
 Iniciar la implementación de las vistas para el registro de usuarios, junto con la subida de imágenes de perfil.
@@ -51,9 +51,17 @@ Generación de rutas para las diversas vistas según el inicio de sesión por lo
 
 Daily semana 5
 
-Durante la reunión de la semana 5 se tomaron los siguientes puntos:
+Durante la reunión para el sprint 5 se tomaron los siguientes puntos:
 Creación de bocetos para las bases de datos
 Construcción de bases de datos en Mysql y generación del script de estructura.
 Generación del script de datos para almacenar en bases de datos.
 Adaptación de sequelize al proyecto y construcción de modelos.
 Creación del CRUD con adaptación de modelos.
+
+Daily semana 6
+
+Durante la reunión para el sprint 6 se tomaron los siguientes puntos:
+Verificación de validaciones en los diversos formularios.
+Adecuación del proyecto para las diversas funcionalidades que se han implementado.
+Generación de validaciones para el front-end y verificación de validaciones para el back-end
+Adecuacion de vistas,código, carpetas y revisión del proyecto de forma general.
