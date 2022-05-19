@@ -57,7 +57,7 @@ const productsControllers = {
 			title: req.body.titulo,
 			description: req.body.descripcionCorta,
 			price: req.body.precio,
-			image: "default.png",
+			image: req.file ? req.file.filename : "default.png",
 			trademark_id: req.body.marca,
 			Pcategory_id: req.body.category,
 
@@ -91,7 +91,7 @@ const productsControllers = {
 			title: req.body.titulo,
 			description: req.body.descripcionCorta,
 			price: req.body.precio,
-			image: "default.png",
+			image: req.file ? req.file.filename : "default.png",
 			trademark_id: req.body.marca,
 			Pcategory_id: req.body.category,
 
