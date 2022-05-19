@@ -1,69 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/stylesheets/login.css">
-    <link rel="stylesheet" href="/stylesheets/formCreate.css">
+        <link rel="stylesheet" href="/stylesheets/login.css">
+        <link rel="stylesheet" href="/stylesheets/formCreate.css">
 
-    <title>Formulario ingreso</title>
+        <title>Formulario ingreso</title>
 </head>
+
 <body>
-    
+
     <%- include('../partials/header.ejs') %>
 
 
-    <main class="container-main">
+        <main class="container-main">
             <a href="/">
-                <img src="/images/Logo/Logo.png"  alt="Logo Playground Jugueteria"></img>
-            </a>  
-    </main>
+                <img src="/images/Logo/Logo.png" alt="Logo Playground Jugueteria"></img>
+            </a>
+        </main>
 
-      <!--Menú-->
-      <nav class="main-navbar">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#marcas">Marcas</a></li>
-            <li><a href="/products">Productos</a></li>
-            <li><a href="/users">Usuarios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-</div>
+        <!--Menú-->
+        <nav class="main-navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#marcas">Marcas</a></li>
+                <li><a href="/products">Productos</a></li>
+                <li><a href="/users">Usuarios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
 
-    <form class="Formulario" action="/products" method="POST">
+        <form class="Formulario" action="/products" method="POST">
 
 
-        <div class="formato">
-        
-            <div >
-                <label for="titulo" class="lnombre">Nombre del producto:</label>
-                <input type="text" id="titulo" name="titulo" required class="nombre">
+            <div class="formato">
+
+                <div>
+                    <label for="titulo" class="lnombre">Nombre del producto:</label>
+                    <input type="text" id="titulo" name="titulo" required class="nombre">
+                </div>
+                <div class="">
+                    <label for="precio" class="lprecio">Precio del producto:</label>
+                    <input type="number" id="precio" name="precio" required class="precio">
+                </div>
+
             </div>
-            <div class="">
-                <label for="precio" class="lprecio">Precio del producto:</label>
-                <input type="number" id="precio" name="precio" required class="precio">
+
+            <div>
+                <label for="descripcionCorta" class="ldescripcion">Descripción:</label>
+                <input type="text" id="descripcionCorta" name="descripcionCorta" required class="descripcion">
             </div>
-  
-    </div>
-
-    <div>
-        <label for="descripcionCorta" class="ldescripcion">Descripción:</label>
-        <input type="text" id="descripcionCorta" name="descripcionCorta" required class="descripcion">
-    </div>
 
 
 
-    <input class="btnenviar" type="submit" value="GUARDAR">
-    
+            <div class="formato">
+                <div>
+                    <label for="" class="lnombre">Marca</label>
+                    <select name="marca" id="marca">
+
+                        <% for (let i=0; i < trademarks.length; i++) {%>
+                            <option value="<%= trademarks[i].trademark_id %>">
+                                <%= trademarks[i].trademark_name %>
+                            </option>
+                            <% }%>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="" class="lnombre">Categoria</label>
+                    <select name="category" id="category">
+
+                        <% for (let i=0; i < categories.length; i++) {%>
+                            <option value="<%= categories[i].Pcategory_id %>">
+                                <%= categories[i].Pcategory_name %>
+                            </option>
+                            <% }%>
+
+                    </select>
+                </div>
+
+
+            </div>
+
+
+            <input class="btnenviar" type="submit" value="GUARDAR">
+
         </form>
 
 
+        <%- include('../partials/slider_dinamico.ejs') %>
 
-<%- include('../partials/slider_dinamico.ejs') %>
+            <!--Footer-->
 
-     <!--Footer-->
-    
-     <%- include('../partials/footer.ejs') %>
-    
+            <%- include('../partials/footer.ejs') %>
+
 </body>
+
 </html>

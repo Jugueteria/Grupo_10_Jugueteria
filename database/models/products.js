@@ -1,44 +1,60 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Products';
+    let alias = 'product';
     let cols = {
-        id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+        product_id: {
+            type: dataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
+
         title: {
+            type: dataTypes.STRING(50),
+            allowNull: false
+        },
+        description: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        descripcion: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        },
+
         price: {
-            type: dataTypes.DECIMAL(3,1),
+            type: dataTypes.DECIMAL(3, 1),
             allowNull: false
         },
-        image: dataTypes.IMAGE,
+
+        image: {
+            type: dataTypes.STRING(100),
+
+        }
+
     };
     let config = {
-        tableName:"Products",
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        tableName: 'products',
+        timestamps: false,
+
     }
-    const Product = sequelize.define(alias, cols, config); 
-    Product.associate=function(models){
-        Product.hasmany(models, Users,{
-            as:Users,
-            foreingKey: "cartsId",
-            otherUsersId:"carts_users_id", 
-            otherUsersId:"category_id"
-        }
-         ) }
-    //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
- 
-    return Product
+    const product = sequelize.define(alias, cols, config);
+
+    product.associate = function (models) {
+        product.belongsTo(models.trademark, {
+            as: "trademarks",
+            foreignKey: "trademark_id"
+        })
+
+        product.belongsTo(models.product_category, {
+            as: "categories",
+            foreignKey: "Pcategory_id"
+        })
+
+        product.belongsToMany(models.shopping_cart, {
+            as: "shoppingCart",
+            through: "cart_detail",
+            foreignKey: "product_id",
+            otherKey: "cart_id",
+            timestamps: false
+        })
+
+    }
+
+    return product
 };

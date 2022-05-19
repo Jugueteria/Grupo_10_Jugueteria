@@ -1,87 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/stylesheets/register.css">
+        <link rel="stylesheet" href="/stylesheets/register.css">
 
-    <title>Formulario registro</title>
+        <title>Formulario registro</title>
 </head>
+
 <body>
 
     <%- include('../partials/header.ejs') %>
 
 
-    <main class="container-main">
-        <a href="/">
-            <img src="/images/Logo/logo.png"  alt="Logo Playground Jugueteria"></img>
-        </a>
-       
-    </main>
+        <main class="container-main">
+            <a href="/">
+                <img src="/images/Logo/logo.png" alt="Logo Playground Jugueteria"></img>
+            </a>
 
-    <!-- FORMULARIO -->
-    
-    <form action="/users/register" method="POST" enctype="multipart/form-data" >
+        </main>
 
-<div class="formulario">
+        <!-- FORMULARIO -->
 
-    <div>
-        <h2>Registrarse</h2>
-        <label for="first_name">Nombre</label>
-        <input id="first_name" class="text" type="text" name="first_name" >
-        <% if(locals.errors && locals.errors.first_name){ %>
-             <span> <%= errors.first_name.msg  %> </span>
-    
-             <% } %>
-    </div>
-    <br>
-    <div>
-        <label for="last_name">Apellido</label>
-    <input id="last_name" class="text" type="text" name="last_name" >
-    <% if(locals.errors && locals.errors.last_name){ %>
-        <span> <%= errors.last_name.msg  %> </span>
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
 
-        <% } %>
-    </div>
-    <br>
-    <div>
-        <label for="email">E-mail</label>
-        <input id="email" class="text" type="email" name="email" >
-        <% if(locals.errors && locals.errors.email){ %>
-            <span> <%= errors.email.msg  %> </span>
-    
-            <% } %>
-    </div>
-    
-    <br>
-    <div>
-        <label for="password">Contraseña</label>
-        <input id="password" class="text" type="password" name="password" >
-        <% if(locals.errors && locals.errors.password){ %>
-            <span> <%= errors.password.msg  %> </span>
-    
-            <% } %>
-    </div>
-    <br>
+            <div class="formulario">
 
-    <label for="imagenUsuario">Imagen de perfil</label>
-    <input type="file" name="imagenUsuario" id="imagenUsuario">
+                <div>
+                    <h2>Registrarse</h2>
+                    <label for="first_name">Nombre</label>
+                    <input id="first_name" class="text" type="text" name="first_name">
+                    <% if(locals.errors && locals.errors.first_name){ %>
+                        <span>
+                            <%= errors.first_name.msg %>
+                        </span>
+                        <% } %>
+                </div>
+                <br>
+                <div>
+                    <label for="last_name">Apellido</label>
+                    <input id="last_name" class="text" type="text" name="last_name">
+                    <% if(locals.errors && locals.errors.last_name){ %>
+                        <span>
+                            <%= errors.last_name.msg %>
+                        </span>
+                        <% } %>
+                </div>
+                <br>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input id="email" class="text" type="email" name="email">
+                    <% if(locals.errors && locals.errors.email){ %>
+                        <span>
+                            <%= errors.email.msg %>
+                        </span>
+                        <% } %>
+                </div>
+
+                <br>
+                <div>
+                    <label for="password">Contraseña</label>
+                    <input id="password" class="text" type="password" name="password">
+                    <% if(locals.errors && locals.errors.password){ %>
+                        <span>
+                            <%= errors.password.msg %>
+                        </span>
+                        <% } %>
+                </div>
+                <br>
+
+                <label for="imagenUsuario">Imagen de perfil</label>
+                <input type="file" name="imagenUsuario" id="imagenUsuario">
 
 
-    <!-- <label>Repetir contraseña</label>
-    <input class="text" type="password" name="contraseña" required> -->
-    <input class="boton" type="submit" value="Aceptar">
+         
+                <input class="boton" type="submit" value="Aceptar">
 
-    </form>
-</div>
+        </form>
+        </div>
 
-<!-- slider_dinamico -->
+        <!-- slider_dinamico -->
 
-<%- include('../partials/slider_dinamico.ejs') %>
+        <%- include('../partials/slider_dinamico.ejs') %>
 
-     <!--Footer-->
+            <!--Footer-->
 
-     <%- include('../partials/footer.ejs') %>
-    
-    
+            <%- include('../partials/footer.ejs') %>
+
+
 </body>
+
 </html>
