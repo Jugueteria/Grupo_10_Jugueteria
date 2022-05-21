@@ -8,65 +8,10 @@
  },
  {
   "id": 2,
-  "titulo": "ROBOTECH",
-  "precio": "235294",
-  "descripcionCorta": "dfdfdfsdfsdfsdfsdf",
   "imagen": "default.png"
  },
  {
   "id": 3,
-  "titulo": "Spiderman",
-  "precio": "29,00",
-  "descripcionCorta": "loremipsun sususssssss",
-  "imagen": "default.png"
- },
- {
-  "id": 4,
-  "titulo": "Robot rUUUUUUUU",
-  "precio": "222",
-  "descripcionCorta": "2scdasdasdasd",
-  "imagen": "default.png"
- },
- {
-  "id": 5,
-  "titulo": "macbook pro",
-  "precio": "sdsdsd",
-  "descripcionCorta": "sdsdsd",
-  "imagen": "default.png"
- },
- {
-  "id": 6,
-  "titulo": "Spiderman",
-  "precio": "11",
-  "descripcionCorta": "22222",
-  "imagen": "default.png"
- },
- {
-  "id": 7,
-  "titulo": "Robot Lego",
-  "precio": "22",
-  "descripcionCorta": "22222",
-  "imagen": "default.png"
- },
- {
-  "id": 8,
-  "titulo": "Robot Lego",
-  "precio": "$450",
-  "descripcionCorta": "Robot Lego education mx314",
-  "imagen": "default.png"
- },
- {
-  "id": 9,
-  "titulo": "macbook pro",
-  "precio": "$990",
-  "descripcionCorta": "loremipsun sususssssss",
-  "imagen": "default.png"
- },
- {
-  "id": 10,
-  "titulo": "TELEVISSOR SMART TV 50\"",
-  "precio": "1000",
-  "descripcionCorta": "DDDDDDD",
   "imagen": "default.png"
  }
 ]

@@ -17,37 +17,55 @@
 <div class="card">
      <div class="container-profile">
 
-        <h1 class="title">Perfíl de usuario # <%= user.id %></h1>
+        <h1 class="title">Perfíl de usuario # <%= users.user_id %></h1>
 
         <div class="imagen-avatar">
-            <img src="/images/Users/<%= user.image %>"  alt="imagen de usuario"></img>
+            <img src="/images/Users/<%= users.image  %>"  alt="imagen de usuario"></img>
         </div>
        
         <div class="grid">
             <div class="form-group a">
                 <label for="name">Nombre</label>
-                <h2 class=""><%= user.first_name%></h2>
+                <h2 class=""><%= users.first_name %></h2>
                 
             </div>
     
             <div class="form-group b">
                 <label for="first-name">Apellidos</label>
-                <h2 class=""><%= user.last_name%></h2>
+                <h2 class=""><%= users.last_name %></h2>
             </div>
     
             <div class="form-group email-group">
                 <label for="email">Email</label>
-                <h2 class=""><%= user.email%></h2>
+                <h2 class=""><%= users.email %></h2>
             </div>
-                   
+            <div class="form-group password-group">
+                <label for="email">Tipo de perfíl</label>
+                <h3><%= users.user_categories.Ucategory_name %></h3>
+            </div>
             
      </div>
      <div class="btn-action">
-        <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" >
-            <input class="editar" onclick="location.href='/users/edit/<%= user.id %>'" type="button" value="Editar" >
+        <form action="/users/delete/<%= users.user_id %>?_method=DELETE" method="POST">
+            <input class="editar" onclick="location.href='/users/edit/<%= users.user_id %>'" type="button"
+                        value="Editar">
             <button type="submit" class="eliminar">Eliminar</button>
+            
         </form>
     </div>       
   </div>
+        <script>
+            deleteButton = document.querySelector('.eliminar');
+             deleteButton.onclick = function(e){
+             e.preventDefault()
+             user_confirm = confirm("¿Está seguro que desea eliminar el registro?")
+             if(user_confirm){
+                 delete_url = deleteButton.getAttribute('href')
+                 window.location.href = delete_url
+             }else{
+                 alert('La eliminación se ha cancelado')
+             }
+             }
+          </script>
 </div>
     
