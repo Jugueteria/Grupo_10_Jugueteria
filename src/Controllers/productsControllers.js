@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 let db = require("../database/models");
 const trademark = require("../database/models/trademark");
+const { validationResult } = require("express-validator");
+
 
 const productsControllers = {
 
@@ -28,6 +30,7 @@ const productsControllers = {
 	},
 
 	'formCreate': function (req, res) {
+
 		let trademarks = db.trademark.findAll()
 		let categories = db.product_category.findAll()
 
@@ -53,6 +56,15 @@ const productsControllers = {
 	},
 
 	'lista': function (req, res) {
+
+
+		const errors = validationResult(req)
+		if (errors.errors.length > 0) {
+		 res.render("products/formCreate", { errorsproducts: errors.mapped()})
+	
+		}
+
+		
 		db.product.create({
 			title: req.body.titulo,
 			description: req.body.descripcionCorta,

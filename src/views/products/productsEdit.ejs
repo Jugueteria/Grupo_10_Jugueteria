@@ -32,7 +32,7 @@
         </nav>
         </div>
 
-        <form class="Formulario" action="/products/edit/<%= Product.product_id %>?_method=PATCH" method="POST">
+        <form class="Formulario" action="/products/edit/<%= Product.product_id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
 
 
             <div class="formato">
@@ -89,6 +89,9 @@
 
             </div>
 
+
+            <label for="imagenProducto" class="lnombre">Imagen de Producto</label>
+            <input type="file" name="imagenProducto" id="imagenProducto">
             <input class="btnenviar" type="submit" value="GUARDAR">
 
         </form>
