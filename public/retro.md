@@ -44,3 +44,12 @@ Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 5; pa
 3.  Continuar haciendo: Retroalimentación del proceso de programación para cada modulo.
 4.  Hacer menos: Extender las funcionalidades de cada vista y no centrarse en lo principal.
 5.  Dejar de hacer: Realizar los pull request del proyecto sin la autorizacion del lider del proyecto.
+
+
+Retrospectiva Sprint 6
+Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 6; para ello utilizaremos la retrospectiva de estrella de mar, el cual tiene los siguientes elementos:
+1.  Comenzar hacer: verificar que cada módulo e implementación del proyecto funciona correctamente a través de pruebas constantes.
+2.  Hacer más: Buscar información para agregar nuevas funcionalidades que den mayor dinámica al proyecto.
+3.  Continuar haciendo: Distribuir los tiempos, pruebas y escritura del código respecto a la planeación proyectada.
+4.  Hacer menos: Realizar cambios de código en varias partes del proyecto al tiempo.
+5.  Dejar de hacer: Generar cambios innecesarios que generen conflictos a la hora de hacer un merge con las diversas ramas.

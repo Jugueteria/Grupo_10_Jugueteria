@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 const productsControllers = require('../Controllers/productsControllers');
 const sinLogin=require("../middlewares/sinLogin");
+const validator = require("../middlewares/validation");
+const multer = require("../middlewares/multerProducts");
 
 //Carrito de ptoductos
 router.get('/productCart',sinLogin, productsControllers.productCart);
@@ -15,13 +17,13 @@ router.get('/',sinLogin, productsControllers.products);
 
 //Creación de productos
 router.get('/create',sinLogin, productsControllers.formCreate);
-router.post('/', productsControllers.lista); 
+router.post('/',multer(),validator.registerproduct, productsControllers.lista); 
 
 
 //Editar un producto
 
 router.get('/edit/:id',sinLogin, productsControllers.edit); 
-router.patch('/edit/:id', productsControllers.update);
+router.patch('/edit/:id',multer(),validator.registerproduct, productsControllers.update);
 
 //Borrar un producto
 
