@@ -65,3 +65,14 @@ Verificación de validaciones en los diversos formularios.
 Adecuación del proyecto para las diversas funcionalidades que se han implementado.
 Generación de validaciones para el front-end y verificación de validaciones para el back-end
 Adecuacion de vistas,código, carpetas y revisión del proyecto de forma general.
+
+
+
+Daily semana 7
+
+Durante la reunión para el sprint 7 se tomaron los siguientes puntos:
+Buscar información sobre creación de APIS.
+Construir los métodos y funciones necesarios para el Dashboard con react
+Iniciar diseño de Dashboard y generación de bocetos.
+Crear rutas y controladores para las APIS.
+Buscar información sobre el consumo de APIS.

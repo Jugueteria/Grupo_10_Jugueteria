@@ -8,8 +8,6 @@ Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 1; pa
 
 
 
-
-
 Retrospectiva Sprint 2
 Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 2; para ello utilizaremos la retrospectiva de estrella de mar, el cual tiene los siguientes elementos:
 1.  Comenzar hacer: Implementar más herramientas para los estilos de cada página, retroalimentar el tema del responsive para las páginas y efectuar una mejora visual de cada vista del proyecto.
@@ -53,3 +51,11 @@ Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 6; pa
 3.  Continuar haciendo: Distribuir los tiempos, pruebas y escritura del código respecto a la planeación proyectada.
 4.  Hacer menos: Realizar cambios de código en varias partes del proyecto al tiempo.
 5.  Dejar de hacer: Generar cambios innecesarios que generen conflictos a la hora de hacer un merge con las diversas ramas.
+
+Retrospectiva Sprint 7
+Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 7; para ello utilizaremos la retrospectiva de estrella de mar, el cual tiene los siguientes elementos:
+1.  Comenzar hacer: implementar la creación de proyectos con react.
+2.  Hacer más: Buscar información sobre APIS para el desarrollo del proyecto final.
+3.  Continuar haciendo: Organizar las tareas del sprint con tiempos y funciones a cada miembro.
+4.  Hacer menos: Dejar fragmentos de código sin modularizar.
+5.  Dejar de hacer: Trabajar con tiempos ajustados para las modificaciones finales.
