@@ -4,6 +4,9 @@
 <head>
     <%- include('../partials/head.ejs') %>
         <link rel="stylesheet" href="/stylesheets/login.css">
+        <script defer src="/javascripts/validatorLogin.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
         <title>Formulario ingreso</title>
 </head>
@@ -31,7 +34,7 @@
 
             <!-- FORMULARIO -->
 
-            <form class="forms" action="/users/login" method="POST">
+            <form  class="forms" action="/users/login" method="POST">
 
 
 

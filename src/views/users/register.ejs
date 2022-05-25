@@ -4,6 +4,8 @@
 <head>
     <%- include('../partials/head.ejs') %>
         <link rel="stylesheet" href="/stylesheets/register.css">
+        <script defer src="/javascripts/validatorRegister.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
         <title>Formulario registro</title>
 </head>
@@ -22,7 +24,7 @@
 
         <!-- FORMULARIO -->
 
-        <form action="/users/register" method="POST" enctype="multipart/form-data">
+        <form class="register" action="/users/register" method="POST" enctype="multipart/form-data">
 
             <div class="formulario">
 
@@ -75,8 +77,12 @@
 
                 <label for="imagenUsuario">Imagen de perfil</label>
                 <input type="file" name="imagenUsuario" id="imagenUsuario">
+                <% if(locals.errors && locals.errors.password){ %>
+                    <span>
+                        <%= errors.password.msg %>
+                    </span>
 
-
+                    <% } %>
          
                 <input class="boton" type="submit" value="Aceptar">
 
