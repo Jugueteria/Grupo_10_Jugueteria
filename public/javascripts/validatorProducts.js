@@ -11,7 +11,8 @@ window.addEventListener("load", function () {
             e.preventDefault();
             swal('Validación', 'Falta ingresar descripcíon del articulo', 'warning')
 
-        }else if(descripcion.length<20){
+        }else if(descripcion.value.length<20){
+            e.preventDefault();
             swal('Validación', 'La descripción del articulo debe tener mínimo 20 caracteres', 'warning')
         }
 
@@ -28,7 +29,6 @@ window.addEventListener("load", function () {
             e.preventDefault();
             swal('Validación', 'Falta ingresar Nombre del articulo', 'warning')
         }else if(titulo.value.length<5){
-            e.preventDefault();
             swal('Validación', 'El nombre del articulo tener mínimo 5 caracteres', 'warning')
         }
 

@@ -10,6 +10,7 @@ window.addEventListener("load", function () {
         if (password.value == "") {
             e.preventDefault();
             swal('Validación', 'Falta ingresar Password', 'warning')
+            
         }else if(password.value.length<8){
             e.preventDefault();
             swal('Validación', 'La contraseña debe tener mínimo 8 caracteres', 'warning')

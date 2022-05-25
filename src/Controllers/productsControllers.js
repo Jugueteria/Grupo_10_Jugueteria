@@ -56,29 +56,35 @@ const productsControllers = {
 	},
 
 	'lista': function (req, res) {
-
-
 		const errors = validationResult(req)
 		if (errors.errors.length > 0) {
-		 res.render("products/formCreate", { errorsproducts: errors.mapped()})
-	
+			let trademarks = db.trademark.findAll()
+			let categories = db.product_category.findAll()
+
+			Promise.all([trademarks, categories])
+				.then(function ([trademarks, categories]) {
+
+					return res.render('products/formCreate', { errorsproducts: errors.mapped(), trademarks: trademarks, categories: categories });
+				})
+
+
+		} else {
+			db.product.create({
+				title: req.body.titulo,
+				description: req.body.descripcionCorta,
+				price: req.body.precio,
+				image: req.file ? req.file.filename : "default.png",
+				trademark_id: req.body.marca,
+				Pcategory_id: req.body.category,
+
+			})
+
+				.then(() => {
+					return res.redirect('/products')
+				})
+				.catch(error => res.send(error))
 		}
 
-		
-		db.product.create({
-			title: req.body.titulo,
-			description: req.body.descripcionCorta,
-			price: req.body.precio,
-			image: req.file ? req.file.filename : "default.png",
-			trademark_id: req.body.marca,
-			Pcategory_id: req.body.category,
-
-		})
-
-			.then(() => {
-				return res.redirect('/products')
-			})
-			.catch(error => res.send(error))
 	},
 
 	'edit': function (req, res) {
@@ -98,24 +104,41 @@ const productsControllers = {
 	},
 
 	'update': function (req, res) {
-		let productId = req.params.id
-		db.product.update({
-			title: req.body.titulo,
-			description: req.body.descripcionCorta,
-			price: req.body.precio,
-			image: req.file ? req.file.filename : "default.png",
-			trademark_id: req.body.marca,
-			Pcategory_id: req.body.category,
+		const errors = validationResult(req)
+		if (errors.errors.length > 0) {
+			let productId = req.params.id
+			let promProducts = db.product.findByPk(productId);
+			let trademarks = db.trademark.findAll()
+			let categories = db.product_category.findAll()
 
-		},
-			{
-				where: { product_id: productId }
-			})
+			Promise
+			.all([promProducts, trademarks, categories])
+			.then(([Product, trademarks, categories]) => {
 
-			.then(() => {
-				return res.redirect('/products')
-			})
-			.catch(error => res.send(error))
+				return res.render(path.resolve(__dirname, '..', 'views', 'products', 'productsEdit'), { errorsproducts: errors.mapped(),Product, trademarks: trademarks, categories: categories })
+				})
+		}else{
+
+			let productId = req.params.id
+			db.product.update({
+				title: req.body.titulo,
+				description: req.body.descripcionCorta,
+				price: req.body.precio,
+				image: req.file ? req.file.filename : "default.png",
+				trademark_id: req.body.marca,
+				Pcategory_id: req.body.category,
+	
+			},
+				{
+					where: { product_id: productId }
+				})
+	
+				.then(() => {
+					return res.redirect('/products')
+				})
+				.catch(error => res.send(error))
+		}
+
 	},
 
 	eliminar: (req, res) => {
