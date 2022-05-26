@@ -6,56 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/styles.css" />
     <link rel="stylesheet" href="/stylesheets/formCreate.css" />
-    <title>Document</title>
+    <script defer src="/javascripts/validatorProducts.js"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Crear producto</title>
   </head>
 
   <body>
     <%- include('../partials/navbar.ejs') %>
 
-    <div class="container-product-create">
-        <form action="/products" method="POST" enctype="multipart/form-data">
-            <div class="container-create">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="">Nuevo producto</h3>
+    <form class="Formulario" action="/products" method="POST" enctype="multipart/form-data">
+            <div class="container-product-create">
+                    <div class="container-create">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="">Nuevo producto</h3>
+                            </div>
+                            <div class="card-body">
+                                <input
+                                id="titulo"
+                                name="titulo"
+                                type="text"
+                                class="input-nombre"
+                                placeholder="Nombre del producto"
+                                />
+                                    <% if(locals.errorsproducts && locals.errorsproducts.titulo){ %>
+                                        <span>
+                                            <%= errorsproducts.titulo.msg %>
+                                        </span>
+                                    <% } %>
+                                <input
+                                id="precio"
+                                name="precio"
+                                type="number"
+                                class="input-precio"
+                                placeholder="precio del producto"
+                                />
+                                    <% if(locals.errorsproducts && locals.errorsproducts.precio){ %>
+                                            <span>
+                                                <%= errorsproducts.precio.msg %>
+                                            </span>
+                
+                                    <% } %>
+                                <div class="box-descripcion">     
+                                    <input
+                                    id="descripcionCorta"
+                                    name="descripcionCorta"
+                                    type="text"
+                                    class="input-descripcion"
+                                    placeholder="Descripción del producto"
+                                    />
+                                        <% if(locals.errorsproducts && locals.errorsproducts.descripcionCorta){ %>
+                                            <span>
+                                                <%= errorsproducts.descripcionCorta.msg %>
+                                            </span>
+                    
+                                        <% } %>
+                                </div>
+                                <div class="containerBox-marcas">
+                                    
+                                        <label>Marca</label>
+                                        <select name="marca" class="marca">
+                                            <% for (let i=0; i < trademarks.length; i++) {%>
+                                                <option value="<%= trademarks[i].trademark_id %>">
+                                                    <%= trademarks[i].trademark_name %>
+                                                </option>
+                                                <% }%> 
+                                        </select>
+                                
+                    
+                                    
+                                        <label>Categoría</label>
+                                        <select name="category" class="category">
+                    
+                                            <% for (let i=0; i < categories.length; i++) {%>
+                    
+                                                <option value="<%= categories[i].Pcategory_id %>">
+                                                    <%= categories[i].Pcategory_name %>
+                                                </option>
+                    
+                                                <% }%>
+                                        </select>
+                                
+                                </div>
+                            </div>
+                                <div class="img-insert">
+                                    <label for="imagenProducto" class="lnombre">Imagen de Producto:</label>
+                                    <input type="file" name="imagenProducto" id="imagenProducto">
+                                </div>
+                                <input class="button" type="submit" value="GUARDAR" />
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <input
-                         id="titulo"
-                         name="titulo"
-                         type="text"
-                         class="input-nombre"
-                         placeholder="Nombre del producto"
-                         required
-                         />
-                         <input
-                         id="precio"
-                         name="precio"
-                         type="text"
-                         class="input-precio"
-                         placeholder="precio del producto"
-                         required
-                         />
-                         <div class="box-descripcion">     
-                             <input
-                             id="descripcionCorta"
-                             name="descripcionCorta"
-                             type="text"
-                             class="input-descripcion"
-                             placeholder="Descripción del producto"
-                             required
-                             />
-                         </div>
-                         <label for="imagenProducto">Imagen del producto</label>
-                         <input type="file" name="imagenProducto" id="imagenProducto" />
-                      
-                    </div>
-                    <input class="button" type="submit" value="GUARDAR" />
                 </div>
-            </div>
-        
-        </form>
-      </div>
-    </div>
+            </form>
   </body>
 </html>

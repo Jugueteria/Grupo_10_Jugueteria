@@ -13,19 +13,21 @@
     <h1 class="titulo">Listado de productos</h1>
     <div class="contenedor_principal">
       <section class="menu">
-        <% products.forEach(function(products) { %>
-        <a href="/products/detail/<%= products.id %>">
+        <% productos.forEach(function(productos) { %>
+        <a href="/products/detail/<%= productos.product_id %>">
           <article>
             <div class="imgen-contenedor">
-              <img src="/images/Products/<%= products.imagen %>" alt="" />
+              <img src="/images/Products/<%= productos.image %>" alt="" />
               <!-- <img src="https://picsum.photos/500/300/?image=5" alt="" /> -->
             </div>
             <ul class="info-box">
-              <li><h3 class=""><%= products.titulo %></h3></li>
-              <li><p><%= products.descripcionCorta %></p></li>
-              <li>Precio: $<%= products.precio %></li>
+              <li><h3 class=""><%= productos.title %></h3></li>
+              <li><p><%= productos.description %></p></li>
+              <li>Precio: $<%= productos.price %></li>
             </ul>
-            <button class="btn-ver">Ver producto</button>
+            <div class="button-ver">
+              <button class="btn-ver">Ver producto</button>
+            </div>
           </article>
         </a>
         <% }) %>

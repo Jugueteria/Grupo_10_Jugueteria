@@ -11,31 +11,42 @@
     <%- include('../partials/navbar.ejs') %>
     <!--Detalle de Producto seccion-->
     <div class="titulo">
-        <h1>Detalle del producto</h1>
+        <h1>Detalle del producto #<%= products.product_id %></h1>
     </div>
     <div class="container-detail-products">
         <div class="container-detalle">
-         <div class="imagen">
-            <img class="imagenes" src="/images/Products/<%= product.imagen %>"  alt=""></img>
+            <div class="imagen">
+                <img class="imagenes" src="/images/Products/<%= products.image %>" alt=""></img>
             </div>
             <div class="detalle">
-                <h2><%= product.titulo %></h2>
-                <br>
-                <p>N° Producto:<%= product.id %></p>
-                <br>
-                <p class="descripcion">Descripción:</p>
-                    <p><%= product.descripcionCorta %></p>
-                <br>
-                <p class="precio">Precio:</p>
-                    
-                    <h3>$<%= product.precio %></h3>
-                
-                  <div class="btn-action-product">
-                      <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" >
-                          <input class="editar" onclick="location.href='/products/edit/<%= product.id %>'" type="button" value="Editar" >
-                          <button type="submit" class="eliminar">Eliminar</button>
-                      </form>
-                  </div>
+                <div class="titulo-producto">
+                    <h2><%= products.title %></h2>
+                </div>
+                <div class="description-producto">
+                        <div class="descripcion-box">
+                            <p class="descripcion">Descripción:</p>
+                            <h4><%= products.description %></h4>
+                        </div>
+                        <div class="precio-box">
+                            <p class="precio">Precio:</p>
+                            <h4>$<%= products.price %></h4>
+                        </div>
+                        <div class="marca-box">
+                            <p class="precio">Marca:</p>
+                            <h4><%= products.trademarks.trademark_name %></h4>
+                        </div>
+                        <div class="categoria-box">                     
+                            <p class="precio">Categoria:</p>
+                            <h4><%= products.categories.Pcategory_name %></h4>  
+                        </div>              
+                        <div class="btn-action-product">
+                            <form action="/products/delete/<%= products.product_id %>?_method=DELETE" method="POST">
+                                <input class="editar" onclick="location.href='/products/edit/<%= products.product_id %>'"
+                                    type="button" value="Editar">
+                                <button type="submit" class="eliminar">Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

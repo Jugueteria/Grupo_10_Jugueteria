@@ -3,6 +3,8 @@
   <head>
     <link rel="stylesheet" href="/stylesheets/styles.css" />
     <link rel="stylesheet" href="/stylesheets/productsEdit.css" />
+    <script defer src="/javascripts/validatorProducts.js"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>Edicion de producto</title>
   </head>
@@ -10,11 +12,9 @@
     <%- include('../partials/navbar.ejs') %>
 
     <form
-      class="Formulario"
-      action="/products/edit/<%= productToEdit.id %>?_method=PATCH"
-      method="POST"
-    >
-      <div class="container-product-create">
+    class="Formulario" action="/products/edit/<%= Product.product_id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+    
+    <div class="container-product-create">
         <div class="container-create">
           <div class="card">
             <div class="card-header">
@@ -27,16 +27,26 @@
                 type="text"
                 class="input-nombre"
                 placeholder="Nombre del producto"
-                value=<%=productToEdit.titulo%>
-              required >
+                value="<%=Product.title%>"
+              />
+                <% if(locals.errorsproducts && locals.errorsproducts.titulo){ %>
+                  <span>
+                      <%= errorsproducts.titulo.msg %>
+                  </span>
+                <% } %>
               <input
                 id="precio"
                 name="precio"
                 type="text"
                 class="input-precio"
                 placeholder="precio del producto"
-                value=<%=productToEdit.precio%>
-              required >
+                value="<%=Product.price%>"
+               />
+                  <% if(locals.errorsproducts && locals.errorsproducts.precio){ %>
+                    <span>
+                        <%= errorsproducts.precio.msg %>
+                    </span>
+                  <% } %>
               <div class="box-descripcion">
                 <input
                   id="descripcionCorta"
@@ -44,9 +54,43 @@
                   type="text"
                   class="input-descripcion"
                   placeholder="Descripción del producto"
-                  value= <%=productToEdit.descripcionCorta%>
-                  required >
+                  value= "<%=Product.description%>"
+                  />
+                    <% if(locals.errorsproducts && locals.errorsproducts.descripcionCorta){ %>
+                      <span>
+                          <%= errorsproducts.descripcionCorta.msg %>
+                      </span>
+                    <% } %>
               </div>
+              <div class="containerBox-marcas">
+                             
+                  <label>Marca</label>
+                    <select name="marca" class="marca">
+                        <% for (let i=0; i < trademarks.length; i++) {%>
+                            <option value="<%= trademarks[i].trademark_id %>">
+                                <%= trademarks[i].trademark_name %>
+                            </option>
+                            <% }%> 
+                    </select>
+           
+
+              
+                    <label>Categoría</label>
+                    <select name="category" class="category">
+
+                        <% for (let i=0; i < categories.length; i++) {%>
+
+                            <option value="<%= categories[i].Pcategory_id %>">
+                                <%= categories[i].Pcategory_name %>
+                            </option>
+
+                            <% }%>
+                    </select>
+                </div>
+            </div>
+            <div class="img-insert">
+              <label for="imagenProducto" class="lnombre">Imagen de Producto:</label>
+              <input type="file" name="imagenProducto" id="imagenProducto">
             </div>
             <input class="button" type="submit" value="GUARDAR" />
           </div>

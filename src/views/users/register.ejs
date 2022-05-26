@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/stylesheets/loginAndRegister.css" />
     <link rel="stylesheet" href="/stylesheets/styles.css" />
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script defer src="/javascripts/validatorRegister.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
@@ -21,6 +23,7 @@
           action="/users/register"
           method="POST"
           enctype="multipart/form-data"
+          class="register"
         >
           <img
             src="https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/avatar.svg"

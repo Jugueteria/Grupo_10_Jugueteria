@@ -13,6 +13,7 @@
 .imagenes{
     height: 200px ;    
     width:200px ;
+   
 }
 
 section{
@@ -24,16 +25,20 @@ section{
 
 article{
 width: 350px;
-height:340px;
+height:350px;
 border: 1px solid rgb(217, 217, 217);
 margin: 10px;
 border-radius:20px;
 }
 
-
+.imgen-contenedor {
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+}
 
 .imgen-contenedor img{
-width: 100%;
+width: auto;
 height: 200px;
 border-radius:20px 20px 0px 0px;
 }
@@ -66,7 +71,7 @@ margin: 10px;
     background: transparent;
   }
 .btn-ver:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    color: rgb(98, 216, 88);
   }
 
 
