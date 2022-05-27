@@ -10,6 +10,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 const methodOverride = require('method-override');
+var usersRouterAPI = require('./routes/routesAPI/userAPI');
+var productsRouterAPI = require('./routes/routesAPI/productAPI');
+
 
 
 
@@ -40,6 +43,9 @@ app.use(locals);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/api', usersRouterAPI);
+app.use('/api', productsRouterAPI);
+app.use(express.json());
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
