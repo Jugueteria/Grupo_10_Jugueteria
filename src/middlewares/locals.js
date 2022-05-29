@@ -1,10 +1,10 @@
-function locals(req, res ,next){
-res.locals.userLocal=false;
+function locals(req, res, next) {
+  res.locals.userLocal = false;
 
-if(req.session.userLogin){
-    res.locals.userLocal=req.session.userLogin;
-}
-   next()
+  if (req.session.userLogin) {
+    res.locals.userLocal = req.session.userLogin;
+  }
+  next()
 }
 
-module.exports=locals;
+module.exports = locals;

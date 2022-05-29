@@ -7,7 +7,7 @@
 
 .Formulario{
 background-color: #CDABED;
-height: 430px;
+height: 480px;
 width: 700px;
 border-radius: 25px;
 padding: 8px;
@@ -45,6 +45,7 @@ border-radius: 10px;
 text-align: center;
 margin: auto;
 font-weight: bold;
+margin-top: 30px;
 
 }
 

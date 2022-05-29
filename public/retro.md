@@ -36,3 +36,11 @@ Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 4; pa
 4.  Hacer menos: Centrar el tiempo en arreglos de estilo de vistas que se pueden corregir al final de cada sprint. 
 5.  Dejar de hacer: Publicar los avances de cada sprint en la rama principal del repositorio GitHub sin el aval de todos los integrantes, para evitar daños en los versionados.
 
+
+Retrospectiva Sprint 5
+Esta retrospectiva tiene como fin analizar el trabajo realizado del Sprint 5; para ello utilizaremos la retrospectiva de estrella de mar, el cual tiene los siguientes elementos:
+1.  Comenzar hacer: Realizar los bocetos para la generacion de las bases de datos y generacion de las realciones entre las entidades.
+2.  Hacer más: Generar pruebas a cada modulo de la apliación y guardar cada avance en el repositorio remoto. 
+3.  Continuar haciendo: Retroalimentación del proceso de programación para cada modulo.
+4.  Hacer menos: Extender las funcionalidades de cada vista y no centrarse en lo principal.
+5.  Dejar de hacer: Realizar los pull request del proyecto sin la autorizacion del lider del proyecto.

@@ -38,7 +38,7 @@ Verificacion de rutas anteriores.
 
 Daily semana 4
 
-Durante la reunión de la semana 34se tomaron los siguientes puntos:
+Durante la reunión de la semana 4 se tomaron los siguientes puntos:
 
 Verificar la estructura de archivos para la entidad de los usuarios(rutas, controladores, vistas ,directorios y colecciones) y anexar lo faltante.
 Iniciar la implementación de las vistas para el registro de usuarios, junto con la subida de imágenes de perfil.
@@ -47,3 +47,13 @@ Creación de CRUD para usuarios.
 Iniciar programación para la funcionalidad de la vista de login, implementando sesiones y cookies.
 Implementar la funcionalidad para recordar datos por sesiones, cuando un usuario se haya logueado.
 Generación de rutas para las diversas vistas según el inicio de sesión por login
+
+
+Daily semana 5
+
+Durante la reunión de la semana 5 se tomaron los siguientes puntos:
+Creación de bocetos para las bases de datos
+Construcción de bases de datos en Mysql y generación del script de estructura.
+Generación del script de datos para almacenar en bases de datos.
+Adaptación de sequelize al proyecto y construcción de modelos.
+Creación del CRUD con adaptación de modelos.
