@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var cors = require('cors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -10,6 +11,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 const methodOverride = require('method-override');
+var usersRouterAPI = require('./routes/routesAPI/userAPI');
+var productsRouterAPI = require('./routes/routesAPI/productAPI');
 
 
 
@@ -27,7 +30,10 @@ app.use(session({
   saveUninitialized: true
 
 }));
-
+const directorioPermitidoCors = 'http://localhost:3000'
+app.use(cors({
+  origin: directorioPermitidoCors
+}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -40,6 +46,9 @@ app.use(locals);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/api', usersRouterAPI);
+app.use('/api', productsRouterAPI);
+app.use(express.json());
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -5,6 +5,7 @@ const sinLogin=require("../middlewares/sinLogin");
 const validator = require("../middlewares/validation");
 const multer = require("../middlewares/multerProducts");
 
+
 //Carrito de ptoductos
 router.get('/productCart',sinLogin, productsControllers.productCart);
 
