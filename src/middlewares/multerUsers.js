@@ -16,7 +16,18 @@ function image() {
 
     });
 
-    const upload = multer({storage}).single('imagenUsuario');
+    const upload = multer({
+        storage:storage,
+        fileFilter: (req, file, cb) => {
+         const whitelist = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp']   
+         if (whitelist.includes(file.mimetype)){
+             cb(null, true);
+         } else {
+             cb(null, false);
+         }
+     }
+    
+    }).single('imagenUsuario');
 
     return upload;
 

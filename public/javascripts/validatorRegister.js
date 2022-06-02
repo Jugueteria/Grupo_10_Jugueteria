@@ -44,6 +44,14 @@ window.addEventListener("load", function () {
             swal('Validación', 'Los nombres deben tener mínimo 2 caracteres', 'warning')
         }
 
+        if (imagenUsuario.value != ""){ 
+            const whitelist = ['png', 'jpeg', 'jpg', 'webp']   
+            if (!whitelist.includes(imagenUsuario.value.split(".")[1])){
+                e.preventDefault()
+                swal('Validación',"La imagen debe estar en formato:/png/jpeg/jpg ", 'warning')
+            }
+        }
+
     })
 
 })
