@@ -29,7 +29,8 @@ const usersControllers = {
               first_name: User.first_name,
               last_name: User.last_name,
               email: User.email,
-              image: User.image
+              image: User.image,
+              category:User.Ucategory_id
 
             }
 
