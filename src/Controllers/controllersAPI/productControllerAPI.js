@@ -6,7 +6,7 @@ module.exports = {
         let products = await db.product.findAll({ attributes: ['product_id', 'title', 'description', 'price'] })
 
        products.forEach(product => {
-            product.setDataValue("endpoint", "localhost3000/api/products/" + product.product_id);
+            product.setDataValue("endpoint", "localhost:3000/api/products/" + product.product_id);
         })
 
 
@@ -14,12 +14,29 @@ module.exports = {
             meta: {
                 status: 200,
                 count: products.length,
-                url: "localhost3000/api/products"
+                url: "localhost:3000/api/products"
             },
             products: products
         }
         res.json(jsonProducts)
     },
+
+    latest: function (req, res) {
+        db.product.findAll({
+            limit: 1,
+            order: [ [ 'product_id', 'DESC' ]]
+          }).then(result => {
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    categoryCount: result, 
+                    url: "http://localhost:3000/api/products/latest"
+                },
+            }
+            res.json(respuesta)
+        })
+    },
+
 
     show: (req, res) => {
         db.product
@@ -30,6 +47,8 @@ module.exports = {
                     status: 200
                 })
             })
-    }
+    },
+
+   
 
 }

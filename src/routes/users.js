@@ -9,7 +9,7 @@ const sinLogin = require("../middlewares/sinLogin");
 
 
 //Ingreso Login
-router.get('/login', accesos, usersControllers.login);
+router.get('/login', usersControllers.login);
 router.post('/login', validator.login, usersControllers.ingreso);
 
 //cerrar sesion
@@ -29,12 +29,12 @@ router.get('/detail/:id', sinLogin, usersControllers.userDetail);
 
 //Editar un usuario
 
-router.get('/edit/:id', sinLogin, usersControllers.edit);
-router.patch('/edit/:id', multer(), validator.register, usersControllers.update);
+router.get('/edit/:id', accesos, sinLogin, usersControllers.edit);
+router.patch('/edit/:id',accesos, multer(), validator.register, usersControllers.update);
 
 //Borrar un usuario
 
-router.delete('/delete/:id', usersControllers.eliminar);
+router.delete('/delete/:id',accesos, usersControllers.eliminar);
 
 
 //ver perfil de ingreso

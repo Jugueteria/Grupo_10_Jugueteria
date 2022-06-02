@@ -39,13 +39,13 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
 app.use(recordame);
 app.use(locals);
-
+app.use(express.json());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/api', usersRouterAPI);
 app.use('/api', productsRouterAPI);
-app.use(express.json());
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -1,8 +1,18 @@
+const db = require("../database/models");
+
 function accesos(req, res, next) {
-    if (req.session.userLogin) {
-        return res.redirect("/");
+   let Iduser = db.user.findOne({
+    where: {
+      Ucategory_id: 2
     }
-    next();
+  })
+        if (req.session.userLogin!=Iduser) {
+            console.log(Iduser)
+        
+            return res.redirect("/");
+        }
+        next();
+   
 }
 
 module.exports = accesos;
