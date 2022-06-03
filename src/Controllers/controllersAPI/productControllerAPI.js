@@ -23,6 +23,7 @@ module.exports = {
 
 
 
+
     "latest": function (req, res) {
         db.product.findAll({
             limit: 1,
@@ -39,11 +40,42 @@ module.exports = {
         })
     },
 
+    "categories": function (req, res) {
+        db.product_category.findAll().then(categories => {
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    categoryCount: categories.length, 
+                    url: "http://localhost:3001/api/products/categories"
+                },
+            }
+            res.json(respuesta)
+        })
+    },
+
+    countByCategory: function (req, res) {
+        db.product.count({
+            include: [{ association: "categories" }],
+            group: ['categories.Pcategory_name']
+        }).then(result => {
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    categoryCount: result,
+                    url: "http://localhost:3001/api/products/total"
+                },
+            }
+            res.json(respuesta)
+        })
+    },
+
 
 
     "show": (req, res) => {
         db.product
-            .findByPk(req.params.id)
+            .findByPk(req.params.id, {
+                include: [{ association: "categories"},{ association: "trademarks"}]
+            })
             .then(product => {
                 let jsonProduct = {
                     meta: {
@@ -55,7 +87,9 @@ module.exports = {
                         title: product.title,
                         description: product.description,
                         price: product.price,
-                        image: "http://localhost:3001/images/products/" + product.image
+                        image: "http://localhost:3001/images/products/" + product.image,
+                        category:product.categories.Pcategory_name,
+                        trademark:product.trademarks.trademark_name
                     }
                 }
                 res.json(jsonProduct);
