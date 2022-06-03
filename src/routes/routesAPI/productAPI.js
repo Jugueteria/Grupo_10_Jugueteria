@@ -9,4 +9,7 @@ router.get('/products/:id',productsControllersAPI.show);
 
 
 
+
+
+
 module.exports=router;

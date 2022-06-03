@@ -12,6 +12,12 @@ var productsRouter = require('./routes/products');
 const methodOverride = require('method-override');
 var usersRouterAPI = require('./routes/routesAPI/userAPI');
 var productsRouterAPI = require('./routes/routesAPI/productAPI');
+const cors = require("cors");
+const directorioPermitidoCors = 'http://localhost:3000/' ;
+var corsOptions = {
+  origin: directorioPermitidoCors
+};
+
 
 
 
@@ -30,7 +36,7 @@ app.use(session({
   saveUninitialized: true
 
 }));
-
+app.use(cors(corsOptions));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

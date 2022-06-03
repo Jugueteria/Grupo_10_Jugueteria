@@ -7,7 +7,7 @@ module.exports = {
         let users = await db.user.findAll({ attributes: ['user_id', 'first_name', 'last_name', 'email'] })
 
         users.forEach(user => {
-            user.setDataValue("endpoint", "localhost3000/api/products/" + user.user_id);
+            user.setDataValue("endpoint", "localhost:3001/api/users/" + user.user_id);
         })
 
 
@@ -15,7 +15,7 @@ module.exports = {
             meta: {
                 status: 200,
                 count: users.length,
-                url: "localhost3000/api/users"
+                url: "localhost:3001/api/users"
             },
             users: users
         }
@@ -25,13 +25,26 @@ module.exports = {
 
     show: (req, res) => {
         db.user
-            .findByPk(req.params.id, { attributes: ['user_id', 'first_name', 'last_name', 'email'] })
+            .findByPk(req.params.id)
             .then(user => {
-                return res.status(200).json({
-                    data: user,
-                    status: 200
-                })
-            })
-    }
+            let jsonUser = {
+                meta: {
+                    status: 200,
+                    url: "localhost:3001/api/users/" + req.params.id
+                },
+                data: {
+                    user_id: user.user_id,
+                    first_name: user.first_name,
+                    last_name: user.last_name,
+                    email: user.email,
+                    image: "http://localhost:3001/images/users/" + user.image
+                }
+            }
+            res.json(jsonUser);
+
+        })
+    },
+
+  
 
 }

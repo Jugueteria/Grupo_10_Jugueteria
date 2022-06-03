@@ -6,4 +6,5 @@ const usersControllersAPI = require('../../Controllers/controllersAPI/userContro
 router.get('/users',usersControllersAPI.list);
 router.get('/users/:id',usersControllersAPI.show);
 
+
 module.exports=router;
