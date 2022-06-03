@@ -21,7 +21,7 @@ router.get('/form_admin', usersControllers.form_admin);
 router.get('/', sinLogin, usersControllers.users);
 
 //Creación de usuarios
-router.get('/register', usersControllers.register);
+router.get('/register',accesos, usersControllers.register);
 router.post('/register', multer(), validator.register, usersControllers.create);
 
 // Detalle usuario
