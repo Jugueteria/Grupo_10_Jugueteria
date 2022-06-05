@@ -12,6 +12,7 @@ var productsRouter = require('./routes/products');
 const methodOverride = require('method-override');
 var usersRouterAPI = require('./routes/routesAPI/userAPI');
 var productsRouterAPI = require('./routes/routesAPI/productAPI');
+var totalRouterAPI = require('./routes/routesAPI/totalAPI');
 const cors = require("cors");
 const directorioPermitidoCors = 'http://localhost:3000/' ;
 var corsOptions = {
@@ -51,6 +52,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/api', usersRouterAPI);
 app.use('/api', productsRouterAPI);
+app.use('/api', totalRouterAPI);
 
 
 // catch 404 and forward to error handler
