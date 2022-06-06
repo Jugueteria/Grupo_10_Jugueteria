@@ -13,31 +13,24 @@ const methodOverride = require('method-override');
 var usersRouterAPI = require('./routes/routesAPI/userAPI');
 var productsRouterAPI = require('./routes/routesAPI/productAPI');
 var totalRouterAPI = require('./routes/routesAPI/totalAPI');
-const cors = require("cors");
-const directorioPermitidoCors = 'http://localhost:3000' ;
+const cors = require('cors');
+const directorioPermitidoCors = 'http://localhost:3000'
 var corsOptions = {
   origin: directorioPermitidoCors
 };
 
-
-
-
-
 var app = express();
-
 // view engine setup
 app.set('views', (path.join(__dirname, './views')));
 app.set('view engine', 'ejs');
 
 
-
+app.use(cors(corsOptions));
 app.use(session({
   secret: 'proyecto',
   resave: false,
   saveUninitialized: true
-
 }));
-app.use(cors(corsOptions));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
