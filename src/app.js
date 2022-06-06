@@ -14,7 +14,7 @@ var usersRouterAPI = require('./routes/routesAPI/userAPI');
 var productsRouterAPI = require('./routes/routesAPI/productAPI');
 var totalRouterAPI = require('./routes/routesAPI/totalAPI');
 const cors = require("cors");
-const directorioPermitidoCors = 'http://localhost:3000/' ;
+const directorioPermitidoCors = 'http://localhost:3000' ;
 var corsOptions = {
   origin: directorioPermitidoCors
 };
