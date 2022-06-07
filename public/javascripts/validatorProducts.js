@@ -32,6 +32,14 @@ window.addEventListener("load", function () {
             swal('Validación', 'El nombre del articulo tener mínimo 5 caracteres', 'warning')
         }
 
+        if (imagenProducto.value != ""){ 
+            const whitelist = ['png', 'jpeg', 'jpg', 'webp']   
+            if (!whitelist.includes(imagenProducto.value.split(".")[1])){
+                e.preventDefault()
+                swal('Validación',"La imagen debe estar en formato:/png/jpeg/jpg ", 'warning')
+            }
+        }
+
     })
 
 })

@@ -71,6 +71,15 @@ form{
     
 }
 
+.cerrar{
+    width: 200px;
+    height:0px ;
+    background-color:none;
+    margin: auto;  
+    margin-bottom: 60px;
+    border-radius: 20px;
+}
+
 
 .ingreso{
     display: flex;

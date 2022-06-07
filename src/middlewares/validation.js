@@ -24,13 +24,13 @@ module.exports = {
         check("first_name")
             .notEmpty()
             .withMessage("Falta ingresar Nombre")
-            .isLength({min:2})
+            .isLength({ min: 2 })
             .withMessage("El nombre debe tener al menos 2 caracteres"),
 
         check("last_name")
             .notEmpty()
             .withMessage("Falta ingresar Apellido")
-            .isLength({min:2})
+            .isLength({ min: 2 })
             .withMessage("El nombre debe tener al menos 2 caracteres"),
 
         check("email")
@@ -41,12 +41,12 @@ module.exports = {
             .withMessage("Formato de correo incorrecto")
             .bail()
             .custom(function (value) {
-               return db.user.findOne({
+                return db.user.findOne({
 
                     where: {
                         email: value
                     }
-                }).then((user)=>{
+                }).then((user) => {
                     if (user) {
                         return Promise.reject("Email ya registrado")
                     }
@@ -57,7 +57,7 @@ module.exports = {
         check("password")
             .notEmpty()
             .withMessage("Falta ingresar Contraseña")
-            .isLength({min:8})
+            .isLength({ min: 8 })
             .withMessage("La contraseña debe tener minimo 8 caracteres")
             .isAlphanumeric()
             .withMessage("La contraseña debe contener letras y números")
@@ -70,20 +70,22 @@ module.exports = {
             .notEmpty()
             .withMessage("Falta ingresar nombre del producto")
             .bail()
-            .isLength({min:5})
+            .isLength({ min: 5 })
             .withMessage("El nombre debe tener al menos 5 caracteres"),
 
         check("precio")
             .notEmpty()
             .withMessage("Falta ingresar precio"),
-            
+
 
         check("descripcionCorta")
             .notEmpty()
             .withMessage("Falta descripción")
             .bail()
-            .isLength({min:20})
-            .withMessage("La descripción debe tener al menos 20 caracteres")
+            .isLength({ min: 20 })
+            .withMessage("La descripción debe tener al menos 20 caracteres"),
+
+      
 
     ]
 
